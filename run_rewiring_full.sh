@@ -141,6 +141,9 @@ if [[ "$REWIRING" == "attention" || "$REWIRING" == "both" ]]; then
             --use_center_moment \
             --seed $SEED \
             --rewiring attention \
+            --graph_learn \
+            --lr_gl 0.001 \
+            --wd_gl 5e-3 \
             --thres_min_deg 3 \
             --thres_min_deg_ratio 1.0 \
             --window [10000,10000] \

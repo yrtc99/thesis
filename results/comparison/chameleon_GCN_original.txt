@@ -1,0 +1,212 @@
+[1;34m==== 運行配置 ====[0m
+數據集: chameleon
+模型: GCN
+重連方法: attention
+使用改進的注意力重連: true
+GPU: 0
+重複次數: 3
+隨機種子: 0
+
+[1;34m==== 開始運行實驗 ====[0m
+[1;36m--- 運行 GCN 與改進的注意力重連 (chameleon 數據集) ---[0m
+2.6.1
+cannot load google_drive_downloader, install it if needed.
+Namespace(model='GCN', num_layer=2, repeat=3, num_epoch=200, dataset='chameleon', data_dir='../data', gpu='0', running_id='0', log_dir=None, hidden=64, moment=1, seed=0, gnn_seed=None, auto_fixed_seed=False, use_center_moment=True, lr=0.01, wd=0.005, rewiring='attention', graph_learn=False, lr_gl=0.001, wd_gl=0.005, thres_min_deg=5, thres_min_deg_ratio=1.5, save_dir_gl='../ckpt/', window=[10000, 10000], shuffle=[False, False], epoch_train_gl=200, epoch_finetune_gl=30, seed_gl=0, k=8, cat_self=True, drop_last=[False, False], prunning=True, epsilon=None, thres_prunning=0.3, use_cpu_cache=False, drop_edge=False, prob_drop_edge=0.1)
+cpu
+[Old Data] Data(x=[2277, 2325], edge_index=[2, 36101], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+Data(x=[2277, 2325], edge_index=[2, 32889], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+GCNNet(
+  (convs): ModuleList(
+    (0): GCNConv(2325, 64)
+    (1): GCNConv(64, 5)
+  )
+)
+Epoch running time:6.2869 s
+[Old Data] Data(x=[2277, 2325], edge_index=[2, 36101], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+Data(x=[2277, 2325], edge_index=[2, 32889], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+GCNNet(
+  (convs): ModuleList(
+    (0): GCNConv(2325, 64)
+    (1): GCNConv(64, 5)
+  )
+)
+Epoch running time:6.5476 s
+[Old Data] Data(x=[2277, 2325], edge_index=[2, 36101], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+Data(x=[2277, 2325], edge_index=[2, 32889], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+GCNNet(
+  (convs): ModuleList(
+    (0): GCNConv(2325, 64)
+    (1): GCNConv(64, 5)
+  )
+)
+Epoch running time:6.4776 s
+[Old Data] Data(x=[2277, 2325], edge_index=[2, 36101], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+Data(x=[2277, 2325], edge_index=[2, 32889], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+GCNNet(
+  (convs): ModuleList(
+    (0): GCNConv(2325, 64)
+    (1): GCNConv(64, 5)
+  )
+)
+Epoch running time:6.5724 s
+[Old Data] Data(x=[2277, 2325], edge_index=[2, 36101], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+Data(x=[2277, 2325], edge_index=[2, 32889], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+GCNNet(
+  (convs): ModuleList(
+    (0): GCNConv(2325, 64)
+    (1): GCNConv(64, 5)
+  )
+)
+Epoch running time:6.3917 s
+[Old Data] Data(x=[2277, 2325], edge_index=[2, 36101], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+Data(x=[2277, 2325], edge_index=[2, 32889], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+GCNNet(
+  (convs): ModuleList(
+    (0): GCNConv(2325, 64)
+    (1): GCNConv(64, 5)
+  )
+)
+Epoch running time:6.6427 s
+[Old Data] Data(x=[2277, 2325], edge_index=[2, 36101], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+Data(x=[2277, 2325], edge_index=[2, 32889], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+GCNNet(
+  (convs): ModuleList(
+    (0): GCNConv(2325, 64)
+    (1): GCNConv(64, 5)
+  )
+)
+Epoch running time:6.5756 s
+[Old Data] Data(x=[2277, 2325], edge_index=[2, 36101], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+Data(x=[2277, 2325], edge_index=[2, 32889], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+GCNNet(
+  (convs): ModuleList(
+    (0): GCNConv(2325, 64)
+    (1): GCNConv(64, 5)
+  )
+)
+Epoch running time:6.4958 s
+[Old Data] Data(x=[2277, 2325], edge_index=[2, 36101], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+Data(x=[2277, 2325], edge_index=[2, 32889], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+GCNNet(
+  (convs): ModuleList(
+    (0): GCNConv(2325, 64)
+    (1): GCNConv(64, 5)
+  )
+)
+Epoch running time:6.4405 s
+[Old Data] Data(x=[2277, 2325], edge_index=[2, 36101], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+Data(x=[2277, 2325], edge_index=[2, 32889], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+GCNNet(
+  (convs): ModuleList(
+    (0): GCNConv(2325, 64)
+    (1): GCNConv(64, 5)
+  )
+)
+Epoch running time:6.6113 s
+[Old Data] Data(x=[2277, 2325], edge_index=[2, 36101], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+Data(x=[2277, 2325], edge_index=[2, 32889], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+GCNNet(
+  (convs): ModuleList(
+    (0): GCNConv(2325, 64)
+    (1): GCNConv(64, 5)
+  )
+)
+Epoch running time:6.7612 s
+[Old Data] Data(x=[2277, 2325], edge_index=[2, 36101], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+Data(x=[2277, 2325], edge_index=[2, 32889], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+GCNNet(
+  (convs): ModuleList(
+    (0): GCNConv(2325, 64)
+    (1): GCNConv(64, 5)
+  )
+)
+Epoch running time:6.4071 s
+[Old Data] Data(x=[2277, 2325], edge_index=[2, 36101], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+Data(x=[2277, 2325], edge_index=[2, 32889], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+GCNNet(
+  (convs): ModuleList(
+    (0): GCNConv(2325, 64)
+    (1): GCNConv(64, 5)
+  )
+)
+Epoch running time:6.6421 s
+[Old Data] Data(x=[2277, 2325], edge_index=[2, 36101], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+Data(x=[2277, 2325], edge_index=[2, 32889], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+GCNNet(
+  (convs): ModuleList(
+    (0): GCNConv(2325, 64)
+    (1): GCNConv(64, 5)
+  )
+)
+Epoch running time:6.5335 s
+[Old Data] Data(x=[2277, 2325], edge_index=[2, 36101], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+Data(x=[2277, 2325], edge_index=[2, 32889], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+GCNNet(
+  (convs): ModuleList(
+    (0): GCNConv(2325, 64)
+    (1): GCNConv(64, 5)
+  )
+)
+Epoch running time:6.4876 s
+[Old Data] Data(x=[2277, 2325], edge_index=[2, 36101], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+Data(x=[2277, 2325], edge_index=[2, 32889], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+GCNNet(
+  (convs): ModuleList(
+    (0): GCNConv(2325, 64)
+    (1): GCNConv(64, 5)
+  )
+)
+Epoch running time:6.4033 s
+[Old Data] Data(x=[2277, 2325], edge_index=[2, 36101], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+Data(x=[2277, 2325], edge_index=[2, 32889], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+GCNNet(
+  (convs): ModuleList(
+    (0): GCNConv(2325, 64)
+    (1): GCNConv(64, 5)
+  )
+)
+Epoch running time:6.6417 s
+[Old Data] Data(x=[2277, 2325], edge_index=[2, 36101], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+Data(x=[2277, 2325], edge_index=[2, 32889], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+GCNNet(
+  (convs): ModuleList(
+    (0): GCNConv(2325, 64)
+    (1): GCNConv(64, 5)
+  )
+)
+Epoch running time:6.5673 s
+[Old Data] Data(x=[2277, 2325], edge_index=[2, 36101], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+Data(x=[2277, 2325], edge_index=[2, 32889], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+GCNNet(
+  (convs): ModuleList(
+    (0): GCNConv(2325, 64)
+    (1): GCNConv(64, 5)
+  )
+)
+Epoch running time:6.4689 s
+[Old Data] Data(x=[2277, 2325], edge_index=[2, 36101], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+Data(x=[2277, 2325], edge_index=[2, 32889], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+GCNNet(
+  (convs): ModuleList(
+    (0): GCNConv(2325, 64)
+    (1): GCNConv(64, 5)
+  )
+)
+Epoch running time:6.5359 s
+[Old Data] Data(x=[2277, 2325], edge_index=[2, 36101], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+Data(x=[2277, 2325], edge_index=[2, 32889], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+GCNNet(
+  (convs): ModuleList(
+    (0): GCNConv(2325, 64)
+    (1): GCNConv(64, 5)
+  )
+)
+Epoch running time:6.6013 s
+[Old Data] Data(x=[2277, 2325], edge_index=[2, 36101], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+Data(x=[2277, 2325], edge_index=[2, 32889], y=[2277], train_mask=[2277], val_mask=[2277], test_mask=[2277])
+GCNNet(
+  (convs): ModuleList(
+    (0): GCNConv(2325, 64)
+    (1): GCNConv(64, 5)
+  )
+)

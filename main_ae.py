@@ -249,6 +249,9 @@ def load_roman_empire_dataset(path):
 
 def build_dataset(args, transform=None):
     data_split = None
+    # Normalize dataset name to lowercase for case-insensitive comparison
+    dataset_lower = args.dataset.lower()
+    
     if args.dataset in ['Cora', 'CiteSeer', 'PubMed']:
         path = osp.join(args.data_dir, args.dataset)
         dataset = Planetoid(path, args.dataset, transform=transform, split='public')
@@ -283,10 +286,6 @@ def build_dataset(args, transform=None):
     elif args.dataset in ["chameleon", "squirrel"]:
         path = osp.join(args.data_dir, args.dataset)
         dataset = WikipediaNetwork(path, args.dataset)
-    elif args.dataset == "roman-empire":
-        # Load roman-empire dataset from npz file
-        npz_path = osp.join(os.getcwd(), "roman_empire.npz")
-        dataset = load_roman_empire_dataset(npz_path)
     elif args.dataset in ['fb100', 'arxiv-year']:
         sub_dataname = 'Penn94' if args.dataset == 'fb100' else ''
         dataset = prepare_dataset_benchmark(args.dataset, sub_dataname=sub_dataname)
