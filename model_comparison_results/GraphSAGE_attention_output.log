@@ -1,0 +1,2737 @@
+[1;34m==== 運行配置 ====[0m
+數據集: Wisconsin
+模型: GraphSAGE
+重連方法: attention
+GPU: 0
+重複次數: 3
+隨機種子: 0
+
+[1;34m==== 開始運行實驗 ====[0m
+[1;36m--- 運行 GraphSAGE 與注意力重連 (Wisconsin 數據集) ---[0m
+2.6.1
+cannot load google_drive_downloader, install it if needed.
+Namespace(model='GraphSAGE', num_layer=2, repeat=3, num_epoch=200, dataset='Wisconsin', data_dir='../data', gpu='0', running_id='0', log_dir=None, hidden=64, moment=1, seed=0, gnn_seed=None, auto_fixed_seed=False, use_center_moment=True, lr=0.01, wd=0.005, graph_learn=True, lr_gl=0.001, wd_gl=0.005, thres_min_deg=3, thres_min_deg_ratio=1.0, save_dir_gl='../ckpt/', window=[10000, 10000], shuffle=[False, False], epoch_train_gl=200, epoch_finetune_gl=30, seed_gl=0, k=8, cat_self=True, drop_last=[False, False], prunning=True, epsilon=None, thres_prunning=0.3, use_cpu_cache=False, drop_edge=False, prob_drop_edge=0.0)
+cpu
+[Old Data] Data(x=[251, 1703], edge_index=[2, 515], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+preparing label similarity matrix.
+candidate set size: tensor(11)
+preparing feature similarity matrix.
+cpu cpu cpu
+Epoch: 001, Reconstruction Loss:0.1114 Time(s/epoch):0.0259
+Epoch: 002, Reconstruction Loss:0.1162 Time(s/epoch):0.0111
+Epoch: 003, Reconstruction Loss:0.0974 Time(s/epoch):0.0100
+Epoch: 004, Reconstruction Loss:0.1007 Time(s/epoch):0.0076
+Epoch: 005, Reconstruction Loss:0.0944 Time(s/epoch):0.0088
+Epoch: 006, Reconstruction Loss:0.1040 Time(s/epoch):0.0075
+Epoch: 007, Reconstruction Loss:0.1223 Time(s/epoch):0.0084
+Epoch: 008, Reconstruction Loss:0.1201 Time(s/epoch):0.0075
+Epoch: 009, Reconstruction Loss:0.0991 Time(s/epoch):0.0083
+Epoch: 010, Reconstruction Loss:0.0760 Time(s/epoch):0.0106
+Epoch: 011, Reconstruction Loss:0.0756 Time(s/epoch):0.0127
+Epoch: 012, Reconstruction Loss:0.0876 Time(s/epoch):0.0096
+Epoch: 013, Reconstruction Loss:0.0961 Time(s/epoch):0.0073
+Epoch: 014, Reconstruction Loss:0.1101 Time(s/epoch):0.0080
+Epoch: 015, Reconstruction Loss:0.1290 Time(s/epoch):0.0066
+Epoch: 016, Reconstruction Loss:0.1436 Time(s/epoch):0.0075
+Epoch: 017, Reconstruction Loss:0.1476 Time(s/epoch):0.0078
+Epoch: 018, Reconstruction Loss:0.1399 Time(s/epoch):0.0072
+Epoch: 019, Reconstruction Loss:0.1232 Time(s/epoch):0.0070
+Epoch: 020, Reconstruction Loss:0.1069 Time(s/epoch):0.0070
+Epoch: 021, Reconstruction Loss:0.1068 Time(s/epoch):0.0073
+Epoch: 022, Reconstruction Loss:0.1227 Time(s/epoch):0.0096
+Epoch: 023, Reconstruction Loss:0.1351 Time(s/epoch):0.0089
+Epoch: 024, Reconstruction Loss:0.1337 Time(s/epoch):0.0078
+Epoch: 025, Reconstruction Loss:0.1232 Time(s/epoch):0.0095
+Epoch: 026, Reconstruction Loss:0.1176 Time(s/epoch):0.0103
+Epoch: 027, Reconstruction Loss:0.1266 Time(s/epoch):0.0098
+Epoch: 028, Reconstruction Loss:0.1437 Time(s/epoch):0.0093
+Epoch: 029, Reconstruction Loss:0.1599 Time(s/epoch):0.0096
+Epoch: 030, Reconstruction Loss:0.1705 Time(s/epoch):0.0102
+Epoch: 031, Reconstruction Loss:0.1734 Time(s/epoch):0.0114
+Epoch: 032, Reconstruction Loss:0.1687 Time(s/epoch):0.0093
+Epoch: 033, Reconstruction Loss:0.1571 Time(s/epoch):0.0096
+Epoch: 034, Reconstruction Loss:0.1407 Time(s/epoch):0.0090
+Epoch: 035, Reconstruction Loss:0.1230 Time(s/epoch):0.0095
+Epoch: 036, Reconstruction Loss:0.1102 Time(s/epoch):0.0089
+Epoch: 037, Reconstruction Loss:0.1091 Time(s/epoch):0.0074
+Epoch: 038, Reconstruction Loss:0.1185 Time(s/epoch):0.0083
+Epoch: 039, Reconstruction Loss:0.1286 Time(s/epoch):0.0090
+Epoch: 040, Reconstruction Loss:0.1318 Time(s/epoch):0.0095
+Epoch: 041, Reconstruction Loss:0.1261 Time(s/epoch):0.0090
+Epoch: 042, Reconstruction Loss:0.1149 Time(s/epoch):0.0088
+Epoch: 043, Reconstruction Loss:0.1061 Time(s/epoch):0.0070
+Epoch: 044, Reconstruction Loss:0.1086 Time(s/epoch):0.0079
+Epoch: 045, Reconstruction Loss:0.1224 Time(s/epoch):0.0067
+Epoch: 046, Reconstruction Loss:0.1393 Time(s/epoch):0.0084
+Epoch: 047, Reconstruction Loss:0.1522 Time(s/epoch):0.0089
+Epoch: 048, Reconstruction Loss:0.1579 Time(s/epoch):0.0094
+Epoch: 049, Reconstruction Loss:0.1554 Time(s/epoch):0.0091
+Epoch: 050, Reconstruction Loss:0.1451 Time(s/epoch):0.0090
+Epoch: 051, Reconstruction Loss:0.1285 Time(s/epoch):0.0091
+Epoch: 052, Reconstruction Loss:0.1090 Time(s/epoch):0.0090
+Epoch: 053, Reconstruction Loss:0.0934 Time(s/epoch):0.0089
+Epoch: 054, Reconstruction Loss:0.0921 Time(s/epoch):0.0088
+Epoch: 055, Reconstruction Loss:0.1063 Time(s/epoch):0.0066
+Epoch: 056, Reconstruction Loss:0.1243 Time(s/epoch):0.0079
+Epoch: 057, Reconstruction Loss:0.1371 Time(s/epoch):0.0068
+Epoch: 058, Reconstruction Loss:0.1418 Time(s/epoch):0.0067
+Epoch: 059, Reconstruction Loss:0.1389 Time(s/epoch):0.0084
+Epoch: 060, Reconstruction Loss:0.1295 Time(s/epoch):0.0097
+Epoch: 061, Reconstruction Loss:0.1159 Time(s/epoch):0.0074
+Epoch: 062, Reconstruction Loss:0.1021 Time(s/epoch):0.0067
+Epoch: 063, Reconstruction Loss:0.0960 Time(s/epoch):0.0095
+Epoch: 064, Reconstruction Loss:0.1040 Time(s/epoch):0.0094
+Epoch: 065, Reconstruction Loss:0.1214 Time(s/epoch):0.0089
+Epoch: 066, Reconstruction Loss:0.1388 Time(s/epoch):0.0075
+Epoch: 067, Reconstruction Loss:0.1502 Time(s/epoch):0.0079
+Epoch: 068, Reconstruction Loss:0.1535 Time(s/epoch):0.0104
+Epoch: 069, Reconstruction Loss:0.1484 Time(s/epoch):0.0093
+Epoch: 070, Reconstruction Loss:0.1356 Time(s/epoch):0.0080
+Epoch: 071, Reconstruction Loss:0.1175 Time(s/epoch):0.0085
+Epoch: 072, Reconstruction Loss:0.0993 Time(s/epoch):0.0075
+Epoch: 073, Reconstruction Loss:0.0896 Time(s/epoch):0.0076
+Epoch: 074, Reconstruction Loss:0.0940 Time(s/epoch):0.0072
+Epoch: 075, Reconstruction Loss:0.1050 Time(s/epoch):0.0071
+Epoch: 076, Reconstruction Loss:0.1131 Time(s/epoch):0.0074
+Epoch: 077, Reconstruction Loss:0.1153 Time(s/epoch):0.0074
+Epoch: 078, Reconstruction Loss:0.1132 Time(s/epoch):0.0075
+Epoch: 079, Reconstruction Loss:0.1102 Time(s/epoch):0.0077
+Epoch: 080, Reconstruction Loss:0.1096 Time(s/epoch):0.0076
+Epoch: 081, Reconstruction Loss:0.1131 Time(s/epoch):0.0082
+Epoch: 082, Reconstruction Loss:0.1202 Time(s/epoch):0.0072
+Epoch: 083, Reconstruction Loss:0.1290 Time(s/epoch):0.0070
+Epoch: 084, Reconstruction Loss:0.1364 Time(s/epoch):0.0098
+Epoch: 085, Reconstruction Loss:0.1395 Time(s/epoch):0.0096
+Epoch: 086, Reconstruction Loss:0.1362 Time(s/epoch):0.0083
+Epoch: 087, Reconstruction Loss:0.1264 Time(s/epoch):0.0090
+Epoch: 088, Reconstruction Loss:0.1122 Time(s/epoch):0.0106
+Epoch: 089, Reconstruction Loss:0.0986 Time(s/epoch):0.0107
+Epoch: 090, Reconstruction Loss:0.0935 Time(s/epoch):0.0090
+Epoch: 091, Reconstruction Loss:0.1000 Time(s/epoch):0.0093
+Epoch: 092, Reconstruction Loss:0.1108 Time(s/epoch):0.0095
+Epoch: 093, Reconstruction Loss:0.1182 Time(s/epoch):0.0087
+Epoch: 094, Reconstruction Loss:0.1194 Time(s/epoch):0.0105
+Epoch: 095, Reconstruction Loss:0.1154 Time(s/epoch):0.0109
+Epoch: 096, Reconstruction Loss:0.1091 Time(s/epoch):0.0101
+Epoch: 097, Reconstruction Loss:0.1048 Time(s/epoch):0.0086
+Epoch: 098, Reconstruction Loss:0.1067 Time(s/epoch):0.0092
+Epoch: 099, Reconstruction Loss:0.1158 Time(s/epoch):0.0093
+Epoch: 100, Reconstruction Loss:0.1285 Time(s/epoch):0.0089
+Epoch: 101, Reconstruction Loss:0.1401 Time(s/epoch):0.0104
+Epoch: 102, Reconstruction Loss:0.1472 Time(s/epoch):0.0101
+Epoch: 103, Reconstruction Loss:0.1478 Time(s/epoch):0.0087
+Epoch: 104, Reconstruction Loss:0.1411 Time(s/epoch):0.0082
+Epoch: 105, Reconstruction Loss:0.1278 Time(s/epoch):0.0089
+Epoch: 106, Reconstruction Loss:0.1110 Time(s/epoch):0.0090
+Epoch: 107, Reconstruction Loss:0.0978 Time(s/epoch):0.0098
+Epoch: 108, Reconstruction Loss:0.0970 Time(s/epoch):0.0093
+Epoch: 109, Reconstruction Loss:0.1072 Time(s/epoch):0.0076
+Epoch: 110, Reconstruction Loss:0.1181 Time(s/epoch):0.0089
+Epoch: 111, Reconstruction Loss:0.1234 Time(s/epoch):0.0102
+Epoch: 112, Reconstruction Loss:0.1223 Time(s/epoch):0.0098
+Epoch: 113, Reconstruction Loss:0.1178 Time(s/epoch):0.0110
+Epoch: 114, Reconstruction Loss:0.1140 Time(s/epoch):0.0097
+Epoch: 115, Reconstruction Loss:0.1148 Time(s/epoch):0.0084
+Epoch: 116, Reconstruction Loss:0.1218 Time(s/epoch):0.0103
+Epoch: 117, Reconstruction Loss:0.1333 Time(s/epoch):0.0108
+Epoch: 118, Reconstruction Loss:0.1462 Time(s/epoch):0.0100
+Epoch: 119, Reconstruction Loss:0.1572 Time(s/epoch):0.0086
+Epoch: 120, Reconstruction Loss:0.1635 Time(s/epoch):0.0075
+Epoch: 121, Reconstruction Loss:0.1634 Time(s/epoch):0.0094
+Epoch: 122, Reconstruction Loss:0.1562 Time(s/epoch):0.0089
+Epoch: 123, Reconstruction Loss:0.1423 Time(s/epoch):0.0080
+Epoch: 124, Reconstruction Loss:0.1244 Time(s/epoch):0.0104
+Epoch: 125, Reconstruction Loss:0.1089 Time(s/epoch):0.0103
+Epoch: 126, Reconstruction Loss:0.1046 Time(s/epoch):0.0095
+Epoch: 127, Reconstruction Loss:0.1116 Time(s/epoch):0.0094
+Epoch: 128, Reconstruction Loss:0.1201 Time(s/epoch):0.0117
+Epoch: 129, Reconstruction Loss:0.1227 Time(s/epoch):0.0112
+Epoch: 130, Reconstruction Loss:0.1190 Time(s/epoch):0.0122
+Epoch: 131, Reconstruction Loss:0.1133 Time(s/epoch):0.0113
+Epoch: 132, Reconstruction Loss:0.1109 Time(s/epoch):0.0115
+Epoch: 133, Reconstruction Loss:0.1149 Time(s/epoch):0.0097
+Epoch: 134, Reconstruction Loss:0.1244 Time(s/epoch):0.0090
+Epoch: 135, Reconstruction Loss:0.1367 Time(s/epoch):0.0103
+Epoch: 136, Reconstruction Loss:0.1489 Time(s/epoch):0.0090
+Epoch: 137, Reconstruction Loss:0.1578 Time(s/epoch):0.0080
+Epoch: 138, Reconstruction Loss:0.1611 Time(s/epoch):0.0082
+Epoch: 139, Reconstruction Loss:0.1578 Time(s/epoch):0.0083
+Epoch: 140, Reconstruction Loss:0.1476 Time(s/epoch):0.0087
+Epoch: 141, Reconstruction Loss:0.1315 Time(s/epoch):0.0113
+Epoch: 142, Reconstruction Loss:0.1124 Time(s/epoch):0.0103
+Epoch: 143, Reconstruction Loss:0.0969 Time(s/epoch):0.0098
+Epoch: 144, Reconstruction Loss:0.0943 Time(s/epoch):0.0100
+Epoch: 145, Reconstruction Loss:0.1052 Time(s/epoch):0.0088
+Epoch: 146, Reconstruction Loss:0.1195 Time(s/epoch):0.0070
+Epoch: 147, Reconstruction Loss:0.1299 Time(s/epoch):0.0076
+Epoch: 148, Reconstruction Loss:0.1341 Time(s/epoch):0.0097
+Epoch: 149, Reconstruction Loss:0.1326 Time(s/epoch):0.0096
+Epoch: 150, Reconstruction Loss:0.1269 Time(s/epoch):0.0098
+Epoch: 151, Reconstruction Loss:0.1191 Time(s/epoch):0.0093
+Epoch: 152, Reconstruction Loss:0.1122 Time(s/epoch):0.0093
+Epoch: 153, Reconstruction Loss:0.1094 Time(s/epoch):0.0082
+Epoch: 154, Reconstruction Loss:0.1134 Time(s/epoch):0.0072
+Epoch: 155, Reconstruction Loss:0.1237 Time(s/epoch):0.0076
+Epoch: 156, Reconstruction Loss:0.1368 Time(s/epoch):0.0076
+Epoch: 157, Reconstruction Loss:0.1485 Time(s/epoch):0.0077
+Epoch: 158, Reconstruction Loss:0.1554 Time(s/epoch):0.0082
+Epoch: 159, Reconstruction Loss:0.1555 Time(s/epoch):0.0080
+Epoch: 160, Reconstruction Loss:0.1486 Time(s/epoch):0.0092
+Epoch: 161, Reconstruction Loss:0.1355 Time(s/epoch):0.0074
+Epoch: 162, Reconstruction Loss:0.1188 Time(s/epoch):0.0096
+Epoch: 163, Reconstruction Loss:0.1037 Time(s/epoch):0.0098
+Epoch: 164, Reconstruction Loss:0.0972 Time(s/epoch):0.0095
+Epoch: 165, Reconstruction Loss:0.1023 Time(s/epoch):0.0077
+Epoch: 166, Reconstruction Loss:0.1132 Time(s/epoch):0.0080
+Epoch: 167, Reconstruction Loss:0.1230 Time(s/epoch):0.0095
+Epoch: 168, Reconstruction Loss:0.1289 Time(s/epoch):0.0099
+Epoch: 169, Reconstruction Loss:0.1308 Time(s/epoch):0.0082
+Epoch: 170, Reconstruction Loss:0.1297 Time(s/epoch):0.0077
+Epoch: 171, Reconstruction Loss:0.1267 Time(s/epoch):0.0081
+Epoch: 172, Reconstruction Loss:0.1227 Time(s/epoch):0.0075
+Epoch: 173, Reconstruction Loss:0.1188 Time(s/epoch):0.0091
+Epoch: 174, Reconstruction Loss:0.1161 Time(s/epoch):0.0101
+Epoch: 175, Reconstruction Loss:0.1159 Time(s/epoch):0.0101
+Epoch: 176, Reconstruction Loss:0.1181 Time(s/epoch):0.0091
+Epoch: 177, Reconstruction Loss:0.1214 Time(s/epoch):0.0067
+Epoch: 178, Reconstruction Loss:0.1234 Time(s/epoch):0.0070
+Epoch: 179, Reconstruction Loss:0.1221 Time(s/epoch):0.0071
+Epoch: 180, Reconstruction Loss:0.1169 Time(s/epoch):0.0072
+Epoch: 181, Reconstruction Loss:0.1085 Time(s/epoch):0.0095
+Epoch: 182, Reconstruction Loss:0.0994 Time(s/epoch):0.0100
+Epoch: 183, Reconstruction Loss:0.0936 Time(s/epoch):0.0095
+Epoch: 184, Reconstruction Loss:0.0942 Time(s/epoch):0.0078
+Epoch: 185, Reconstruction Loss:0.1002 Time(s/epoch):0.0080
+Epoch: 186, Reconstruction Loss:0.1076 Time(s/epoch):0.0082
+Epoch: 187, Reconstruction Loss:0.1130 Time(s/epoch):0.0071
+Epoch: 188, Reconstruction Loss:0.1150 Time(s/epoch):0.0074
+Epoch: 189, Reconstruction Loss:0.1137 Time(s/epoch):0.0073
+Epoch: 190, Reconstruction Loss:0.1096 Time(s/epoch):0.0074
+Epoch: 191, Reconstruction Loss:0.1036 Time(s/epoch):0.0078
+Epoch: 192, Reconstruction Loss:0.0967 Time(s/epoch):0.0078
+Epoch: 193, Reconstruction Loss:0.0910 Time(s/epoch):0.0079
+Epoch: 194, Reconstruction Loss:0.0887 Time(s/epoch):0.0086
+Epoch: 195, Reconstruction Loss:0.0913 Time(s/epoch):0.0096
+Epoch: 196, Reconstruction Loss:0.0976 Time(s/epoch):0.0096
+Epoch: 197, Reconstruction Loss:0.1045 Time(s/epoch):0.0099
+Epoch: 198, Reconstruction Loss:0.1090 Time(s/epoch):0.0101
+Epoch: 199, Reconstruction Loss:0.1091 Time(s/epoch):0.0096
+Epoch: 200, Reconstruction Loss:0.1040 Time(s/epoch):0.0080
+[Train] best epoch:11 | min reconstruction loss:0.0756
+Begin finetuning...
+Epoch: 001, Supervised Loss:1.3322 Time(s/epoch):0.0068
+Epoch: 002, Supervised Loss:1.2726 Time(s/epoch):0.0070
+Epoch: 003, Supervised Loss:1.2222 Time(s/epoch):0.0075
+Epoch: 004, Supervised Loss:1.2074 Time(s/epoch):0.0066
+Epoch: 005, Supervised Loss:1.1940 Time(s/epoch):0.0068
+Epoch: 006, Supervised Loss:1.1774 Time(s/epoch):0.0067
+Epoch: 007, Supervised Loss:1.1751 Time(s/epoch):0.0061
+Epoch: 008, Supervised Loss:1.1926 Time(s/epoch):0.0067
+Epoch: 009, Supervised Loss:1.2237 Time(s/epoch):0.0065
+Epoch: 010, Supervised Loss:1.2610 Time(s/epoch):0.0063
+Epoch: 011, Supervised Loss:1.3006 Time(s/epoch):0.0065
+Epoch: 012, Supervised Loss:1.3341 Time(s/epoch):0.0066
+Epoch: 013, Supervised Loss:1.3535 Time(s/epoch):0.0050
+Epoch: 014, Supervised Loss:1.3588 Time(s/epoch):0.0052
+Epoch: 015, Supervised Loss:1.3555 Time(s/epoch):0.0049
+Epoch: 016, Supervised Loss:1.3487 Time(s/epoch):0.0055
+Epoch: 017, Supervised Loss:1.3410 Time(s/epoch):0.0048
+Epoch: 018, Supervised Loss:1.3336 Time(s/epoch):0.0049
+Epoch: 019, Supervised Loss:1.3272 Time(s/epoch):0.0049
+Epoch: 020, Supervised Loss:1.3232 Time(s/epoch):0.0051
+Epoch: 021, Supervised Loss:1.3221 Time(s/epoch):0.0048
+Epoch: 022, Supervised Loss:1.3228 Time(s/epoch):0.0053
+Epoch: 023, Supervised Loss:1.3225 Time(s/epoch):0.0048
+Epoch: 024, Supervised Loss:1.3198 Time(s/epoch):0.0049
+Epoch: 025, Supervised Loss:1.3150 Time(s/epoch):0.0054
+Epoch: 026, Supervised Loss:1.3102 Time(s/epoch):0.0057
+Epoch: 027, Supervised Loss:1.3065 Time(s/epoch):0.0048
+Epoch: 028, Supervised Loss:1.3035 Time(s/epoch):0.0058
+Epoch: 029, Supervised Loss:1.3002 Time(s/epoch):0.0048
+Epoch: 030, Supervised Loss:1.2956 Time(s/epoch):0.0070
+0.8617705 515
+Add 404 edges.
+Prune 366 edges from torch.Size([2, 515]) to torch.Size([2, 149])
+save graph to: ../ckpt/data_Wisconsin_new_0.3.dat
+Homophily ratio change from 0.196 to 0.746
+Data(x=[251, 1703], edge_index=[2, 548], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+GraphSAGE(
+  (convs): ModuleList(
+    (0): SAGEConv(1703, 64, aggr=mean)
+    (1): SAGEConv(64, 5, aggr=mean)
+  )
+)
+Epoch running time:3.7793 s
+[Old Data] Data(x=[251, 1703], edge_index=[2, 515], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+load graph from: ../ckpt/data_Wisconsin_new_0.3.dat
+Homophily ratio change from 0.196 to 0.746
+Data(x=[251, 1703], edge_index=[2, 548], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+GraphSAGE(
+  (convs): ModuleList(
+    (0): SAGEConv(1703, 64, aggr=mean)
+    (1): SAGEConv(64, 5, aggr=mean)
+  )
+)
+Epoch running time:2.3193 s
+[Old Data] Data(x=[251, 1703], edge_index=[2, 515], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+load graph from: ../ckpt/data_Wisconsin_new_0.3.dat
+Homophily ratio change from 0.196 to 0.746
+Data(x=[251, 1703], edge_index=[2, 548], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+GraphSAGE(
+  (convs): ModuleList(
+    (0): SAGEConv(1703, 64, aggr=mean)
+    (1): SAGEConv(64, 5, aggr=mean)
+  )
+)
+Epoch running time:1.7631 s
+[Old Data] Data(x=[251, 1703], edge_index=[2, 515], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+preparing label similarity matrix.
+candidate set size: tensor(19)
+preparing feature similarity matrix.
+cpu cpu cpu
+Epoch: 001, Reconstruction Loss:0.1114 Time(s/epoch):0.0149
+Epoch: 002, Reconstruction Loss:0.1162 Time(s/epoch):0.0099
+Epoch: 003, Reconstruction Loss:0.0974 Time(s/epoch):0.0121
+Epoch: 004, Reconstruction Loss:0.1007 Time(s/epoch):0.0213
+Epoch: 005, Reconstruction Loss:0.0944 Time(s/epoch):0.0190
+Epoch: 006, Reconstruction Loss:0.1040 Time(s/epoch):0.0115
+Epoch: 007, Reconstruction Loss:0.1223 Time(s/epoch):0.0083
+Epoch: 008, Reconstruction Loss:0.1201 Time(s/epoch):0.0082
+Epoch: 009, Reconstruction Loss:0.0991 Time(s/epoch):0.0104
+Epoch: 010, Reconstruction Loss:0.0760 Time(s/epoch):0.0137
+Epoch: 011, Reconstruction Loss:0.0756 Time(s/epoch):0.0134
+Epoch: 012, Reconstruction Loss:0.0876 Time(s/epoch):0.0110
+Epoch: 013, Reconstruction Loss:0.0961 Time(s/epoch):0.0118
+Epoch: 014, Reconstruction Loss:0.1101 Time(s/epoch):0.0123
+Epoch: 015, Reconstruction Loss:0.1290 Time(s/epoch):0.0115
+Epoch: 016, Reconstruction Loss:0.1436 Time(s/epoch):0.0104
+Epoch: 017, Reconstruction Loss:0.1476 Time(s/epoch):0.0112
+Epoch: 018, Reconstruction Loss:0.1399 Time(s/epoch):0.0090
+Epoch: 019, Reconstruction Loss:0.1232 Time(s/epoch):0.0099
+Epoch: 020, Reconstruction Loss:0.1069 Time(s/epoch):0.0103
+Epoch: 021, Reconstruction Loss:0.1068 Time(s/epoch):0.0102
+Epoch: 022, Reconstruction Loss:0.1227 Time(s/epoch):0.0107
+Epoch: 023, Reconstruction Loss:0.1351 Time(s/epoch):0.0076
+Epoch: 024, Reconstruction Loss:0.1337 Time(s/epoch):0.0083
+Epoch: 025, Reconstruction Loss:0.1232 Time(s/epoch):0.0080
+Epoch: 026, Reconstruction Loss:0.1176 Time(s/epoch):0.0080
+Epoch: 027, Reconstruction Loss:0.1266 Time(s/epoch):0.0074
+Epoch: 028, Reconstruction Loss:0.1437 Time(s/epoch):0.0076
+Epoch: 029, Reconstruction Loss:0.1599 Time(s/epoch):0.0076
+Epoch: 030, Reconstruction Loss:0.1705 Time(s/epoch):0.0077
+Epoch: 031, Reconstruction Loss:0.1734 Time(s/epoch):0.0089
+Epoch: 032, Reconstruction Loss:0.1687 Time(s/epoch):0.0101
+Epoch: 033, Reconstruction Loss:0.1571 Time(s/epoch):0.0080
+Epoch: 034, Reconstruction Loss:0.1407 Time(s/epoch):0.0099
+Epoch: 035, Reconstruction Loss:0.1230 Time(s/epoch):0.0100
+Epoch: 036, Reconstruction Loss:0.1102 Time(s/epoch):0.0102
+Epoch: 037, Reconstruction Loss:0.1091 Time(s/epoch):0.0108
+Epoch: 038, Reconstruction Loss:0.1185 Time(s/epoch):0.0100
+Epoch: 039, Reconstruction Loss:0.1286 Time(s/epoch):0.0107
+Epoch: 040, Reconstruction Loss:0.1318 Time(s/epoch):0.0125
+Epoch: 041, Reconstruction Loss:0.1261 Time(s/epoch):0.0114
+Epoch: 042, Reconstruction Loss:0.1149 Time(s/epoch):0.0109
+Epoch: 043, Reconstruction Loss:0.1061 Time(s/epoch):0.0107
+Epoch: 044, Reconstruction Loss:0.1086 Time(s/epoch):0.0103
+Epoch: 045, Reconstruction Loss:0.1224 Time(s/epoch):0.0101
+Epoch: 046, Reconstruction Loss:0.1393 Time(s/epoch):0.0096
+Epoch: 047, Reconstruction Loss:0.1522 Time(s/epoch):0.0099
+Epoch: 048, Reconstruction Loss:0.1579 Time(s/epoch):0.0083
+Epoch: 049, Reconstruction Loss:0.1554 Time(s/epoch):0.0074
+Epoch: 050, Reconstruction Loss:0.1451 Time(s/epoch):0.0073
+Epoch: 051, Reconstruction Loss:0.1285 Time(s/epoch):0.0094
+Epoch: 052, Reconstruction Loss:0.1090 Time(s/epoch):0.0095
+Epoch: 053, Reconstruction Loss:0.0934 Time(s/epoch):0.0100
+Epoch: 054, Reconstruction Loss:0.0921 Time(s/epoch):0.0089
+Epoch: 055, Reconstruction Loss:0.1063 Time(s/epoch):0.0081
+Epoch: 056, Reconstruction Loss:0.1243 Time(s/epoch):0.0100
+Epoch: 057, Reconstruction Loss:0.1371 Time(s/epoch):0.0096
+Epoch: 058, Reconstruction Loss:0.1418 Time(s/epoch):0.0085
+Epoch: 059, Reconstruction Loss:0.1389 Time(s/epoch):0.0088
+Epoch: 060, Reconstruction Loss:0.1295 Time(s/epoch):0.0108
+Epoch: 061, Reconstruction Loss:0.1159 Time(s/epoch):0.0100
+Epoch: 062, Reconstruction Loss:0.1021 Time(s/epoch):0.0107
+Epoch: 063, Reconstruction Loss:0.0960 Time(s/epoch):0.0107
+Epoch: 064, Reconstruction Loss:0.1040 Time(s/epoch):0.0082
+Epoch: 065, Reconstruction Loss:0.1214 Time(s/epoch):0.0079
+Epoch: 066, Reconstruction Loss:0.1388 Time(s/epoch):0.0098
+Epoch: 067, Reconstruction Loss:0.1502 Time(s/epoch):0.0101
+Epoch: 068, Reconstruction Loss:0.1535 Time(s/epoch):0.0104
+Epoch: 069, Reconstruction Loss:0.1484 Time(s/epoch):0.0096
+Epoch: 070, Reconstruction Loss:0.1356 Time(s/epoch):0.0104
+Epoch: 071, Reconstruction Loss:0.1175 Time(s/epoch):0.0080
+Epoch: 072, Reconstruction Loss:0.0993 Time(s/epoch):0.0103
+Epoch: 073, Reconstruction Loss:0.0896 Time(s/epoch):0.0090
+Epoch: 074, Reconstruction Loss:0.0940 Time(s/epoch):0.0099
+Epoch: 075, Reconstruction Loss:0.1050 Time(s/epoch):0.0088
+Epoch: 076, Reconstruction Loss:0.1131 Time(s/epoch):0.0090
+Epoch: 077, Reconstruction Loss:0.1153 Time(s/epoch):0.0083
+Epoch: 078, Reconstruction Loss:0.1132 Time(s/epoch):0.0084
+Epoch: 079, Reconstruction Loss:0.1102 Time(s/epoch):0.0112
+Epoch: 080, Reconstruction Loss:0.1096 Time(s/epoch):0.0098
+Epoch: 081, Reconstruction Loss:0.1131 Time(s/epoch):0.0087
+Epoch: 082, Reconstruction Loss:0.1202 Time(s/epoch):0.0113
+Epoch: 083, Reconstruction Loss:0.1290 Time(s/epoch):0.0083
+Epoch: 084, Reconstruction Loss:0.1364 Time(s/epoch):0.0102
+Epoch: 085, Reconstruction Loss:0.1395 Time(s/epoch):0.0101
+Epoch: 086, Reconstruction Loss:0.1362 Time(s/epoch):0.0100
+Epoch: 087, Reconstruction Loss:0.1264 Time(s/epoch):0.0102
+Epoch: 088, Reconstruction Loss:0.1122 Time(s/epoch):0.0098
+Epoch: 089, Reconstruction Loss:0.0986 Time(s/epoch):0.0083
+Epoch: 090, Reconstruction Loss:0.0935 Time(s/epoch):0.0089
+Epoch: 091, Reconstruction Loss:0.1000 Time(s/epoch):0.0085
+Epoch: 092, Reconstruction Loss:0.1108 Time(s/epoch):0.0101
+Epoch: 093, Reconstruction Loss:0.1182 Time(s/epoch):0.0090
+Epoch: 094, Reconstruction Loss:0.1194 Time(s/epoch):0.0084
+Epoch: 095, Reconstruction Loss:0.1154 Time(s/epoch):0.0083
+Epoch: 096, Reconstruction Loss:0.1091 Time(s/epoch):0.0075
+Epoch: 097, Reconstruction Loss:0.1048 Time(s/epoch):0.0096
+Epoch: 098, Reconstruction Loss:0.1067 Time(s/epoch):0.0103
+Epoch: 099, Reconstruction Loss:0.1158 Time(s/epoch):0.0078
+Epoch: 100, Reconstruction Loss:0.1285 Time(s/epoch):0.0087
+Epoch: 101, Reconstruction Loss:0.1401 Time(s/epoch):0.0099
+Epoch: 102, Reconstruction Loss:0.1472 Time(s/epoch):0.0099
+Epoch: 103, Reconstruction Loss:0.1478 Time(s/epoch):0.0097
+Epoch: 104, Reconstruction Loss:0.1411 Time(s/epoch):0.0082
+Epoch: 105, Reconstruction Loss:0.1278 Time(s/epoch):0.0093
+Epoch: 106, Reconstruction Loss:0.1110 Time(s/epoch):0.0103
+Epoch: 107, Reconstruction Loss:0.0978 Time(s/epoch):0.0111
+Epoch: 108, Reconstruction Loss:0.0970 Time(s/epoch):0.0099
+Epoch: 109, Reconstruction Loss:0.1072 Time(s/epoch):0.0085
+Epoch: 110, Reconstruction Loss:0.1181 Time(s/epoch):0.0083
+Epoch: 111, Reconstruction Loss:0.1234 Time(s/epoch):0.0079
+Epoch: 112, Reconstruction Loss:0.1223 Time(s/epoch):0.0105
+Epoch: 113, Reconstruction Loss:0.1178 Time(s/epoch):0.0104
+Epoch: 114, Reconstruction Loss:0.1140 Time(s/epoch):0.0108
+Epoch: 115, Reconstruction Loss:0.1148 Time(s/epoch):0.0101
+Epoch: 116, Reconstruction Loss:0.1218 Time(s/epoch):0.0080
+Epoch: 117, Reconstruction Loss:0.1333 Time(s/epoch):0.0074
+Epoch: 118, Reconstruction Loss:0.1462 Time(s/epoch):0.0082
+Epoch: 119, Reconstruction Loss:0.1572 Time(s/epoch):0.0099
+Epoch: 120, Reconstruction Loss:0.1635 Time(s/epoch):0.0092
+Epoch: 121, Reconstruction Loss:0.1634 Time(s/epoch):0.0084
+Epoch: 122, Reconstruction Loss:0.1562 Time(s/epoch):0.0093
+Epoch: 123, Reconstruction Loss:0.1423 Time(s/epoch):0.0086
+Epoch: 124, Reconstruction Loss:0.1244 Time(s/epoch):0.0099
+Epoch: 125, Reconstruction Loss:0.1089 Time(s/epoch):0.0083
+Epoch: 126, Reconstruction Loss:0.1046 Time(s/epoch):0.0071
+Epoch: 127, Reconstruction Loss:0.1116 Time(s/epoch):0.0091
+Epoch: 128, Reconstruction Loss:0.1201 Time(s/epoch):0.0101
+Epoch: 129, Reconstruction Loss:0.1227 Time(s/epoch):0.0101
+Epoch: 130, Reconstruction Loss:0.1190 Time(s/epoch):0.0108
+Epoch: 131, Reconstruction Loss:0.1133 Time(s/epoch):0.0089
+Epoch: 132, Reconstruction Loss:0.1109 Time(s/epoch):0.0091
+Epoch: 133, Reconstruction Loss:0.1149 Time(s/epoch):0.0098
+Epoch: 134, Reconstruction Loss:0.1244 Time(s/epoch):0.0083
+Epoch: 135, Reconstruction Loss:0.1367 Time(s/epoch):0.0092
+Epoch: 136, Reconstruction Loss:0.1489 Time(s/epoch):0.0110
+Epoch: 137, Reconstruction Loss:0.1578 Time(s/epoch):0.0108
+Epoch: 138, Reconstruction Loss:0.1611 Time(s/epoch):0.0102
+Epoch: 139, Reconstruction Loss:0.1578 Time(s/epoch):0.0096
+Epoch: 140, Reconstruction Loss:0.1476 Time(s/epoch):0.0101
+Epoch: 141, Reconstruction Loss:0.1315 Time(s/epoch):0.0093
+Epoch: 142, Reconstruction Loss:0.1124 Time(s/epoch):0.0134
+Epoch: 143, Reconstruction Loss:0.0969 Time(s/epoch):0.0152
+Epoch: 144, Reconstruction Loss:0.0943 Time(s/epoch):0.0123
+Epoch: 145, Reconstruction Loss:0.1052 Time(s/epoch):0.0108
+Epoch: 146, Reconstruction Loss:0.1195 Time(s/epoch):0.0094
+Epoch: 147, Reconstruction Loss:0.1299 Time(s/epoch):0.0102
+Epoch: 148, Reconstruction Loss:0.1341 Time(s/epoch):0.0119
+Epoch: 149, Reconstruction Loss:0.1326 Time(s/epoch):0.0102
+Epoch: 150, Reconstruction Loss:0.1269 Time(s/epoch):0.0089
+Epoch: 151, Reconstruction Loss:0.1191 Time(s/epoch):0.0089
+Epoch: 152, Reconstruction Loss:0.1122 Time(s/epoch):0.0101
+Epoch: 153, Reconstruction Loss:0.1094 Time(s/epoch):0.0113
+Epoch: 154, Reconstruction Loss:0.1134 Time(s/epoch):0.0100
+Epoch: 155, Reconstruction Loss:0.1237 Time(s/epoch):0.0098
+Epoch: 156, Reconstruction Loss:0.1368 Time(s/epoch):0.0084
+Epoch: 157, Reconstruction Loss:0.1485 Time(s/epoch):0.0078
+Epoch: 158, Reconstruction Loss:0.1554 Time(s/epoch):0.0077
+Epoch: 159, Reconstruction Loss:0.1555 Time(s/epoch):0.0079
+Epoch: 160, Reconstruction Loss:0.1486 Time(s/epoch):0.0098
+Epoch: 161, Reconstruction Loss:0.1355 Time(s/epoch):0.0086
+Epoch: 162, Reconstruction Loss:0.1188 Time(s/epoch):0.0071
+Epoch: 163, Reconstruction Loss:0.1037 Time(s/epoch):0.0082
+Epoch: 164, Reconstruction Loss:0.0972 Time(s/epoch):0.0096
+Epoch: 165, Reconstruction Loss:0.1023 Time(s/epoch):0.0097
+Epoch: 166, Reconstruction Loss:0.1132 Time(s/epoch):0.0097
+Epoch: 167, Reconstruction Loss:0.1230 Time(s/epoch):0.0095
+Epoch: 168, Reconstruction Loss:0.1289 Time(s/epoch):0.0094
+Epoch: 169, Reconstruction Loss:0.1308 Time(s/epoch):0.0073
+Epoch: 170, Reconstruction Loss:0.1297 Time(s/epoch):0.0072
+Epoch: 171, Reconstruction Loss:0.1267 Time(s/epoch):0.0079
+Epoch: 172, Reconstruction Loss:0.1227 Time(s/epoch):0.0073
+Epoch: 173, Reconstruction Loss:0.1188 Time(s/epoch):0.0072
+Epoch: 174, Reconstruction Loss:0.1161 Time(s/epoch):0.0078
+Epoch: 175, Reconstruction Loss:0.1159 Time(s/epoch):0.0074
+Epoch: 176, Reconstruction Loss:0.1181 Time(s/epoch):0.0073
+Epoch: 177, Reconstruction Loss:0.1214 Time(s/epoch):0.0074
+Epoch: 178, Reconstruction Loss:0.1234 Time(s/epoch):0.0074
+Epoch: 179, Reconstruction Loss:0.1221 Time(s/epoch):0.0073
+Epoch: 180, Reconstruction Loss:0.1169 Time(s/epoch):0.0074
+Epoch: 181, Reconstruction Loss:0.1085 Time(s/epoch):0.0072
+Epoch: 182, Reconstruction Loss:0.0994 Time(s/epoch):0.0078
+Epoch: 183, Reconstruction Loss:0.0936 Time(s/epoch):0.0076
+Epoch: 184, Reconstruction Loss:0.0942 Time(s/epoch):0.0077
+Epoch: 185, Reconstruction Loss:0.1002 Time(s/epoch):0.0072
+Epoch: 186, Reconstruction Loss:0.1076 Time(s/epoch):0.0091
+Epoch: 187, Reconstruction Loss:0.1130 Time(s/epoch):0.0084
+Epoch: 188, Reconstruction Loss:0.1150 Time(s/epoch):0.0077
+Epoch: 189, Reconstruction Loss:0.1137 Time(s/epoch):0.0074
+Epoch: 190, Reconstruction Loss:0.1096 Time(s/epoch):0.0073
+Epoch: 191, Reconstruction Loss:0.1036 Time(s/epoch):0.0089
+Epoch: 192, Reconstruction Loss:0.0967 Time(s/epoch):0.0094
+Epoch: 193, Reconstruction Loss:0.0910 Time(s/epoch):0.0096
+Epoch: 194, Reconstruction Loss:0.0887 Time(s/epoch):0.0085
+Epoch: 195, Reconstruction Loss:0.0913 Time(s/epoch):0.0079
+Epoch: 196, Reconstruction Loss:0.0976 Time(s/epoch):0.0079
+Epoch: 197, Reconstruction Loss:0.1045 Time(s/epoch):0.0093
+Epoch: 198, Reconstruction Loss:0.1090 Time(s/epoch):0.0101
+Epoch: 199, Reconstruction Loss:0.1091 Time(s/epoch):0.0099
+Epoch: 200, Reconstruction Loss:0.1040 Time(s/epoch):0.0100
+[Train] best epoch:11 | min reconstruction loss:0.0756
+Begin finetuning...
+Epoch: 001, Supervised Loss:1.4767 Time(s/epoch):0.0057
+Epoch: 002, Supervised Loss:1.4063 Time(s/epoch):0.0050
+Epoch: 003, Supervised Loss:1.3290 Time(s/epoch):0.0057
+Epoch: 004, Supervised Loss:1.2835 Time(s/epoch):0.0073
+Epoch: 005, Supervised Loss:1.2698 Time(s/epoch):0.0073
+Epoch: 006, Supervised Loss:1.2669 Time(s/epoch):0.0073
+Epoch: 007, Supervised Loss:1.2634 Time(s/epoch):0.0072
+Epoch: 008, Supervised Loss:1.2551 Time(s/epoch):0.0060
+Epoch: 009, Supervised Loss:1.2445 Time(s/epoch):0.0075
+Epoch: 010, Supervised Loss:1.2385 Time(s/epoch):0.0224
+Epoch: 011, Supervised Loss:1.2376 Time(s/epoch):0.0083
+Epoch: 012, Supervised Loss:1.2369 Time(s/epoch):0.0087
+Epoch: 013, Supervised Loss:1.2349 Time(s/epoch):0.0069
+Epoch: 014, Supervised Loss:1.2347 Time(s/epoch):0.0072
+Epoch: 015, Supervised Loss:1.2395 Time(s/epoch):0.0075
+Epoch: 016, Supervised Loss:1.2480 Time(s/epoch):0.0069
+Epoch: 017, Supervised Loss:1.2562 Time(s/epoch):0.0062
+Epoch: 018, Supervised Loss:1.2616 Time(s/epoch):0.0057
+Epoch: 019, Supervised Loss:1.2642 Time(s/epoch):0.0071
+Epoch: 020, Supervised Loss:1.2650 Time(s/epoch):0.0059
+Epoch: 021, Supervised Loss:1.2651 Time(s/epoch):0.0073
+Epoch: 022, Supervised Loss:1.2653 Time(s/epoch):0.0079
+Epoch: 023, Supervised Loss:1.2661 Time(s/epoch):0.0072
+Epoch: 024, Supervised Loss:1.2675 Time(s/epoch):0.0075
+Epoch: 025, Supervised Loss:1.2695 Time(s/epoch):0.0071
+Epoch: 026, Supervised Loss:1.2714 Time(s/epoch):0.0078
+Epoch: 027, Supervised Loss:1.2723 Time(s/epoch):0.0068
+Epoch: 028, Supervised Loss:1.2711 Time(s/epoch):0.0068
+Epoch: 029, Supervised Loss:1.2673 Time(s/epoch):0.0069
+Epoch: 030, Supervised Loss:1.2615 Time(s/epoch):0.0063
+0.8911468 515
+Add 405 edges.
+Prune 367 edges from torch.Size([2, 515]) to torch.Size([2, 148])
+save graph to: ../ckpt/data_Wisconsin_new_0.3.dat
+Homophily ratio change from 0.196 to 0.739
+Data(x=[251, 1703], edge_index=[2, 547], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+GraphSAGE(
+  (convs): ModuleList(
+    (0): SAGEConv(1703, 64, aggr=mean)
+    (1): SAGEConv(64, 5, aggr=mean)
+  )
+)
+Epoch running time:3.9977 s
+[Old Data] Data(x=[251, 1703], edge_index=[2, 515], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+load graph from: ../ckpt/data_Wisconsin_new_0.3.dat
+Homophily ratio change from 0.196 to 0.739
+Data(x=[251, 1703], edge_index=[2, 547], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+GraphSAGE(
+  (convs): ModuleList(
+    (0): SAGEConv(1703, 64, aggr=mean)
+    (1): SAGEConv(64, 5, aggr=mean)
+  )
+)
+Epoch running time:1.7080 s
+[Old Data] Data(x=[251, 1703], edge_index=[2, 515], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+load graph from: ../ckpt/data_Wisconsin_new_0.3.dat
+Homophily ratio change from 0.196 to 0.739
+Data(x=[251, 1703], edge_index=[2, 547], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+GraphSAGE(
+  (convs): ModuleList(
+    (0): SAGEConv(1703, 64, aggr=mean)
+    (1): SAGEConv(64, 5, aggr=mean)
+  )
+)
+Epoch running time:1.8155 s
+[Old Data] Data(x=[251, 1703], edge_index=[2, 515], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+preparing label similarity matrix.
+candidate set size: tensor(18)
+preparing feature similarity matrix.
+cpu cpu cpu
+Epoch: 001, Reconstruction Loss:0.1114 Time(s/epoch):0.0182
+Epoch: 002, Reconstruction Loss:0.1162 Time(s/epoch):0.0112
+Epoch: 003, Reconstruction Loss:0.0974 Time(s/epoch):0.0143
+Epoch: 004, Reconstruction Loss:0.1007 Time(s/epoch):0.0112
+Epoch: 005, Reconstruction Loss:0.0944 Time(s/epoch):0.0153
+Epoch: 006, Reconstruction Loss:0.1040 Time(s/epoch):0.0141
+Epoch: 007, Reconstruction Loss:0.1223 Time(s/epoch):0.0133
+Epoch: 008, Reconstruction Loss:0.1201 Time(s/epoch):0.0125
+Epoch: 009, Reconstruction Loss:0.0991 Time(s/epoch):0.0137
+Epoch: 010, Reconstruction Loss:0.0760 Time(s/epoch):0.0149
+Epoch: 011, Reconstruction Loss:0.0756 Time(s/epoch):0.0165
+Epoch: 012, Reconstruction Loss:0.0876 Time(s/epoch):0.0130
+Epoch: 013, Reconstruction Loss:0.0961 Time(s/epoch):0.0151
+Epoch: 014, Reconstruction Loss:0.1101 Time(s/epoch):0.0163
+Epoch: 015, Reconstruction Loss:0.1290 Time(s/epoch):0.0117
+Epoch: 016, Reconstruction Loss:0.1436 Time(s/epoch):0.0123
+Epoch: 017, Reconstruction Loss:0.1476 Time(s/epoch):0.0120
+Epoch: 018, Reconstruction Loss:0.1399 Time(s/epoch):0.0086
+Epoch: 019, Reconstruction Loss:0.1232 Time(s/epoch):0.0111
+Epoch: 020, Reconstruction Loss:0.1069 Time(s/epoch):0.0113
+Epoch: 021, Reconstruction Loss:0.1068 Time(s/epoch):0.0086
+Epoch: 022, Reconstruction Loss:0.1227 Time(s/epoch):0.0087
+Epoch: 023, Reconstruction Loss:0.1351 Time(s/epoch):0.0079
+Epoch: 024, Reconstruction Loss:0.1337 Time(s/epoch):0.0105
+Epoch: 025, Reconstruction Loss:0.1232 Time(s/epoch):0.0099
+Epoch: 026, Reconstruction Loss:0.1176 Time(s/epoch):0.0107
+Epoch: 027, Reconstruction Loss:0.1266 Time(s/epoch):0.0109
+Epoch: 028, Reconstruction Loss:0.1437 Time(s/epoch):0.0076
+Epoch: 029, Reconstruction Loss:0.1599 Time(s/epoch):0.0098
+Epoch: 030, Reconstruction Loss:0.1705 Time(s/epoch):0.0092
+Epoch: 031, Reconstruction Loss:0.1734 Time(s/epoch):0.0113
+Epoch: 032, Reconstruction Loss:0.1687 Time(s/epoch):0.0092
+Epoch: 033, Reconstruction Loss:0.1571 Time(s/epoch):0.0122
+Epoch: 034, Reconstruction Loss:0.1407 Time(s/epoch):0.0113
+Epoch: 035, Reconstruction Loss:0.1230 Time(s/epoch):0.0091
+Epoch: 036, Reconstruction Loss:0.1102 Time(s/epoch):0.0110
+Epoch: 037, Reconstruction Loss:0.1091 Time(s/epoch):0.0106
+Epoch: 038, Reconstruction Loss:0.1185 Time(s/epoch):0.0092
+Epoch: 039, Reconstruction Loss:0.1286 Time(s/epoch):0.0092
+Epoch: 040, Reconstruction Loss:0.1318 Time(s/epoch):0.0092
+Epoch: 041, Reconstruction Loss:0.1261 Time(s/epoch):0.0108
+Epoch: 042, Reconstruction Loss:0.1149 Time(s/epoch):0.0113
+Epoch: 043, Reconstruction Loss:0.1061 Time(s/epoch):0.0109
+Epoch: 044, Reconstruction Loss:0.1086 Time(s/epoch):0.0106
+Epoch: 045, Reconstruction Loss:0.1224 Time(s/epoch):0.0110
+Epoch: 046, Reconstruction Loss:0.1393 Time(s/epoch):0.0111
+Epoch: 047, Reconstruction Loss:0.1522 Time(s/epoch):0.0115
+Epoch: 048, Reconstruction Loss:0.1579 Time(s/epoch):0.0112
+Epoch: 049, Reconstruction Loss:0.1554 Time(s/epoch):0.0110
+Epoch: 050, Reconstruction Loss:0.1451 Time(s/epoch):0.0109
+Epoch: 051, Reconstruction Loss:0.1285 Time(s/epoch):0.0129
+Epoch: 052, Reconstruction Loss:0.1090 Time(s/epoch):0.0111
+Epoch: 053, Reconstruction Loss:0.0934 Time(s/epoch):0.0102
+Epoch: 054, Reconstruction Loss:0.0921 Time(s/epoch):0.0111
+Epoch: 055, Reconstruction Loss:0.1063 Time(s/epoch):0.0085
+Epoch: 056, Reconstruction Loss:0.1243 Time(s/epoch):0.0104
+Epoch: 057, Reconstruction Loss:0.1371 Time(s/epoch):0.0092
+Epoch: 058, Reconstruction Loss:0.1418 Time(s/epoch):0.0094
+Epoch: 059, Reconstruction Loss:0.1389 Time(s/epoch):0.0096
+Epoch: 060, Reconstruction Loss:0.1295 Time(s/epoch):0.0102
+Epoch: 061, Reconstruction Loss:0.1159 Time(s/epoch):0.0102
+Epoch: 062, Reconstruction Loss:0.1021 Time(s/epoch):0.0101
+Epoch: 063, Reconstruction Loss:0.0960 Time(s/epoch):0.0094
+Epoch: 064, Reconstruction Loss:0.1040 Time(s/epoch):0.0091
+Epoch: 065, Reconstruction Loss:0.1214 Time(s/epoch):0.0075
+Epoch: 066, Reconstruction Loss:0.1388 Time(s/epoch):0.0076
+Epoch: 067, Reconstruction Loss:0.1502 Time(s/epoch):0.0081
+Epoch: 068, Reconstruction Loss:0.1535 Time(s/epoch):0.0166
+Epoch: 069, Reconstruction Loss:0.1484 Time(s/epoch):0.0226
+Epoch: 070, Reconstruction Loss:0.1356 Time(s/epoch):0.0179
+Epoch: 071, Reconstruction Loss:0.1175 Time(s/epoch):0.0121
+Epoch: 072, Reconstruction Loss:0.0993 Time(s/epoch):0.0112
+Epoch: 073, Reconstruction Loss:0.0896 Time(s/epoch):0.0130
+Epoch: 074, Reconstruction Loss:0.0940 Time(s/epoch):0.0116
+Epoch: 075, Reconstruction Loss:0.1050 Time(s/epoch):0.0093
+Epoch: 076, Reconstruction Loss:0.1131 Time(s/epoch):0.0107
+Epoch: 077, Reconstruction Loss:0.1153 Time(s/epoch):0.0109
+Epoch: 078, Reconstruction Loss:0.1132 Time(s/epoch):0.0111
+Epoch: 079, Reconstruction Loss:0.1102 Time(s/epoch):0.0102
+Epoch: 080, Reconstruction Loss:0.1096 Time(s/epoch):0.0096
+Epoch: 081, Reconstruction Loss:0.1131 Time(s/epoch):0.0083
+Epoch: 082, Reconstruction Loss:0.1202 Time(s/epoch):0.0101
+Epoch: 083, Reconstruction Loss:0.1290 Time(s/epoch):0.0083
+Epoch: 084, Reconstruction Loss:0.1364 Time(s/epoch):0.0084
+Epoch: 085, Reconstruction Loss:0.1395 Time(s/epoch):0.0098
+Epoch: 086, Reconstruction Loss:0.1362 Time(s/epoch):0.0102
+Epoch: 087, Reconstruction Loss:0.1264 Time(s/epoch):0.0095
+Epoch: 088, Reconstruction Loss:0.1122 Time(s/epoch):0.0103
+Epoch: 089, Reconstruction Loss:0.0986 Time(s/epoch):0.0113
+Epoch: 090, Reconstruction Loss:0.0935 Time(s/epoch):0.0111
+Epoch: 091, Reconstruction Loss:0.1000 Time(s/epoch):0.0082
+Epoch: 092, Reconstruction Loss:0.1108 Time(s/epoch):0.0092
+Epoch: 093, Reconstruction Loss:0.1182 Time(s/epoch):0.0084
+Epoch: 094, Reconstruction Loss:0.1194 Time(s/epoch):0.0095
+Epoch: 095, Reconstruction Loss:0.1154 Time(s/epoch):0.0104
+Epoch: 096, Reconstruction Loss:0.1091 Time(s/epoch):0.0091
+Epoch: 097, Reconstruction Loss:0.1048 Time(s/epoch):0.0096
+Epoch: 098, Reconstruction Loss:0.1067 Time(s/epoch):0.0088
+Epoch: 099, Reconstruction Loss:0.1158 Time(s/epoch):0.0083
+Epoch: 100, Reconstruction Loss:0.1285 Time(s/epoch):0.0083
+Epoch: 101, Reconstruction Loss:0.1401 Time(s/epoch):0.0106
+Epoch: 102, Reconstruction Loss:0.1472 Time(s/epoch):0.0107
+Epoch: 103, Reconstruction Loss:0.1478 Time(s/epoch):0.0104
+Epoch: 104, Reconstruction Loss:0.1411 Time(s/epoch):0.0102
+Epoch: 105, Reconstruction Loss:0.1278 Time(s/epoch):0.0106
+Epoch: 106, Reconstruction Loss:0.1110 Time(s/epoch):0.0099
+Epoch: 107, Reconstruction Loss:0.0978 Time(s/epoch):0.0081
+Epoch: 108, Reconstruction Loss:0.0970 Time(s/epoch):0.0103
+Epoch: 109, Reconstruction Loss:0.1072 Time(s/epoch):0.0088
+Epoch: 110, Reconstruction Loss:0.1181 Time(s/epoch):0.0080
+Epoch: 111, Reconstruction Loss:0.1234 Time(s/epoch):0.0085
+Epoch: 112, Reconstruction Loss:0.1223 Time(s/epoch):0.0093
+Epoch: 113, Reconstruction Loss:0.1178 Time(s/epoch):0.0108
+Epoch: 114, Reconstruction Loss:0.1140 Time(s/epoch):0.0106
+Epoch: 115, Reconstruction Loss:0.1148 Time(s/epoch):0.0109
+Epoch: 116, Reconstruction Loss:0.1218 Time(s/epoch):0.0088
+Epoch: 117, Reconstruction Loss:0.1333 Time(s/epoch):0.0101
+Epoch: 118, Reconstruction Loss:0.1462 Time(s/epoch):0.0102
+Epoch: 119, Reconstruction Loss:0.1572 Time(s/epoch):0.0091
+Epoch: 120, Reconstruction Loss:0.1635 Time(s/epoch):0.0088
+Epoch: 121, Reconstruction Loss:0.1634 Time(s/epoch):0.0091
+Epoch: 122, Reconstruction Loss:0.1562 Time(s/epoch):0.0100
+Epoch: 123, Reconstruction Loss:0.1423 Time(s/epoch):0.0104
+Epoch: 124, Reconstruction Loss:0.1244 Time(s/epoch):0.0105
+Epoch: 125, Reconstruction Loss:0.1089 Time(s/epoch):0.0103
+Epoch: 126, Reconstruction Loss:0.1046 Time(s/epoch):0.0093
+Epoch: 127, Reconstruction Loss:0.1116 Time(s/epoch):0.0099
+Epoch: 128, Reconstruction Loss:0.1201 Time(s/epoch):0.0100
+Epoch: 129, Reconstruction Loss:0.1227 Time(s/epoch):0.0110
+Epoch: 130, Reconstruction Loss:0.1190 Time(s/epoch):0.0088
+Epoch: 131, Reconstruction Loss:0.1133 Time(s/epoch):0.0080
+Epoch: 132, Reconstruction Loss:0.1109 Time(s/epoch):0.0093
+Epoch: 133, Reconstruction Loss:0.1149 Time(s/epoch):0.0081
+Epoch: 134, Reconstruction Loss:0.1244 Time(s/epoch):0.0105
+Epoch: 135, Reconstruction Loss:0.1367 Time(s/epoch):0.0086
+Epoch: 136, Reconstruction Loss:0.1489 Time(s/epoch):0.0106
+Epoch: 137, Reconstruction Loss:0.1578 Time(s/epoch):0.0078
+Epoch: 138, Reconstruction Loss:0.1611 Time(s/epoch):0.0111
+Epoch: 139, Reconstruction Loss:0.1578 Time(s/epoch):0.0113
+Epoch: 140, Reconstruction Loss:0.1476 Time(s/epoch):0.0084
+Epoch: 141, Reconstruction Loss:0.1315 Time(s/epoch):0.0111
+Epoch: 142, Reconstruction Loss:0.1124 Time(s/epoch):0.0105
+Epoch: 143, Reconstruction Loss:0.0969 Time(s/epoch):0.0095
+Epoch: 144, Reconstruction Loss:0.0943 Time(s/epoch):0.0081
+Epoch: 145, Reconstruction Loss:0.1052 Time(s/epoch):0.0107
+Epoch: 146, Reconstruction Loss:0.1195 Time(s/epoch):0.0113
+Epoch: 147, Reconstruction Loss:0.1299 Time(s/epoch):0.0107
+Epoch: 148, Reconstruction Loss:0.1341 Time(s/epoch):0.0096
+Epoch: 149, Reconstruction Loss:0.1326 Time(s/epoch):0.0077
+Epoch: 150, Reconstruction Loss:0.1269 Time(s/epoch):0.0092
+Epoch: 151, Reconstruction Loss:0.1191 Time(s/epoch):0.0093
+Epoch: 152, Reconstruction Loss:0.1122 Time(s/epoch):0.0085
+Epoch: 153, Reconstruction Loss:0.1094 Time(s/epoch):0.0097
+Epoch: 154, Reconstruction Loss:0.1134 Time(s/epoch):0.0106
+Epoch: 155, Reconstruction Loss:0.1237 Time(s/epoch):0.0103
+Epoch: 156, Reconstruction Loss:0.1368 Time(s/epoch):0.0104
+Epoch: 157, Reconstruction Loss:0.1485 Time(s/epoch):0.0101
+Epoch: 158, Reconstruction Loss:0.1554 Time(s/epoch):0.0104
+Epoch: 159, Reconstruction Loss:0.1555 Time(s/epoch):0.0101
+Epoch: 160, Reconstruction Loss:0.1486 Time(s/epoch):0.0103
+Epoch: 161, Reconstruction Loss:0.1355 Time(s/epoch):0.0095
+Epoch: 162, Reconstruction Loss:0.1188 Time(s/epoch):0.0113
+Epoch: 163, Reconstruction Loss:0.1037 Time(s/epoch):0.0094
+Epoch: 164, Reconstruction Loss:0.0972 Time(s/epoch):0.0083
+Epoch: 165, Reconstruction Loss:0.1023 Time(s/epoch):0.0083
+Epoch: 166, Reconstruction Loss:0.1132 Time(s/epoch):0.0080
+Epoch: 167, Reconstruction Loss:0.1230 Time(s/epoch):0.0106
+Epoch: 168, Reconstruction Loss:0.1289 Time(s/epoch):0.0115
+Epoch: 169, Reconstruction Loss:0.1308 Time(s/epoch):0.0097
+Epoch: 170, Reconstruction Loss:0.1297 Time(s/epoch):0.0088
+Epoch: 171, Reconstruction Loss:0.1267 Time(s/epoch):0.0094
+Epoch: 172, Reconstruction Loss:0.1227 Time(s/epoch):0.0105
+Epoch: 173, Reconstruction Loss:0.1188 Time(s/epoch):0.0100
+Epoch: 174, Reconstruction Loss:0.1161 Time(s/epoch):0.0111
+Epoch: 175, Reconstruction Loss:0.1159 Time(s/epoch):0.0107
+Epoch: 176, Reconstruction Loss:0.1181 Time(s/epoch):0.0120
+Epoch: 177, Reconstruction Loss:0.1214 Time(s/epoch):0.0105
+Epoch: 178, Reconstruction Loss:0.1234 Time(s/epoch):0.0100
+Epoch: 179, Reconstruction Loss:0.1221 Time(s/epoch):0.0103
+Epoch: 180, Reconstruction Loss:0.1169 Time(s/epoch):0.0121
+Epoch: 181, Reconstruction Loss:0.1085 Time(s/epoch):0.0107
+Epoch: 182, Reconstruction Loss:0.0994 Time(s/epoch):0.0108
+Epoch: 183, Reconstruction Loss:0.0936 Time(s/epoch):0.0104
+Epoch: 184, Reconstruction Loss:0.0942 Time(s/epoch):0.0093
+Epoch: 185, Reconstruction Loss:0.1002 Time(s/epoch):0.0086
+Epoch: 186, Reconstruction Loss:0.1076 Time(s/epoch):0.0103
+Epoch: 187, Reconstruction Loss:0.1130 Time(s/epoch):0.0113
+Epoch: 188, Reconstruction Loss:0.1150 Time(s/epoch):0.0104
+Epoch: 189, Reconstruction Loss:0.1137 Time(s/epoch):0.0085
+Epoch: 190, Reconstruction Loss:0.1096 Time(s/epoch):0.0116
+Epoch: 191, Reconstruction Loss:0.1036 Time(s/epoch):0.0118
+Epoch: 192, Reconstruction Loss:0.0967 Time(s/epoch):0.0110
+Epoch: 193, Reconstruction Loss:0.0910 Time(s/epoch):0.0105
+Epoch: 194, Reconstruction Loss:0.0887 Time(s/epoch):0.0108
+Epoch: 195, Reconstruction Loss:0.0913 Time(s/epoch):0.0105
+Epoch: 196, Reconstruction Loss:0.0976 Time(s/epoch):0.0105
+Epoch: 197, Reconstruction Loss:0.1045 Time(s/epoch):0.0104
+Epoch: 198, Reconstruction Loss:0.1090 Time(s/epoch):0.0109
+Epoch: 199, Reconstruction Loss:0.1091 Time(s/epoch):0.0085
+Epoch: 200, Reconstruction Loss:0.1040 Time(s/epoch):0.0109
+[Train] best epoch:11 | min reconstruction loss:0.0756
+Begin finetuning...
+Epoch: 001, Supervised Loss:1.6090 Time(s/epoch):0.0074
+Epoch: 002, Supervised Loss:1.5131 Time(s/epoch):0.0082
+Epoch: 003, Supervised Loss:1.4074 Time(s/epoch):0.0080
+Epoch: 004, Supervised Loss:1.3568 Time(s/epoch):0.0064
+Epoch: 005, Supervised Loss:1.3883 Time(s/epoch):0.0062
+Epoch: 006, Supervised Loss:1.4524 Time(s/epoch):0.0062
+Epoch: 007, Supervised Loss:1.4790 Time(s/epoch):0.0061
+Epoch: 008, Supervised Loss:1.4697 Time(s/epoch):0.0057
+Epoch: 009, Supervised Loss:1.4632 Time(s/epoch):0.0060
+Epoch: 010, Supervised Loss:1.4711 Time(s/epoch):0.0078
+Epoch: 011, Supervised Loss:1.4785 Time(s/epoch):0.0074
+Epoch: 012, Supervised Loss:1.4765 Time(s/epoch):0.0066
+Epoch: 013, Supervised Loss:1.4683 Time(s/epoch):0.0077
+Epoch: 014, Supervised Loss:1.4616 Time(s/epoch):0.0079
+Epoch: 015, Supervised Loss:1.4609 Time(s/epoch):0.0060
+Epoch: 016, Supervised Loss:1.4640 Time(s/epoch):0.0088
+Epoch: 017, Supervised Loss:1.4650 Time(s/epoch):0.0076
+Epoch: 018, Supervised Loss:1.4611 Time(s/epoch):0.0072
+Epoch: 019, Supervised Loss:1.4542 Time(s/epoch):0.0063
+Epoch: 020, Supervised Loss:1.4473 Time(s/epoch):0.0066
+Epoch: 021, Supervised Loss:1.4417 Time(s/epoch):0.0058
+Epoch: 022, Supervised Loss:1.4374 Time(s/epoch):0.0052
+Epoch: 023, Supervised Loss:1.4344 Time(s/epoch):0.0062
+Epoch: 024, Supervised Loss:1.4331 Time(s/epoch):0.0054
+Epoch: 025, Supervised Loss:1.4334 Time(s/epoch):0.0060
+Epoch: 026, Supervised Loss:1.4343 Time(s/epoch):0.0073
+Epoch: 027, Supervised Loss:1.4346 Time(s/epoch):0.0073
+Epoch: 028, Supervised Loss:1.4338 Time(s/epoch):0.0065
+Epoch: 029, Supervised Loss:1.4325 Time(s/epoch):0.0056
+Epoch: 030, Supervised Loss:1.4312 Time(s/epoch):0.0048
+0.9250624 515
+Add 374 edges.
+Prune 371 edges from torch.Size([2, 515]) to torch.Size([2, 144])
+save graph to: ../ckpt/data_Wisconsin_new_0.3.dat
+Homophily ratio change from 0.196 to 0.706
+Data(x=[251, 1703], edge_index=[2, 513], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+GraphSAGE(
+  (convs): ModuleList(
+    (0): SAGEConv(1703, 64, aggr=mean)
+    (1): SAGEConv(64, 5, aggr=mean)
+  )
+)
+Epoch running time:3.9741 s
+[Old Data] Data(x=[251, 1703], edge_index=[2, 515], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+load graph from: ../ckpt/data_Wisconsin_new_0.3.dat
+Homophily ratio change from 0.196 to 0.706
+Data(x=[251, 1703], edge_index=[2, 513], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+GraphSAGE(
+  (convs): ModuleList(
+    (0): SAGEConv(1703, 64, aggr=mean)
+    (1): SAGEConv(64, 5, aggr=mean)
+  )
+)
+Epoch running time:2.1233 s
+[Old Data] Data(x=[251, 1703], edge_index=[2, 515], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+load graph from: ../ckpt/data_Wisconsin_new_0.3.dat
+Homophily ratio change from 0.196 to 0.706
+Data(x=[251, 1703], edge_index=[2, 513], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+GraphSAGE(
+  (convs): ModuleList(
+    (0): SAGEConv(1703, 64, aggr=mean)
+    (1): SAGEConv(64, 5, aggr=mean)
+  )
+)
+Epoch running time:1.8196 s
+[Old Data] Data(x=[251, 1703], edge_index=[2, 515], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+preparing label similarity matrix.
+candidate set size: tensor(18)
+preparing feature similarity matrix.
+cpu cpu cpu
+Epoch: 001, Reconstruction Loss:0.1114 Time(s/epoch):0.0189
+Epoch: 002, Reconstruction Loss:0.1162 Time(s/epoch):0.0080
+Epoch: 003, Reconstruction Loss:0.0974 Time(s/epoch):0.0109
+Epoch: 004, Reconstruction Loss:0.1007 Time(s/epoch):0.0074
+Epoch: 005, Reconstruction Loss:0.0944 Time(s/epoch):0.0115
+Epoch: 006, Reconstruction Loss:0.1040 Time(s/epoch):0.0078
+Epoch: 007, Reconstruction Loss:0.1223 Time(s/epoch):0.0084
+Epoch: 008, Reconstruction Loss:0.1201 Time(s/epoch):0.0083
+Epoch: 009, Reconstruction Loss:0.0991 Time(s/epoch):0.0080
+Epoch: 010, Reconstruction Loss:0.0760 Time(s/epoch):0.0109
+Epoch: 011, Reconstruction Loss:0.0756 Time(s/epoch):0.0122
+Epoch: 012, Reconstruction Loss:0.0876 Time(s/epoch):0.0105
+Epoch: 013, Reconstruction Loss:0.0961 Time(s/epoch):0.0082
+Epoch: 014, Reconstruction Loss:0.1101 Time(s/epoch):0.0074
+Epoch: 015, Reconstruction Loss:0.1290 Time(s/epoch):0.0075
+Epoch: 016, Reconstruction Loss:0.1436 Time(s/epoch):0.0076
+Epoch: 017, Reconstruction Loss:0.1476 Time(s/epoch):0.0078
+Epoch: 018, Reconstruction Loss:0.1399 Time(s/epoch):0.0082
+Epoch: 019, Reconstruction Loss:0.1232 Time(s/epoch):0.0091
+Epoch: 020, Reconstruction Loss:0.1069 Time(s/epoch):0.0107
+Epoch: 021, Reconstruction Loss:0.1068 Time(s/epoch):0.0092
+Epoch: 022, Reconstruction Loss:0.1227 Time(s/epoch):0.0091
+Epoch: 023, Reconstruction Loss:0.1351 Time(s/epoch):0.0106
+Epoch: 024, Reconstruction Loss:0.1337 Time(s/epoch):0.0100
+Epoch: 025, Reconstruction Loss:0.1232 Time(s/epoch):0.0078
+Epoch: 026, Reconstruction Loss:0.1176 Time(s/epoch):0.0097
+Epoch: 027, Reconstruction Loss:0.1266 Time(s/epoch):0.0099
+Epoch: 028, Reconstruction Loss:0.1437 Time(s/epoch):0.0099
+Epoch: 029, Reconstruction Loss:0.1599 Time(s/epoch):0.0100
+Epoch: 030, Reconstruction Loss:0.1705 Time(s/epoch):0.0098
+Epoch: 031, Reconstruction Loss:0.1734 Time(s/epoch):0.0097
+Epoch: 032, Reconstruction Loss:0.1687 Time(s/epoch):0.0095
+Epoch: 033, Reconstruction Loss:0.1571 Time(s/epoch):0.0094
+Epoch: 034, Reconstruction Loss:0.1407 Time(s/epoch):0.0095
+Epoch: 035, Reconstruction Loss:0.1230 Time(s/epoch):0.0082
+Epoch: 036, Reconstruction Loss:0.1102 Time(s/epoch):0.0083
+Epoch: 037, Reconstruction Loss:0.1091 Time(s/epoch):0.0105
+Epoch: 038, Reconstruction Loss:0.1185 Time(s/epoch):0.0102
+Epoch: 039, Reconstruction Loss:0.1286 Time(s/epoch):0.0076
+Epoch: 040, Reconstruction Loss:0.1318 Time(s/epoch):0.0085
+Epoch: 041, Reconstruction Loss:0.1261 Time(s/epoch):0.0077
+Epoch: 042, Reconstruction Loss:0.1149 Time(s/epoch):0.0095
+Epoch: 043, Reconstruction Loss:0.1061 Time(s/epoch):0.0092
+Epoch: 044, Reconstruction Loss:0.1086 Time(s/epoch):0.0110
+Epoch: 045, Reconstruction Loss:0.1224 Time(s/epoch):0.0101
+Epoch: 046, Reconstruction Loss:0.1393 Time(s/epoch):0.0098
+Epoch: 047, Reconstruction Loss:0.1522 Time(s/epoch):0.0099
+Epoch: 048, Reconstruction Loss:0.1579 Time(s/epoch):0.0098
+Epoch: 049, Reconstruction Loss:0.1554 Time(s/epoch):0.0110
+Epoch: 050, Reconstruction Loss:0.1451 Time(s/epoch):0.0100
+Epoch: 051, Reconstruction Loss:0.1285 Time(s/epoch):0.0108
+Epoch: 052, Reconstruction Loss:0.1090 Time(s/epoch):0.0084
+Epoch: 053, Reconstruction Loss:0.0934 Time(s/epoch):0.0090
+Epoch: 054, Reconstruction Loss:0.0921 Time(s/epoch):0.0101
+Epoch: 055, Reconstruction Loss:0.1063 Time(s/epoch):0.0104
+Epoch: 056, Reconstruction Loss:0.1243 Time(s/epoch):0.0116
+Epoch: 057, Reconstruction Loss:0.1371 Time(s/epoch):0.0106
+Epoch: 058, Reconstruction Loss:0.1418 Time(s/epoch):0.0105
+Epoch: 059, Reconstruction Loss:0.1389 Time(s/epoch):0.0094
+Epoch: 060, Reconstruction Loss:0.1295 Time(s/epoch):0.0105
+Epoch: 061, Reconstruction Loss:0.1159 Time(s/epoch):0.0107
+Epoch: 062, Reconstruction Loss:0.1021 Time(s/epoch):0.0094
+Epoch: 063, Reconstruction Loss:0.0960 Time(s/epoch):0.0105
+Epoch: 064, Reconstruction Loss:0.1040 Time(s/epoch):0.0086
+Epoch: 065, Reconstruction Loss:0.1214 Time(s/epoch):0.0101
+Epoch: 066, Reconstruction Loss:0.1388 Time(s/epoch):0.0075
+Epoch: 067, Reconstruction Loss:0.1502 Time(s/epoch):0.0093
+Epoch: 068, Reconstruction Loss:0.1535 Time(s/epoch):0.0102
+Epoch: 069, Reconstruction Loss:0.1484 Time(s/epoch):0.0100
+Epoch: 070, Reconstruction Loss:0.1356 Time(s/epoch):0.0101
+Epoch: 071, Reconstruction Loss:0.1175 Time(s/epoch):0.0099
+Epoch: 072, Reconstruction Loss:0.0993 Time(s/epoch):0.0085
+Epoch: 073, Reconstruction Loss:0.0896 Time(s/epoch):0.0080
+Epoch: 074, Reconstruction Loss:0.0940 Time(s/epoch):0.0078
+Epoch: 075, Reconstruction Loss:0.1050 Time(s/epoch):0.0101
+Epoch: 076, Reconstruction Loss:0.1131 Time(s/epoch):0.0103
+Epoch: 077, Reconstruction Loss:0.1153 Time(s/epoch):0.0096
+Epoch: 078, Reconstruction Loss:0.1132 Time(s/epoch):0.0095
+Epoch: 079, Reconstruction Loss:0.1102 Time(s/epoch):0.0078
+Epoch: 080, Reconstruction Loss:0.1096 Time(s/epoch):0.0100
+Epoch: 081, Reconstruction Loss:0.1131 Time(s/epoch):0.0087
+Epoch: 082, Reconstruction Loss:0.1202 Time(s/epoch):0.0100
+Epoch: 083, Reconstruction Loss:0.1290 Time(s/epoch):0.0088
+Epoch: 084, Reconstruction Loss:0.1364 Time(s/epoch):0.0088
+Epoch: 085, Reconstruction Loss:0.1395 Time(s/epoch):0.0085
+Epoch: 086, Reconstruction Loss:0.1362 Time(s/epoch):0.0077
+Epoch: 087, Reconstruction Loss:0.1264 Time(s/epoch):0.0074
+Epoch: 088, Reconstruction Loss:0.1122 Time(s/epoch):0.0079
+Epoch: 089, Reconstruction Loss:0.0986 Time(s/epoch):0.0077
+Epoch: 090, Reconstruction Loss:0.0935 Time(s/epoch):0.0098
+Epoch: 091, Reconstruction Loss:0.1000 Time(s/epoch):0.0101
+Epoch: 092, Reconstruction Loss:0.1108 Time(s/epoch):0.0102
+Epoch: 093, Reconstruction Loss:0.1182 Time(s/epoch):0.0098
+Epoch: 094, Reconstruction Loss:0.1194 Time(s/epoch):0.0092
+Epoch: 095, Reconstruction Loss:0.1154 Time(s/epoch):0.0078
+Epoch: 096, Reconstruction Loss:0.1091 Time(s/epoch):0.0073
+Epoch: 097, Reconstruction Loss:0.1048 Time(s/epoch):0.0096
+Epoch: 098, Reconstruction Loss:0.1067 Time(s/epoch):0.0093
+Epoch: 099, Reconstruction Loss:0.1158 Time(s/epoch):0.0073
+Epoch: 100, Reconstruction Loss:0.1285 Time(s/epoch):0.0082
+Epoch: 101, Reconstruction Loss:0.1401 Time(s/epoch):0.0107
+Epoch: 102, Reconstruction Loss:0.1472 Time(s/epoch):0.0080
+Epoch: 103, Reconstruction Loss:0.1478 Time(s/epoch):0.0075
+Epoch: 104, Reconstruction Loss:0.1411 Time(s/epoch):0.0086
+Epoch: 105, Reconstruction Loss:0.1278 Time(s/epoch):0.0085
+Epoch: 106, Reconstruction Loss:0.1110 Time(s/epoch):0.0082
+Epoch: 107, Reconstruction Loss:0.0978 Time(s/epoch):0.0099
+Epoch: 108, Reconstruction Loss:0.0970 Time(s/epoch):0.0101
+Epoch: 109, Reconstruction Loss:0.1072 Time(s/epoch):0.0091
+Epoch: 110, Reconstruction Loss:0.1181 Time(s/epoch):0.0075
+Epoch: 111, Reconstruction Loss:0.1234 Time(s/epoch):0.0071
+Epoch: 112, Reconstruction Loss:0.1223 Time(s/epoch):0.0077
+Epoch: 113, Reconstruction Loss:0.1178 Time(s/epoch):0.0080
+Epoch: 114, Reconstruction Loss:0.1140 Time(s/epoch):0.0086
+Epoch: 115, Reconstruction Loss:0.1148 Time(s/epoch):0.0080
+Epoch: 116, Reconstruction Loss:0.1218 Time(s/epoch):0.0092
+Epoch: 117, Reconstruction Loss:0.1333 Time(s/epoch):0.0101
+Epoch: 118, Reconstruction Loss:0.1462 Time(s/epoch):0.0103
+Epoch: 119, Reconstruction Loss:0.1572 Time(s/epoch):0.0085
+Epoch: 120, Reconstruction Loss:0.1635 Time(s/epoch):0.0075
+Epoch: 121, Reconstruction Loss:0.1634 Time(s/epoch):0.0081
+Epoch: 122, Reconstruction Loss:0.1562 Time(s/epoch):0.0074
+Epoch: 123, Reconstruction Loss:0.1423 Time(s/epoch):0.0078
+Epoch: 124, Reconstruction Loss:0.1244 Time(s/epoch):0.0074
+Epoch: 125, Reconstruction Loss:0.1089 Time(s/epoch):0.0089
+Epoch: 126, Reconstruction Loss:0.1046 Time(s/epoch):0.0100
+Epoch: 127, Reconstruction Loss:0.1116 Time(s/epoch):0.0098
+Epoch: 128, Reconstruction Loss:0.1201 Time(s/epoch):0.0075
+Epoch: 129, Reconstruction Loss:0.1227 Time(s/epoch):0.0074
+Epoch: 130, Reconstruction Loss:0.1190 Time(s/epoch):0.0077
+Epoch: 131, Reconstruction Loss:0.1133 Time(s/epoch):0.0083
+Epoch: 132, Reconstruction Loss:0.1109 Time(s/epoch):0.0101
+Epoch: 133, Reconstruction Loss:0.1149 Time(s/epoch):0.0087
+Epoch: 134, Reconstruction Loss:0.1244 Time(s/epoch):0.0077
+Epoch: 135, Reconstruction Loss:0.1367 Time(s/epoch):0.0100
+Epoch: 136, Reconstruction Loss:0.1489 Time(s/epoch):0.0098
+Epoch: 137, Reconstruction Loss:0.1578 Time(s/epoch):0.0103
+Epoch: 138, Reconstruction Loss:0.1611 Time(s/epoch):0.0086
+Epoch: 139, Reconstruction Loss:0.1578 Time(s/epoch):0.0073
+Epoch: 140, Reconstruction Loss:0.1476 Time(s/epoch):0.0077
+Epoch: 141, Reconstruction Loss:0.1315 Time(s/epoch):0.0078
+Epoch: 142, Reconstruction Loss:0.1124 Time(s/epoch):0.0078
+Epoch: 143, Reconstruction Loss:0.0969 Time(s/epoch):0.0076
+Epoch: 144, Reconstruction Loss:0.0943 Time(s/epoch):0.0075
+Epoch: 145, Reconstruction Loss:0.1052 Time(s/epoch):0.0077
+Epoch: 146, Reconstruction Loss:0.1195 Time(s/epoch):0.0106
+Epoch: 147, Reconstruction Loss:0.1299 Time(s/epoch):0.0118
+Epoch: 148, Reconstruction Loss:0.1341 Time(s/epoch):0.0136
+Epoch: 149, Reconstruction Loss:0.1326 Time(s/epoch):0.0123
+Epoch: 150, Reconstruction Loss:0.1269 Time(s/epoch):0.0102
+Epoch: 151, Reconstruction Loss:0.1191 Time(s/epoch):0.0093
+Epoch: 152, Reconstruction Loss:0.1122 Time(s/epoch):0.0090
+Epoch: 153, Reconstruction Loss:0.1094 Time(s/epoch):0.0113
+Epoch: 154, Reconstruction Loss:0.1134 Time(s/epoch):0.0106
+Epoch: 155, Reconstruction Loss:0.1237 Time(s/epoch):0.0094
+Epoch: 156, Reconstruction Loss:0.1368 Time(s/epoch):0.0109
+Epoch: 157, Reconstruction Loss:0.1485 Time(s/epoch):0.0097
+Epoch: 158, Reconstruction Loss:0.1554 Time(s/epoch):0.0115
+Epoch: 159, Reconstruction Loss:0.1555 Time(s/epoch):0.0101
+Epoch: 160, Reconstruction Loss:0.1486 Time(s/epoch):0.0103
+Epoch: 161, Reconstruction Loss:0.1355 Time(s/epoch):0.0109
+Epoch: 162, Reconstruction Loss:0.1188 Time(s/epoch):0.0106
+Epoch: 163, Reconstruction Loss:0.1037 Time(s/epoch):0.0107
+Epoch: 164, Reconstruction Loss:0.0972 Time(s/epoch):0.0104
+Epoch: 165, Reconstruction Loss:0.1023 Time(s/epoch):0.0107
+Epoch: 166, Reconstruction Loss:0.1132 Time(s/epoch):0.0110
+Epoch: 167, Reconstruction Loss:0.1230 Time(s/epoch):0.0089
+Epoch: 168, Reconstruction Loss:0.1289 Time(s/epoch):0.0089
+Epoch: 169, Reconstruction Loss:0.1308 Time(s/epoch):0.0089
+Epoch: 170, Reconstruction Loss:0.1297 Time(s/epoch):0.0106
+Epoch: 171, Reconstruction Loss:0.1267 Time(s/epoch):0.0095
+Epoch: 172, Reconstruction Loss:0.1227 Time(s/epoch):0.0104
+Epoch: 173, Reconstruction Loss:0.1188 Time(s/epoch):0.0108
+Epoch: 174, Reconstruction Loss:0.1161 Time(s/epoch):0.0116
+Epoch: 175, Reconstruction Loss:0.1159 Time(s/epoch):0.0105
+Epoch: 176, Reconstruction Loss:0.1181 Time(s/epoch):0.0102
+Epoch: 177, Reconstruction Loss:0.1214 Time(s/epoch):0.0123
+Epoch: 178, Reconstruction Loss:0.1234 Time(s/epoch):0.0118
+Epoch: 179, Reconstruction Loss:0.1221 Time(s/epoch):0.0116
+Epoch: 180, Reconstruction Loss:0.1169 Time(s/epoch):0.0117
+Epoch: 181, Reconstruction Loss:0.1085 Time(s/epoch):0.0127
+Epoch: 182, Reconstruction Loss:0.0994 Time(s/epoch):0.0106
+Epoch: 183, Reconstruction Loss:0.0936 Time(s/epoch):0.0087
+Epoch: 184, Reconstruction Loss:0.0942 Time(s/epoch):0.0098
+Epoch: 185, Reconstruction Loss:0.1002 Time(s/epoch):0.0099
+Epoch: 186, Reconstruction Loss:0.1076 Time(s/epoch):0.0117
+Epoch: 187, Reconstruction Loss:0.1130 Time(s/epoch):0.0117
+Epoch: 188, Reconstruction Loss:0.1150 Time(s/epoch):0.0118
+Epoch: 189, Reconstruction Loss:0.1137 Time(s/epoch):0.0185
+Epoch: 190, Reconstruction Loss:0.1096 Time(s/epoch):0.0130
+Epoch: 191, Reconstruction Loss:0.1036 Time(s/epoch):0.0125
+Epoch: 192, Reconstruction Loss:0.0967 Time(s/epoch):0.0106
+Epoch: 193, Reconstruction Loss:0.0910 Time(s/epoch):0.0116
+Epoch: 194, Reconstruction Loss:0.0887 Time(s/epoch):0.0134
+Epoch: 195, Reconstruction Loss:0.0913 Time(s/epoch):0.0135
+Epoch: 196, Reconstruction Loss:0.0976 Time(s/epoch):0.0099
+Epoch: 197, Reconstruction Loss:0.1045 Time(s/epoch):0.0080
+Epoch: 198, Reconstruction Loss:0.1090 Time(s/epoch):0.0080
+Epoch: 199, Reconstruction Loss:0.1091 Time(s/epoch):0.0078
+Epoch: 200, Reconstruction Loss:0.1040 Time(s/epoch):0.0076
+[Train] best epoch:11 | min reconstruction loss:0.0756
+Begin finetuning...
+Epoch: 001, Supervised Loss:1.9632 Time(s/epoch):0.0049
+Epoch: 002, Supervised Loss:1.8779 Time(s/epoch):0.0054
+Epoch: 003, Supervised Loss:1.7838 Time(s/epoch):0.0074
+Epoch: 004, Supervised Loss:1.7203 Time(s/epoch):0.0074
+Epoch: 005, Supervised Loss:1.7009 Time(s/epoch):0.0068
+Epoch: 006, Supervised Loss:1.7308 Time(s/epoch):0.0058
+Epoch: 007, Supervised Loss:1.7744 Time(s/epoch):0.0054
+Epoch: 008, Supervised Loss:1.7948 Time(s/epoch):0.0052
+Epoch: 009, Supervised Loss:1.7975 Time(s/epoch):0.0068
+Epoch: 010, Supervised Loss:1.8031 Time(s/epoch):0.0069
+Epoch: 011, Supervised Loss:1.8209 Time(s/epoch):0.0068
+Epoch: 012, Supervised Loss:1.8441 Time(s/epoch):0.0067
+Epoch: 013, Supervised Loss:1.8630 Time(s/epoch):0.0069
+Epoch: 014, Supervised Loss:1.8752 Time(s/epoch):0.0052
+Epoch: 015, Supervised Loss:1.8838 Time(s/epoch):0.0055
+Epoch: 016, Supervised Loss:1.8911 Time(s/epoch):0.0065
+Epoch: 017, Supervised Loss:1.8964 Time(s/epoch):0.0069
+Epoch: 018, Supervised Loss:1.8997 Time(s/epoch):0.0067
+Epoch: 019, Supervised Loss:1.9019 Time(s/epoch):0.0067
+Epoch: 020, Supervised Loss:1.9032 Time(s/epoch):0.0070
+Epoch: 021, Supervised Loss:1.9025 Time(s/epoch):0.0063
+Epoch: 022, Supervised Loss:1.8993 Time(s/epoch):0.0049
+Epoch: 023, Supervised Loss:1.8951 Time(s/epoch):0.0061
+Epoch: 024, Supervised Loss:1.8917 Time(s/epoch):0.0054
+Epoch: 025, Supervised Loss:1.8901 Time(s/epoch):0.0051
+Epoch: 026, Supervised Loss:1.8905 Time(s/epoch):0.0055
+Epoch: 027, Supervised Loss:1.8929 Time(s/epoch):0.0066
+Epoch: 028, Supervised Loss:1.8971 Time(s/epoch):0.0066
+Epoch: 029, Supervised Loss:1.9025 Time(s/epoch):0.0062
+Epoch: 030, Supervised Loss:1.9075 Time(s/epoch):0.0055
+0.95983636 515
+Add 331 edges.
+Prune 355 edges from torch.Size([2, 515]) to torch.Size([2, 160])
+save graph to: ../ckpt/data_Wisconsin_new_0.3.dat
+Homophily ratio change from 0.196 to 0.663
+Data(x=[251, 1703], edge_index=[2, 487], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+GraphSAGE(
+  (convs): ModuleList(
+    (0): SAGEConv(1703, 64, aggr=mean)
+    (1): SAGEConv(64, 5, aggr=mean)
+  )
+)
+Epoch running time:3.8823 s
+[Old Data] Data(x=[251, 1703], edge_index=[2, 515], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+load graph from: ../ckpt/data_Wisconsin_new_0.3.dat
+Homophily ratio change from 0.196 to 0.663
+Data(x=[251, 1703], edge_index=[2, 487], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+GraphSAGE(
+  (convs): ModuleList(
+    (0): SAGEConv(1703, 64, aggr=mean)
+    (1): SAGEConv(64, 5, aggr=mean)
+  )
+)
+Epoch running time:1.8248 s
+[Old Data] Data(x=[251, 1703], edge_index=[2, 515], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+load graph from: ../ckpt/data_Wisconsin_new_0.3.dat
+Homophily ratio change from 0.196 to 0.663
+Data(x=[251, 1703], edge_index=[2, 487], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+GraphSAGE(
+  (convs): ModuleList(
+    (0): SAGEConv(1703, 64, aggr=mean)
+    (1): SAGEConv(64, 5, aggr=mean)
+  )
+)
+Epoch running time:1.6952 s
+[Old Data] Data(x=[251, 1703], edge_index=[2, 515], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+preparing label similarity matrix.
+candidate set size: tensor(33)
+preparing feature similarity matrix.
+cpu cpu cpu
+Epoch: 001, Reconstruction Loss:0.1114 Time(s/epoch):0.0157
+Epoch: 002, Reconstruction Loss:0.1162 Time(s/epoch):0.0101
+Epoch: 003, Reconstruction Loss:0.0974 Time(s/epoch):0.0118
+Epoch: 004, Reconstruction Loss:0.1007 Time(s/epoch):0.0100
+Epoch: 005, Reconstruction Loss:0.0944 Time(s/epoch):0.0111
+Epoch: 006, Reconstruction Loss:0.1040 Time(s/epoch):0.0076
+Epoch: 007, Reconstruction Loss:0.1223 Time(s/epoch):0.0095
+Epoch: 008, Reconstruction Loss:0.1201 Time(s/epoch):0.0081
+Epoch: 009, Reconstruction Loss:0.0991 Time(s/epoch):0.0085
+Epoch: 010, Reconstruction Loss:0.0760 Time(s/epoch):0.0110
+Epoch: 011, Reconstruction Loss:0.0756 Time(s/epoch):0.0150
+Epoch: 012, Reconstruction Loss:0.0876 Time(s/epoch):0.0127
+Epoch: 013, Reconstruction Loss:0.0961 Time(s/epoch):0.0106
+Epoch: 014, Reconstruction Loss:0.1101 Time(s/epoch):0.0102
+Epoch: 015, Reconstruction Loss:0.1290 Time(s/epoch):0.0096
+Epoch: 016, Reconstruction Loss:0.1436 Time(s/epoch):0.0093
+Epoch: 017, Reconstruction Loss:0.1476 Time(s/epoch):0.0090
+Epoch: 018, Reconstruction Loss:0.1399 Time(s/epoch):0.0072
+Epoch: 019, Reconstruction Loss:0.1232 Time(s/epoch):0.0075
+Epoch: 020, Reconstruction Loss:0.1069 Time(s/epoch):0.0077
+Epoch: 021, Reconstruction Loss:0.1068 Time(s/epoch):0.0078
+Epoch: 022, Reconstruction Loss:0.1227 Time(s/epoch):0.0073
+Epoch: 023, Reconstruction Loss:0.1351 Time(s/epoch):0.0074
+Epoch: 024, Reconstruction Loss:0.1337 Time(s/epoch):0.0072
+Epoch: 025, Reconstruction Loss:0.1232 Time(s/epoch):0.0083
+Epoch: 026, Reconstruction Loss:0.1176 Time(s/epoch):0.0094
+Epoch: 027, Reconstruction Loss:0.1266 Time(s/epoch):0.0093
+Epoch: 028, Reconstruction Loss:0.1437 Time(s/epoch):0.0093
+Epoch: 029, Reconstruction Loss:0.1599 Time(s/epoch):0.0075
+Epoch: 030, Reconstruction Loss:0.1705 Time(s/epoch):0.0072
+Epoch: 031, Reconstruction Loss:0.1734 Time(s/epoch):0.0093
+Epoch: 032, Reconstruction Loss:0.1687 Time(s/epoch):0.0097
+Epoch: 033, Reconstruction Loss:0.1571 Time(s/epoch):0.0092
+Epoch: 034, Reconstruction Loss:0.1407 Time(s/epoch):0.0095
+Epoch: 035, Reconstruction Loss:0.1230 Time(s/epoch):0.0095
+Epoch: 036, Reconstruction Loss:0.1102 Time(s/epoch):0.0099
+Epoch: 037, Reconstruction Loss:0.1091 Time(s/epoch):0.0094
+Epoch: 038, Reconstruction Loss:0.1185 Time(s/epoch):0.0070
+Epoch: 039, Reconstruction Loss:0.1286 Time(s/epoch):0.0068
+Epoch: 040, Reconstruction Loss:0.1318 Time(s/epoch):0.0071
+Epoch: 041, Reconstruction Loss:0.1261 Time(s/epoch):0.0068
+Epoch: 042, Reconstruction Loss:0.1149 Time(s/epoch):0.0090
+Epoch: 043, Reconstruction Loss:0.1061 Time(s/epoch):0.0073
+Epoch: 044, Reconstruction Loss:0.1086 Time(s/epoch):0.0079
+Epoch: 045, Reconstruction Loss:0.1224 Time(s/epoch):0.0079
+Epoch: 046, Reconstruction Loss:0.1393 Time(s/epoch):0.0101
+Epoch: 047, Reconstruction Loss:0.1522 Time(s/epoch):0.0102
+Epoch: 048, Reconstruction Loss:0.1579 Time(s/epoch):0.0079
+Epoch: 049, Reconstruction Loss:0.1554 Time(s/epoch):0.0074
+Epoch: 050, Reconstruction Loss:0.1451 Time(s/epoch):0.0071
+Epoch: 051, Reconstruction Loss:0.1285 Time(s/epoch):0.0071
+Epoch: 052, Reconstruction Loss:0.1090 Time(s/epoch):0.0072
+Epoch: 053, Reconstruction Loss:0.0934 Time(s/epoch):0.0070
+Epoch: 054, Reconstruction Loss:0.0921 Time(s/epoch):0.0092
+Epoch: 055, Reconstruction Loss:0.1063 Time(s/epoch):0.0093
+Epoch: 056, Reconstruction Loss:0.1243 Time(s/epoch):0.0092
+Epoch: 057, Reconstruction Loss:0.1371 Time(s/epoch):0.0087
+Epoch: 058, Reconstruction Loss:0.1418 Time(s/epoch):0.0095
+Epoch: 059, Reconstruction Loss:0.1389 Time(s/epoch):0.0118
+Epoch: 060, Reconstruction Loss:0.1295 Time(s/epoch):0.0095
+Epoch: 061, Reconstruction Loss:0.1159 Time(s/epoch):0.0106
+Epoch: 062, Reconstruction Loss:0.1021 Time(s/epoch):0.0091
+Epoch: 063, Reconstruction Loss:0.0960 Time(s/epoch):0.0103
+Epoch: 064, Reconstruction Loss:0.1040 Time(s/epoch):0.0097
+Epoch: 065, Reconstruction Loss:0.1214 Time(s/epoch):0.0080
+Epoch: 066, Reconstruction Loss:0.1388 Time(s/epoch):0.0072
+Epoch: 067, Reconstruction Loss:0.1502 Time(s/epoch):0.0072
+Epoch: 068, Reconstruction Loss:0.1535 Time(s/epoch):0.0076
+Epoch: 069, Reconstruction Loss:0.1484 Time(s/epoch):0.0086
+Epoch: 070, Reconstruction Loss:0.1356 Time(s/epoch):0.0108
+Epoch: 071, Reconstruction Loss:0.1175 Time(s/epoch):0.0110
+Epoch: 072, Reconstruction Loss:0.0993 Time(s/epoch):0.0112
+Epoch: 073, Reconstruction Loss:0.0896 Time(s/epoch):0.0121
+Epoch: 074, Reconstruction Loss:0.0940 Time(s/epoch):0.0090
+Epoch: 075, Reconstruction Loss:0.1050 Time(s/epoch):0.0094
+Epoch: 076, Reconstruction Loss:0.1131 Time(s/epoch):0.0077
+Epoch: 077, Reconstruction Loss:0.1153 Time(s/epoch):0.0080
+Epoch: 078, Reconstruction Loss:0.1132 Time(s/epoch):0.0072
+Epoch: 079, Reconstruction Loss:0.1102 Time(s/epoch):0.0084
+Epoch: 080, Reconstruction Loss:0.1096 Time(s/epoch):0.0095
+Epoch: 081, Reconstruction Loss:0.1131 Time(s/epoch):0.0094
+Epoch: 082, Reconstruction Loss:0.1202 Time(s/epoch):0.0095
+Epoch: 083, Reconstruction Loss:0.1290 Time(s/epoch):0.0094
+Epoch: 084, Reconstruction Loss:0.1364 Time(s/epoch):0.0096
+Epoch: 085, Reconstruction Loss:0.1395 Time(s/epoch):0.0094
+Epoch: 086, Reconstruction Loss:0.1362 Time(s/epoch):0.0094
+Epoch: 087, Reconstruction Loss:0.1264 Time(s/epoch):0.0094
+Epoch: 088, Reconstruction Loss:0.1122 Time(s/epoch):0.0072
+Epoch: 089, Reconstruction Loss:0.0986 Time(s/epoch):0.0070
+Epoch: 090, Reconstruction Loss:0.0935 Time(s/epoch):0.0075
+Epoch: 091, Reconstruction Loss:0.1000 Time(s/epoch):0.0072
+Epoch: 092, Reconstruction Loss:0.1108 Time(s/epoch):0.0092
+Epoch: 093, Reconstruction Loss:0.1182 Time(s/epoch):0.0097
+Epoch: 094, Reconstruction Loss:0.1194 Time(s/epoch):0.0074
+Epoch: 095, Reconstruction Loss:0.1154 Time(s/epoch):0.0072
+Epoch: 096, Reconstruction Loss:0.1091 Time(s/epoch):0.0093
+Epoch: 097, Reconstruction Loss:0.1048 Time(s/epoch):0.0096
+Epoch: 098, Reconstruction Loss:0.1067 Time(s/epoch):0.0093
+Epoch: 099, Reconstruction Loss:0.1158 Time(s/epoch):0.0097
+Epoch: 100, Reconstruction Loss:0.1285 Time(s/epoch):0.0096
+Epoch: 101, Reconstruction Loss:0.1401 Time(s/epoch):0.0096
+Epoch: 102, Reconstruction Loss:0.1472 Time(s/epoch):0.0093
+Epoch: 103, Reconstruction Loss:0.1478 Time(s/epoch):0.0072
+Epoch: 104, Reconstruction Loss:0.1411 Time(s/epoch):0.0072
+Epoch: 105, Reconstruction Loss:0.1278 Time(s/epoch):0.0074
+Epoch: 106, Reconstruction Loss:0.1110 Time(s/epoch):0.0085
+Epoch: 107, Reconstruction Loss:0.0978 Time(s/epoch):0.0095
+Epoch: 108, Reconstruction Loss:0.0970 Time(s/epoch):0.0094
+Epoch: 109, Reconstruction Loss:0.1072 Time(s/epoch):0.0093
+Epoch: 110, Reconstruction Loss:0.1181 Time(s/epoch):0.0094
+Epoch: 111, Reconstruction Loss:0.1234 Time(s/epoch):0.0096
+Epoch: 112, Reconstruction Loss:0.1223 Time(s/epoch):0.0093
+Epoch: 113, Reconstruction Loss:0.1178 Time(s/epoch):0.0093
+Epoch: 114, Reconstruction Loss:0.1140 Time(s/epoch):0.0076
+Epoch: 115, Reconstruction Loss:0.1148 Time(s/epoch):0.0075
+Epoch: 116, Reconstruction Loss:0.1218 Time(s/epoch):0.0071
+Epoch: 117, Reconstruction Loss:0.1333 Time(s/epoch):0.0078
+Epoch: 118, Reconstruction Loss:0.1462 Time(s/epoch):0.0072
+Epoch: 119, Reconstruction Loss:0.1572 Time(s/epoch):0.0076
+Epoch: 120, Reconstruction Loss:0.1635 Time(s/epoch):0.0072
+Epoch: 121, Reconstruction Loss:0.1634 Time(s/epoch):0.0088
+Epoch: 122, Reconstruction Loss:0.1562 Time(s/epoch):0.0100
+Epoch: 123, Reconstruction Loss:0.1423 Time(s/epoch):0.0098
+Epoch: 124, Reconstruction Loss:0.1244 Time(s/epoch):0.0098
+Epoch: 125, Reconstruction Loss:0.1089 Time(s/epoch):0.0095
+Epoch: 126, Reconstruction Loss:0.1046 Time(s/epoch):0.0096
+Epoch: 127, Reconstruction Loss:0.1116 Time(s/epoch):0.0096
+Epoch: 128, Reconstruction Loss:0.1201 Time(s/epoch):0.0097
+Epoch: 129, Reconstruction Loss:0.1227 Time(s/epoch):0.0098
+Epoch: 130, Reconstruction Loss:0.1190 Time(s/epoch):0.0096
+Epoch: 131, Reconstruction Loss:0.1133 Time(s/epoch):0.0101
+Epoch: 132, Reconstruction Loss:0.1109 Time(s/epoch):0.0103
+Epoch: 133, Reconstruction Loss:0.1149 Time(s/epoch):0.0098
+Epoch: 134, Reconstruction Loss:0.1244 Time(s/epoch):0.0088
+Epoch: 135, Reconstruction Loss:0.1367 Time(s/epoch):0.0077
+Epoch: 136, Reconstruction Loss:0.1489 Time(s/epoch):0.0085
+Epoch: 137, Reconstruction Loss:0.1578 Time(s/epoch):0.0097
+Epoch: 138, Reconstruction Loss:0.1611 Time(s/epoch):0.0100
+Epoch: 139, Reconstruction Loss:0.1578 Time(s/epoch):0.0098
+Epoch: 140, Reconstruction Loss:0.1476 Time(s/epoch):0.0089
+Epoch: 141, Reconstruction Loss:0.1315 Time(s/epoch):0.0080
+Epoch: 142, Reconstruction Loss:0.1124 Time(s/epoch):0.0078
+Epoch: 143, Reconstruction Loss:0.0969 Time(s/epoch):0.0083
+Epoch: 144, Reconstruction Loss:0.0943 Time(s/epoch):0.0078
+Epoch: 145, Reconstruction Loss:0.1052 Time(s/epoch):0.0074
+Epoch: 146, Reconstruction Loss:0.1195 Time(s/epoch):0.0072
+Epoch: 147, Reconstruction Loss:0.1299 Time(s/epoch):0.0092
+Epoch: 148, Reconstruction Loss:0.1341 Time(s/epoch):0.0097
+Epoch: 149, Reconstruction Loss:0.1326 Time(s/epoch):0.0079
+Epoch: 150, Reconstruction Loss:0.1269 Time(s/epoch):0.0077
+Epoch: 151, Reconstruction Loss:0.1191 Time(s/epoch):0.0070
+Epoch: 152, Reconstruction Loss:0.1122 Time(s/epoch):0.0072
+Epoch: 153, Reconstruction Loss:0.1094 Time(s/epoch):0.0075
+Epoch: 154, Reconstruction Loss:0.1134 Time(s/epoch):0.0075
+Epoch: 155, Reconstruction Loss:0.1237 Time(s/epoch):0.0073
+Epoch: 156, Reconstruction Loss:0.1368 Time(s/epoch):0.0072
+Epoch: 157, Reconstruction Loss:0.1485 Time(s/epoch):0.0077
+Epoch: 158, Reconstruction Loss:0.1554 Time(s/epoch):0.0073
+Epoch: 159, Reconstruction Loss:0.1555 Time(s/epoch):0.0073
+Epoch: 160, Reconstruction Loss:0.1486 Time(s/epoch):0.0078
+Epoch: 161, Reconstruction Loss:0.1355 Time(s/epoch):0.0097
+Epoch: 162, Reconstruction Loss:0.1188 Time(s/epoch):0.0102
+Epoch: 163, Reconstruction Loss:0.1037 Time(s/epoch):0.0094
+Epoch: 164, Reconstruction Loss:0.0972 Time(s/epoch):0.0096
+Epoch: 165, Reconstruction Loss:0.1023 Time(s/epoch):0.0110
+Epoch: 166, Reconstruction Loss:0.1132 Time(s/epoch):0.0101
+Epoch: 167, Reconstruction Loss:0.1230 Time(s/epoch):0.0096
+Epoch: 168, Reconstruction Loss:0.1289 Time(s/epoch):0.0107
+Epoch: 169, Reconstruction Loss:0.1308 Time(s/epoch):0.0105
+Epoch: 170, Reconstruction Loss:0.1297 Time(s/epoch):0.0098
+Epoch: 171, Reconstruction Loss:0.1267 Time(s/epoch):0.0104
+Epoch: 172, Reconstruction Loss:0.1227 Time(s/epoch):0.0118
+Epoch: 173, Reconstruction Loss:0.1188 Time(s/epoch):0.0111
+Epoch: 174, Reconstruction Loss:0.1161 Time(s/epoch):0.0099
+Epoch: 175, Reconstruction Loss:0.1159 Time(s/epoch):0.0094
+Epoch: 176, Reconstruction Loss:0.1181 Time(s/epoch):0.0101
+Epoch: 177, Reconstruction Loss:0.1214 Time(s/epoch):0.0099
+Epoch: 178, Reconstruction Loss:0.1234 Time(s/epoch):0.0103
+Epoch: 179, Reconstruction Loss:0.1221 Time(s/epoch):0.0102
+Epoch: 180, Reconstruction Loss:0.1169 Time(s/epoch):0.0075
+Epoch: 181, Reconstruction Loss:0.1085 Time(s/epoch):0.0077
+Epoch: 182, Reconstruction Loss:0.0994 Time(s/epoch):0.0082
+Epoch: 183, Reconstruction Loss:0.0936 Time(s/epoch):0.0079
+Epoch: 184, Reconstruction Loss:0.0942 Time(s/epoch):0.0077
+Epoch: 185, Reconstruction Loss:0.1002 Time(s/epoch):0.0078
+Epoch: 186, Reconstruction Loss:0.1076 Time(s/epoch):0.0082
+Epoch: 187, Reconstruction Loss:0.1130 Time(s/epoch):0.0088
+Epoch: 188, Reconstruction Loss:0.1150 Time(s/epoch):0.0106
+Epoch: 189, Reconstruction Loss:0.1137 Time(s/epoch):0.0102
+Epoch: 190, Reconstruction Loss:0.1096 Time(s/epoch):0.0101
+Epoch: 191, Reconstruction Loss:0.1036 Time(s/epoch):0.0105
+Epoch: 192, Reconstruction Loss:0.0967 Time(s/epoch):0.0102
+Epoch: 193, Reconstruction Loss:0.0910 Time(s/epoch):0.0101
+Epoch: 194, Reconstruction Loss:0.0887 Time(s/epoch):0.0104
+Epoch: 195, Reconstruction Loss:0.0913 Time(s/epoch):0.0093
+Epoch: 196, Reconstruction Loss:0.0976 Time(s/epoch):0.0083
+Epoch: 197, Reconstruction Loss:0.1045 Time(s/epoch):0.0079
+Epoch: 198, Reconstruction Loss:0.1090 Time(s/epoch):0.0076
+Epoch: 199, Reconstruction Loss:0.1091 Time(s/epoch):0.0085
+Epoch: 200, Reconstruction Loss:0.1040 Time(s/epoch):0.0086
+[Train] best epoch:11 | min reconstruction loss:0.0756
+Begin finetuning...
+Epoch: 001, Supervised Loss:2.2578 Time(s/epoch):0.0059
+Epoch: 002, Supervised Loss:2.1414 Time(s/epoch):0.0057
+Epoch: 003, Supervised Loss:2.0235 Time(s/epoch):0.0058
+Epoch: 004, Supervised Loss:1.9517 Time(s/epoch):0.0069
+Epoch: 005, Supervised Loss:1.9335 Time(s/epoch):0.0065
+Epoch: 006, Supervised Loss:1.9587 Time(s/epoch):0.0067
+Epoch: 007, Supervised Loss:1.9823 Time(s/epoch):0.0065
+Epoch: 008, Supervised Loss:1.9773 Time(s/epoch):0.0076
+Epoch: 009, Supervised Loss:1.9546 Time(s/epoch):0.0072
+Epoch: 010, Supervised Loss:1.9348 Time(s/epoch):0.0065
+Epoch: 011, Supervised Loss:1.9248 Time(s/epoch):0.0050
+Epoch: 012, Supervised Loss:1.9249 Time(s/epoch):0.0057
+Epoch: 013, Supervised Loss:1.9348 Time(s/epoch):0.0054
+Epoch: 014, Supervised Loss:1.9447 Time(s/epoch):0.0054
+Epoch: 015, Supervised Loss:1.9456 Time(s/epoch):0.0051
+Epoch: 016, Supervised Loss:1.9363 Time(s/epoch):0.0070
+Epoch: 017, Supervised Loss:1.9209 Time(s/epoch):0.0069
+Epoch: 018, Supervised Loss:1.9040 Time(s/epoch):0.0065
+Epoch: 019, Supervised Loss:1.8884 Time(s/epoch):0.0055
+Epoch: 020, Supervised Loss:1.8739 Time(s/epoch):0.0066
+Epoch: 021, Supervised Loss:1.8598 Time(s/epoch):0.0071
+Epoch: 022, Supervised Loss:1.8482 Time(s/epoch):0.0078
+Epoch: 023, Supervised Loss:1.8445 Time(s/epoch):0.0076
+Epoch: 024, Supervised Loss:1.8547 Time(s/epoch):0.0071
+Epoch: 025, Supervised Loss:1.8763 Time(s/epoch):0.0071
+Epoch: 026, Supervised Loss:1.8958 Time(s/epoch):0.0069
+Epoch: 027, Supervised Loss:1.9015 Time(s/epoch):0.0067
+Epoch: 028, Supervised Loss:1.8930 Time(s/epoch):0.0064
+Epoch: 029, Supervised Loss:1.8766 Time(s/epoch):0.0066
+Epoch: 030, Supervised Loss:1.8582 Time(s/epoch):0.0067
+0.8299915 515
+Add 417 edges.
+Prune 355 edges from torch.Size([2, 515]) to torch.Size([2, 160])
+save graph to: ../ckpt/data_Wisconsin_new_0.3.dat
+Homophily ratio change from 0.196 to 0.720
+Data(x=[251, 1703], edge_index=[2, 571], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+GraphSAGE(
+  (convs): ModuleList(
+    (0): SAGEConv(1703, 64, aggr=mean)
+    (1): SAGEConv(64, 5, aggr=mean)
+  )
+)
+Epoch running time:3.8456 s
+[Old Data] Data(x=[251, 1703], edge_index=[2, 515], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+load graph from: ../ckpt/data_Wisconsin_new_0.3.dat
+Homophily ratio change from 0.196 to 0.720
+Data(x=[251, 1703], edge_index=[2, 571], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+GraphSAGE(
+  (convs): ModuleList(
+    (0): SAGEConv(1703, 64, aggr=mean)
+    (1): SAGEConv(64, 5, aggr=mean)
+  )
+)
+Epoch running time:1.7422 s
+[Old Data] Data(x=[251, 1703], edge_index=[2, 515], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+load graph from: ../ckpt/data_Wisconsin_new_0.3.dat
+Homophily ratio change from 0.196 to 0.720
+Data(x=[251, 1703], edge_index=[2, 571], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+GraphSAGE(
+  (convs): ModuleList(
+    (0): SAGEConv(1703, 64, aggr=mean)
+    (1): SAGEConv(64, 5, aggr=mean)
+  )
+)
+Epoch running time:1.7533 s
+[Old Data] Data(x=[251, 1703], edge_index=[2, 515], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+preparing label similarity matrix.
+candidate set size: tensor(20)
+preparing feature similarity matrix.
+cpu cpu cpu
+Epoch: 001, Reconstruction Loss:0.1114 Time(s/epoch):0.0135
+Epoch: 002, Reconstruction Loss:0.1162 Time(s/epoch):0.0075
+Epoch: 003, Reconstruction Loss:0.0974 Time(s/epoch):0.0094
+Epoch: 004, Reconstruction Loss:0.1007 Time(s/epoch):0.0077
+Epoch: 005, Reconstruction Loss:0.0944 Time(s/epoch):0.0094
+Epoch: 006, Reconstruction Loss:0.1040 Time(s/epoch):0.0073
+Epoch: 007, Reconstruction Loss:0.1223 Time(s/epoch):0.0083
+Epoch: 008, Reconstruction Loss:0.1201 Time(s/epoch):0.0077
+Epoch: 009, Reconstruction Loss:0.0991 Time(s/epoch):0.0084
+Epoch: 010, Reconstruction Loss:0.0760 Time(s/epoch):0.0118
+Epoch: 011, Reconstruction Loss:0.0756 Time(s/epoch):0.0093
+Epoch: 012, Reconstruction Loss:0.0876 Time(s/epoch):0.0084
+Epoch: 013, Reconstruction Loss:0.0961 Time(s/epoch):0.0085
+Epoch: 014, Reconstruction Loss:0.1101 Time(s/epoch):0.0091
+Epoch: 015, Reconstruction Loss:0.1290 Time(s/epoch):0.0099
+Epoch: 016, Reconstruction Loss:0.1436 Time(s/epoch):0.0082
+Epoch: 017, Reconstruction Loss:0.1476 Time(s/epoch):0.0086
+Epoch: 018, Reconstruction Loss:0.1399 Time(s/epoch):0.0239
+Epoch: 019, Reconstruction Loss:0.1232 Time(s/epoch):0.0122
+Epoch: 020, Reconstruction Loss:0.1069 Time(s/epoch):0.0105
+Epoch: 021, Reconstruction Loss:0.1068 Time(s/epoch):0.0115
+Epoch: 022, Reconstruction Loss:0.1227 Time(s/epoch):0.0122
+Epoch: 023, Reconstruction Loss:0.1351 Time(s/epoch):0.0104
+Epoch: 024, Reconstruction Loss:0.1337 Time(s/epoch):0.0090
+Epoch: 025, Reconstruction Loss:0.1232 Time(s/epoch):0.0078
+Epoch: 026, Reconstruction Loss:0.1176 Time(s/epoch):0.0075
+Epoch: 027, Reconstruction Loss:0.1266 Time(s/epoch):0.0076
+Epoch: 028, Reconstruction Loss:0.1437 Time(s/epoch):0.0074
+Epoch: 029, Reconstruction Loss:0.1599 Time(s/epoch):0.0089
+Epoch: 030, Reconstruction Loss:0.1705 Time(s/epoch):0.0097
+Epoch: 031, Reconstruction Loss:0.1734 Time(s/epoch):0.0076
+Epoch: 032, Reconstruction Loss:0.1687 Time(s/epoch):0.0073
+Epoch: 033, Reconstruction Loss:0.1571 Time(s/epoch):0.0074
+Epoch: 034, Reconstruction Loss:0.1407 Time(s/epoch):0.0074
+Epoch: 035, Reconstruction Loss:0.1230 Time(s/epoch):0.0092
+Epoch: 036, Reconstruction Loss:0.1102 Time(s/epoch):0.0101
+Epoch: 037, Reconstruction Loss:0.1091 Time(s/epoch):0.0092
+Epoch: 038, Reconstruction Loss:0.1185 Time(s/epoch):0.0087
+Epoch: 039, Reconstruction Loss:0.1286 Time(s/epoch):0.0085
+Epoch: 040, Reconstruction Loss:0.1318 Time(s/epoch):0.0099
+Epoch: 041, Reconstruction Loss:0.1261 Time(s/epoch):0.0103
+Epoch: 042, Reconstruction Loss:0.1149 Time(s/epoch):0.0090
+Epoch: 043, Reconstruction Loss:0.1061 Time(s/epoch):0.0107
+Epoch: 044, Reconstruction Loss:0.1086 Time(s/epoch):0.0111
+Epoch: 045, Reconstruction Loss:0.1224 Time(s/epoch):0.0106
+Epoch: 046, Reconstruction Loss:0.1393 Time(s/epoch):0.0097
+Epoch: 047, Reconstruction Loss:0.1522 Time(s/epoch):0.0083
+Epoch: 048, Reconstruction Loss:0.1579 Time(s/epoch):0.0095
+Epoch: 049, Reconstruction Loss:0.1554 Time(s/epoch):0.0102
+Epoch: 050, Reconstruction Loss:0.1451 Time(s/epoch):0.0097
+Epoch: 051, Reconstruction Loss:0.1285 Time(s/epoch):0.0096
+Epoch: 052, Reconstruction Loss:0.1090 Time(s/epoch):0.0080
+Epoch: 053, Reconstruction Loss:0.0934 Time(s/epoch):0.0091
+Epoch: 054, Reconstruction Loss:0.0921 Time(s/epoch):0.0099
+Epoch: 055, Reconstruction Loss:0.1063 Time(s/epoch):0.0103
+Epoch: 056, Reconstruction Loss:0.1243 Time(s/epoch):0.0102
+Epoch: 057, Reconstruction Loss:0.1371 Time(s/epoch):0.0102
+Epoch: 058, Reconstruction Loss:0.1418 Time(s/epoch):0.0103
+Epoch: 059, Reconstruction Loss:0.1389 Time(s/epoch):0.0088
+Epoch: 060, Reconstruction Loss:0.1295 Time(s/epoch):0.0085
+Epoch: 061, Reconstruction Loss:0.1159 Time(s/epoch):0.0093
+Epoch: 062, Reconstruction Loss:0.1021 Time(s/epoch):0.0105
+Epoch: 063, Reconstruction Loss:0.0960 Time(s/epoch):0.0100
+Epoch: 064, Reconstruction Loss:0.1040 Time(s/epoch):0.0103
+Epoch: 065, Reconstruction Loss:0.1214 Time(s/epoch):0.0100
+Epoch: 066, Reconstruction Loss:0.1388 Time(s/epoch):0.0100
+Epoch: 067, Reconstruction Loss:0.1502 Time(s/epoch):0.0101
+Epoch: 068, Reconstruction Loss:0.1535 Time(s/epoch):0.0098
+Epoch: 069, Reconstruction Loss:0.1484 Time(s/epoch):0.0088
+Epoch: 070, Reconstruction Loss:0.1356 Time(s/epoch):0.0076
+Epoch: 071, Reconstruction Loss:0.1175 Time(s/epoch):0.0079
+Epoch: 072, Reconstruction Loss:0.0993 Time(s/epoch):0.0082
+Epoch: 073, Reconstruction Loss:0.0896 Time(s/epoch):0.0107
+Epoch: 074, Reconstruction Loss:0.0940 Time(s/epoch):0.0124
+Epoch: 075, Reconstruction Loss:0.1050 Time(s/epoch):0.0111
+Epoch: 076, Reconstruction Loss:0.1131 Time(s/epoch):0.0086
+Epoch: 077, Reconstruction Loss:0.1153 Time(s/epoch):0.0111
+Epoch: 078, Reconstruction Loss:0.1132 Time(s/epoch):0.0090
+Epoch: 079, Reconstruction Loss:0.1102 Time(s/epoch):0.0093
+Epoch: 080, Reconstruction Loss:0.1096 Time(s/epoch):0.0087
+Epoch: 081, Reconstruction Loss:0.1131 Time(s/epoch):0.0093
+Epoch: 082, Reconstruction Loss:0.1202 Time(s/epoch):0.0092
+Epoch: 083, Reconstruction Loss:0.1290 Time(s/epoch):0.0102
+Epoch: 084, Reconstruction Loss:0.1364 Time(s/epoch):0.0088
+Epoch: 085, Reconstruction Loss:0.1395 Time(s/epoch):0.0078
+Epoch: 086, Reconstruction Loss:0.1362 Time(s/epoch):0.0092
+Epoch: 087, Reconstruction Loss:0.1264 Time(s/epoch):0.0109
+Epoch: 088, Reconstruction Loss:0.1122 Time(s/epoch):0.0105
+Epoch: 089, Reconstruction Loss:0.0986 Time(s/epoch):0.0117
+Epoch: 090, Reconstruction Loss:0.0935 Time(s/epoch):0.0089
+Epoch: 091, Reconstruction Loss:0.1000 Time(s/epoch):0.0087
+Epoch: 092, Reconstruction Loss:0.1108 Time(s/epoch):0.0082
+Epoch: 093, Reconstruction Loss:0.1182 Time(s/epoch):0.0077
+Epoch: 094, Reconstruction Loss:0.1194 Time(s/epoch):0.0074
+Epoch: 095, Reconstruction Loss:0.1154 Time(s/epoch):0.0097
+Epoch: 096, Reconstruction Loss:0.1091 Time(s/epoch):0.0097
+Epoch: 097, Reconstruction Loss:0.1048 Time(s/epoch):0.0094
+Epoch: 098, Reconstruction Loss:0.1067 Time(s/epoch):0.0096
+Epoch: 099, Reconstruction Loss:0.1158 Time(s/epoch):0.0095
+Epoch: 100, Reconstruction Loss:0.1285 Time(s/epoch):0.0076
+Epoch: 101, Reconstruction Loss:0.1401 Time(s/epoch):0.0075
+Epoch: 102, Reconstruction Loss:0.1472 Time(s/epoch):0.0072
+Epoch: 103, Reconstruction Loss:0.1478 Time(s/epoch):0.0075
+Epoch: 104, Reconstruction Loss:0.1411 Time(s/epoch):0.0095
+Epoch: 105, Reconstruction Loss:0.1278 Time(s/epoch):0.0094
+Epoch: 106, Reconstruction Loss:0.1110 Time(s/epoch):0.0093
+Epoch: 107, Reconstruction Loss:0.0978 Time(s/epoch):0.0092
+Epoch: 108, Reconstruction Loss:0.0970 Time(s/epoch):0.0092
+Epoch: 109, Reconstruction Loss:0.1072 Time(s/epoch):0.0092
+Epoch: 110, Reconstruction Loss:0.1181 Time(s/epoch):0.0093
+Epoch: 111, Reconstruction Loss:0.1234 Time(s/epoch):0.0095
+Epoch: 112, Reconstruction Loss:0.1223 Time(s/epoch):0.0103
+Epoch: 113, Reconstruction Loss:0.1178 Time(s/epoch):0.0099
+Epoch: 114, Reconstruction Loss:0.1140 Time(s/epoch):0.0098
+Epoch: 115, Reconstruction Loss:0.1148 Time(s/epoch):0.0095
+Epoch: 116, Reconstruction Loss:0.1218 Time(s/epoch):0.0078
+Epoch: 117, Reconstruction Loss:0.1333 Time(s/epoch):0.0087
+Epoch: 118, Reconstruction Loss:0.1462 Time(s/epoch):0.0095
+Epoch: 119, Reconstruction Loss:0.1572 Time(s/epoch):0.0094
+Epoch: 120, Reconstruction Loss:0.1635 Time(s/epoch):0.0097
+Epoch: 121, Reconstruction Loss:0.1634 Time(s/epoch):0.0111
+Epoch: 122, Reconstruction Loss:0.1562 Time(s/epoch):0.0091
+Epoch: 123, Reconstruction Loss:0.1423 Time(s/epoch):0.0077
+Epoch: 124, Reconstruction Loss:0.1244 Time(s/epoch):0.0097
+Epoch: 125, Reconstruction Loss:0.1089 Time(s/epoch):0.0100
+Epoch: 126, Reconstruction Loss:0.1046 Time(s/epoch):0.0077
+Epoch: 127, Reconstruction Loss:0.1116 Time(s/epoch):0.0077
+Epoch: 128, Reconstruction Loss:0.1201 Time(s/epoch):0.0097
+Epoch: 129, Reconstruction Loss:0.1227 Time(s/epoch):0.0101
+Epoch: 130, Reconstruction Loss:0.1190 Time(s/epoch):0.0082
+Epoch: 131, Reconstruction Loss:0.1133 Time(s/epoch):0.0079
+Epoch: 132, Reconstruction Loss:0.1109 Time(s/epoch):0.0073
+Epoch: 133, Reconstruction Loss:0.1149 Time(s/epoch):0.0102
+Epoch: 134, Reconstruction Loss:0.1244 Time(s/epoch):0.0099
+Epoch: 135, Reconstruction Loss:0.1367 Time(s/epoch):0.0080
+Epoch: 136, Reconstruction Loss:0.1489 Time(s/epoch):0.0094
+Epoch: 137, Reconstruction Loss:0.1578 Time(s/epoch):0.0101
+Epoch: 138, Reconstruction Loss:0.1611 Time(s/epoch):0.0098
+Epoch: 139, Reconstruction Loss:0.1578 Time(s/epoch):0.0091
+Epoch: 140, Reconstruction Loss:0.1476 Time(s/epoch):0.0096
+Epoch: 141, Reconstruction Loss:0.1315 Time(s/epoch):0.0084
+Epoch: 142, Reconstruction Loss:0.1124 Time(s/epoch):0.0075
+Epoch: 143, Reconstruction Loss:0.0969 Time(s/epoch):0.0097
+Epoch: 144, Reconstruction Loss:0.0943 Time(s/epoch):0.0094
+Epoch: 145, Reconstruction Loss:0.1052 Time(s/epoch):0.0081
+Epoch: 146, Reconstruction Loss:0.1195 Time(s/epoch):0.0093
+Epoch: 147, Reconstruction Loss:0.1299 Time(s/epoch):0.0079
+Epoch: 148, Reconstruction Loss:0.1341 Time(s/epoch):0.0083
+Epoch: 149, Reconstruction Loss:0.1326 Time(s/epoch):0.0086
+Epoch: 150, Reconstruction Loss:0.1269 Time(s/epoch):0.0100
+Epoch: 151, Reconstruction Loss:0.1191 Time(s/epoch):0.0099
+Epoch: 152, Reconstruction Loss:0.1122 Time(s/epoch):0.0080
+Epoch: 153, Reconstruction Loss:0.1094 Time(s/epoch):0.0087
+Epoch: 154, Reconstruction Loss:0.1134 Time(s/epoch):0.0106
+Epoch: 155, Reconstruction Loss:0.1237 Time(s/epoch):0.0098
+Epoch: 156, Reconstruction Loss:0.1368 Time(s/epoch):0.0104
+Epoch: 157, Reconstruction Loss:0.1485 Time(s/epoch):0.0080
+Epoch: 158, Reconstruction Loss:0.1554 Time(s/epoch):0.0077
+Epoch: 159, Reconstruction Loss:0.1555 Time(s/epoch):0.0081
+Epoch: 160, Reconstruction Loss:0.1486 Time(s/epoch):0.0085
+Epoch: 161, Reconstruction Loss:0.1355 Time(s/epoch):0.0090
+Epoch: 162, Reconstruction Loss:0.1188 Time(s/epoch):0.0096
+Epoch: 163, Reconstruction Loss:0.1037 Time(s/epoch):0.0103
+Epoch: 164, Reconstruction Loss:0.0972 Time(s/epoch):0.0107
+Epoch: 165, Reconstruction Loss:0.1023 Time(s/epoch):0.0105
+Epoch: 166, Reconstruction Loss:0.1132 Time(s/epoch):0.0104
+Epoch: 167, Reconstruction Loss:0.1230 Time(s/epoch):0.0106
+Epoch: 168, Reconstruction Loss:0.1289 Time(s/epoch):0.0097
+Epoch: 169, Reconstruction Loss:0.1308 Time(s/epoch):0.0108
+Epoch: 170, Reconstruction Loss:0.1297 Time(s/epoch):0.0100
+Epoch: 171, Reconstruction Loss:0.1267 Time(s/epoch):0.0084
+Epoch: 172, Reconstruction Loss:0.1227 Time(s/epoch):0.0077
+Epoch: 173, Reconstruction Loss:0.1188 Time(s/epoch):0.0083
+Epoch: 174, Reconstruction Loss:0.1161 Time(s/epoch):0.0074
+Epoch: 175, Reconstruction Loss:0.1159 Time(s/epoch):0.0103
+Epoch: 176, Reconstruction Loss:0.1181 Time(s/epoch):0.0100
+Epoch: 177, Reconstruction Loss:0.1214 Time(s/epoch):0.0098
+Epoch: 178, Reconstruction Loss:0.1234 Time(s/epoch):0.0099
+Epoch: 179, Reconstruction Loss:0.1221 Time(s/epoch):0.0086
+Epoch: 180, Reconstruction Loss:0.1169 Time(s/epoch):0.0092
+Epoch: 181, Reconstruction Loss:0.1085 Time(s/epoch):0.0099
+Epoch: 182, Reconstruction Loss:0.0994 Time(s/epoch):0.0099
+Epoch: 183, Reconstruction Loss:0.0936 Time(s/epoch):0.0096
+Epoch: 184, Reconstruction Loss:0.0942 Time(s/epoch):0.0099
+Epoch: 185, Reconstruction Loss:0.1002 Time(s/epoch):0.0083
+Epoch: 186, Reconstruction Loss:0.1076 Time(s/epoch):0.0075
+Epoch: 187, Reconstruction Loss:0.1130 Time(s/epoch):0.0096
+Epoch: 188, Reconstruction Loss:0.1150 Time(s/epoch):0.0098
+Epoch: 189, Reconstruction Loss:0.1137 Time(s/epoch):0.0073
+Epoch: 190, Reconstruction Loss:0.1096 Time(s/epoch):0.0078
+Epoch: 191, Reconstruction Loss:0.1036 Time(s/epoch):0.0099
+Epoch: 192, Reconstruction Loss:0.0967 Time(s/epoch):0.0089
+Epoch: 193, Reconstruction Loss:0.0910 Time(s/epoch):0.0079
+Epoch: 194, Reconstruction Loss:0.0887 Time(s/epoch):0.0094
+Epoch: 195, Reconstruction Loss:0.0913 Time(s/epoch):0.0099
+Epoch: 196, Reconstruction Loss:0.0976 Time(s/epoch):0.0106
+Epoch: 197, Reconstruction Loss:0.1045 Time(s/epoch):0.0090
+Epoch: 198, Reconstruction Loss:0.1090 Time(s/epoch):0.0079
+Epoch: 199, Reconstruction Loss:0.1091 Time(s/epoch):0.0096
+Epoch: 200, Reconstruction Loss:0.1040 Time(s/epoch):0.0100
+[Train] best epoch:11 | min reconstruction loss:0.0756
+Begin finetuning...
+Epoch: 001, Supervised Loss:1.8514 Time(s/epoch):0.0069
+Epoch: 002, Supervised Loss:1.7698 Time(s/epoch):0.0069
+Epoch: 003, Supervised Loss:1.6982 Time(s/epoch):0.0057
+Epoch: 004, Supervised Loss:1.6685 Time(s/epoch):0.0056
+Epoch: 005, Supervised Loss:1.6721 Time(s/epoch):0.0052
+Epoch: 006, Supervised Loss:1.6832 Time(s/epoch):0.0072
+Epoch: 007, Supervised Loss:1.6779 Time(s/epoch):0.0070
+Epoch: 008, Supervised Loss:1.6541 Time(s/epoch):0.0066
+Epoch: 009, Supervised Loss:1.6279 Time(s/epoch):0.0066
+Epoch: 010, Supervised Loss:1.6159 Time(s/epoch):0.0067
+Epoch: 011, Supervised Loss:1.6240 Time(s/epoch):0.0066
+Epoch: 012, Supervised Loss:1.6462 Time(s/epoch):0.0069
+Epoch: 013, Supervised Loss:1.6717 Time(s/epoch):0.0053
+Epoch: 014, Supervised Loss:1.6923 Time(s/epoch):0.0051
+Epoch: 015, Supervised Loss:1.7046 Time(s/epoch):0.0053
+Epoch: 016, Supervised Loss:1.7086 Time(s/epoch):0.0048
+Epoch: 017, Supervised Loss:1.7061 Time(s/epoch):0.0054
+Epoch: 018, Supervised Loss:1.6990 Time(s/epoch):0.0062
+Epoch: 019, Supervised Loss:1.6890 Time(s/epoch):0.0075
+Epoch: 020, Supervised Loss:1.6778 Time(s/epoch):0.0072
+Epoch: 021, Supervised Loss:1.6672 Time(s/epoch):0.0075
+Epoch: 022, Supervised Loss:1.6583 Time(s/epoch):0.0068
+Epoch: 023, Supervised Loss:1.6517 Time(s/epoch):0.0069
+Epoch: 024, Supervised Loss:1.6480 Time(s/epoch):0.0069
+Epoch: 025, Supervised Loss:1.6466 Time(s/epoch):0.0059
+Epoch: 026, Supervised Loss:1.6468 Time(s/epoch):0.0052
+Epoch: 027, Supervised Loss:1.6478 Time(s/epoch):0.0048
+Epoch: 028, Supervised Loss:1.6490 Time(s/epoch):0.0065
+Epoch: 029, Supervised Loss:1.6506 Time(s/epoch):0.0061
+Epoch: 030, Supervised Loss:1.6519 Time(s/epoch):0.0076
+0.9318529 515
+Add 367 edges.
+Prune 355 edges from torch.Size([2, 515]) to torch.Size([2, 160])
+save graph to: ../ckpt/data_Wisconsin_new_0.3.dat
+Homophily ratio change from 0.196 to 0.701
+Data(x=[251, 1703], edge_index=[2, 521], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+GraphSAGE(
+  (convs): ModuleList(
+    (0): SAGEConv(1703, 64, aggr=mean)
+    (1): SAGEConv(64, 5, aggr=mean)
+  )
+)
+Epoch running time:3.7436 s
+[Old Data] Data(x=[251, 1703], edge_index=[2, 515], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+load graph from: ../ckpt/data_Wisconsin_new_0.3.dat
+Homophily ratio change from 0.196 to 0.701
+Data(x=[251, 1703], edge_index=[2, 521], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+GraphSAGE(
+  (convs): ModuleList(
+    (0): SAGEConv(1703, 64, aggr=mean)
+    (1): SAGEConv(64, 5, aggr=mean)
+  )
+)
+Epoch running time:1.6576 s
+[Old Data] Data(x=[251, 1703], edge_index=[2, 515], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+load graph from: ../ckpt/data_Wisconsin_new_0.3.dat
+Homophily ratio change from 0.196 to 0.701
+Data(x=[251, 1703], edge_index=[2, 521], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+GraphSAGE(
+  (convs): ModuleList(
+    (0): SAGEConv(1703, 64, aggr=mean)
+    (1): SAGEConv(64, 5, aggr=mean)
+  )
+)
+Epoch running time:1.7110 s
+[Old Data] Data(x=[251, 1703], edge_index=[2, 515], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+preparing label similarity matrix.
+candidate set size: tensor(29)
+preparing feature similarity matrix.
+cpu cpu cpu
+Epoch: 001, Reconstruction Loss:0.1114 Time(s/epoch):0.0129
+Epoch: 002, Reconstruction Loss:0.1162 Time(s/epoch):0.0086
+Epoch: 003, Reconstruction Loss:0.0974 Time(s/epoch):0.0093
+Epoch: 004, Reconstruction Loss:0.1007 Time(s/epoch):0.0089
+Epoch: 005, Reconstruction Loss:0.0944 Time(s/epoch):0.0117
+Epoch: 006, Reconstruction Loss:0.1040 Time(s/epoch):0.0096
+Epoch: 007, Reconstruction Loss:0.1223 Time(s/epoch):0.0099
+Epoch: 008, Reconstruction Loss:0.1201 Time(s/epoch):0.0095
+Epoch: 009, Reconstruction Loss:0.0991 Time(s/epoch):0.0074
+Epoch: 010, Reconstruction Loss:0.0760 Time(s/epoch):0.0095
+Epoch: 011, Reconstruction Loss:0.0756 Time(s/epoch):0.0126
+Epoch: 012, Reconstruction Loss:0.0876 Time(s/epoch):0.0104
+Epoch: 013, Reconstruction Loss:0.0961 Time(s/epoch):0.0102
+Epoch: 014, Reconstruction Loss:0.1101 Time(s/epoch):0.0081
+Epoch: 015, Reconstruction Loss:0.1290 Time(s/epoch):0.0084
+Epoch: 016, Reconstruction Loss:0.1436 Time(s/epoch):0.0097
+Epoch: 017, Reconstruction Loss:0.1476 Time(s/epoch):0.0096
+Epoch: 018, Reconstruction Loss:0.1399 Time(s/epoch):0.0100
+Epoch: 019, Reconstruction Loss:0.1232 Time(s/epoch):0.0079
+Epoch: 020, Reconstruction Loss:0.1069 Time(s/epoch):0.0078
+Epoch: 021, Reconstruction Loss:0.1068 Time(s/epoch):0.0104
+Epoch: 022, Reconstruction Loss:0.1227 Time(s/epoch):0.0105
+Epoch: 023, Reconstruction Loss:0.1351 Time(s/epoch):0.0097
+Epoch: 024, Reconstruction Loss:0.1337 Time(s/epoch):0.0094
+Epoch: 025, Reconstruction Loss:0.1232 Time(s/epoch):0.0096
+Epoch: 026, Reconstruction Loss:0.1176 Time(s/epoch):0.0094
+Epoch: 027, Reconstruction Loss:0.1266 Time(s/epoch):0.0092
+Epoch: 028, Reconstruction Loss:0.1437 Time(s/epoch):0.0095
+Epoch: 029, Reconstruction Loss:0.1599 Time(s/epoch):0.0073
+Epoch: 030, Reconstruction Loss:0.1705 Time(s/epoch):0.0075
+Epoch: 031, Reconstruction Loss:0.1734 Time(s/epoch):0.0096
+Epoch: 032, Reconstruction Loss:0.1687 Time(s/epoch):0.0097
+Epoch: 033, Reconstruction Loss:0.1571 Time(s/epoch):0.0095
+Epoch: 034, Reconstruction Loss:0.1407 Time(s/epoch):0.0085
+Epoch: 035, Reconstruction Loss:0.1230 Time(s/epoch):0.0074
+Epoch: 036, Reconstruction Loss:0.1102 Time(s/epoch):0.0077
+Epoch: 037, Reconstruction Loss:0.1091 Time(s/epoch):0.0073
+Epoch: 038, Reconstruction Loss:0.1185 Time(s/epoch):0.0070
+Epoch: 039, Reconstruction Loss:0.1286 Time(s/epoch):0.0072
+Epoch: 040, Reconstruction Loss:0.1318 Time(s/epoch):0.0078
+Epoch: 041, Reconstruction Loss:0.1261 Time(s/epoch):0.0073
+Epoch: 042, Reconstruction Loss:0.1149 Time(s/epoch):0.0074
+Epoch: 043, Reconstruction Loss:0.1061 Time(s/epoch):0.0074
+Epoch: 044, Reconstruction Loss:0.1086 Time(s/epoch):0.0076
+Epoch: 045, Reconstruction Loss:0.1224 Time(s/epoch):0.0096
+Epoch: 046, Reconstruction Loss:0.1393 Time(s/epoch):0.0095
+Epoch: 047, Reconstruction Loss:0.1522 Time(s/epoch):0.0094
+Epoch: 048, Reconstruction Loss:0.1579 Time(s/epoch):0.0075
+Epoch: 049, Reconstruction Loss:0.1554 Time(s/epoch):0.0070
+Epoch: 050, Reconstruction Loss:0.1451 Time(s/epoch):0.0076
+Epoch: 051, Reconstruction Loss:0.1285 Time(s/epoch):0.0074
+Epoch: 052, Reconstruction Loss:0.1090 Time(s/epoch):0.0086
+Epoch: 053, Reconstruction Loss:0.0934 Time(s/epoch):0.0093
+Epoch: 054, Reconstruction Loss:0.0921 Time(s/epoch):0.0080
+Epoch: 055, Reconstruction Loss:0.1063 Time(s/epoch):0.0072
+Epoch: 056, Reconstruction Loss:0.1243 Time(s/epoch):0.0075
+Epoch: 057, Reconstruction Loss:0.1371 Time(s/epoch):0.0072
+Epoch: 058, Reconstruction Loss:0.1418 Time(s/epoch):0.0091
+Epoch: 059, Reconstruction Loss:0.1389 Time(s/epoch):0.0099
+Epoch: 060, Reconstruction Loss:0.1295 Time(s/epoch):0.0098
+Epoch: 061, Reconstruction Loss:0.1159 Time(s/epoch):0.0090
+Epoch: 062, Reconstruction Loss:0.1021 Time(s/epoch):0.0078
+Epoch: 063, Reconstruction Loss:0.0960 Time(s/epoch):0.0085
+Epoch: 064, Reconstruction Loss:0.1040 Time(s/epoch):0.0102
+Epoch: 065, Reconstruction Loss:0.1214 Time(s/epoch):0.0084
+Epoch: 066, Reconstruction Loss:0.1388 Time(s/epoch):0.0073
+Epoch: 067, Reconstruction Loss:0.1502 Time(s/epoch):0.0094
+Epoch: 068, Reconstruction Loss:0.1535 Time(s/epoch):0.0099
+Epoch: 069, Reconstruction Loss:0.1484 Time(s/epoch):0.0097
+Epoch: 070, Reconstruction Loss:0.1356 Time(s/epoch):0.0084
+Epoch: 071, Reconstruction Loss:0.1175 Time(s/epoch):0.0082
+Epoch: 072, Reconstruction Loss:0.0993 Time(s/epoch):0.0090
+Epoch: 073, Reconstruction Loss:0.0896 Time(s/epoch):0.0076
+Epoch: 074, Reconstruction Loss:0.0940 Time(s/epoch):0.0098
+Epoch: 075, Reconstruction Loss:0.1050 Time(s/epoch):0.0105
+Epoch: 076, Reconstruction Loss:0.1131 Time(s/epoch):0.0108
+Epoch: 077, Reconstruction Loss:0.1153 Time(s/epoch):0.0107
+Epoch: 078, Reconstruction Loss:0.1132 Time(s/epoch):0.0094
+Epoch: 079, Reconstruction Loss:0.1102 Time(s/epoch):0.0075
+Epoch: 080, Reconstruction Loss:0.1096 Time(s/epoch):0.0085
+Epoch: 081, Reconstruction Loss:0.1131 Time(s/epoch):0.0079
+Epoch: 082, Reconstruction Loss:0.1202 Time(s/epoch):0.0085
+Epoch: 083, Reconstruction Loss:0.1290 Time(s/epoch):0.0098
+Epoch: 084, Reconstruction Loss:0.1364 Time(s/epoch):0.0086
+Epoch: 085, Reconstruction Loss:0.1395 Time(s/epoch):0.0076
+Epoch: 086, Reconstruction Loss:0.1362 Time(s/epoch):0.0099
+Epoch: 087, Reconstruction Loss:0.1264 Time(s/epoch):0.0092
+Epoch: 088, Reconstruction Loss:0.1122 Time(s/epoch):0.0076
+Epoch: 089, Reconstruction Loss:0.0986 Time(s/epoch):0.0080
+Epoch: 090, Reconstruction Loss:0.0935 Time(s/epoch):0.0074
+Epoch: 091, Reconstruction Loss:0.1000 Time(s/epoch):0.0076
+Epoch: 092, Reconstruction Loss:0.1108 Time(s/epoch):0.0074
+Epoch: 093, Reconstruction Loss:0.1182 Time(s/epoch):0.0077
+Epoch: 094, Reconstruction Loss:0.1194 Time(s/epoch):0.0077
+Epoch: 095, Reconstruction Loss:0.1154 Time(s/epoch):0.0077
+Epoch: 096, Reconstruction Loss:0.1091 Time(s/epoch):0.0096
+Epoch: 097, Reconstruction Loss:0.1048 Time(s/epoch):0.0098
+Epoch: 098, Reconstruction Loss:0.1067 Time(s/epoch):0.0098
+Epoch: 099, Reconstruction Loss:0.1158 Time(s/epoch):0.0096
+Epoch: 100, Reconstruction Loss:0.1285 Time(s/epoch):0.0101
+Epoch: 101, Reconstruction Loss:0.1401 Time(s/epoch):0.0102
+Epoch: 102, Reconstruction Loss:0.1472 Time(s/epoch):0.0102
+Epoch: 103, Reconstruction Loss:0.1478 Time(s/epoch):0.0095
+Epoch: 104, Reconstruction Loss:0.1411 Time(s/epoch):0.0077
+Epoch: 105, Reconstruction Loss:0.1278 Time(s/epoch):0.0089
+Epoch: 106, Reconstruction Loss:0.1110 Time(s/epoch):0.0103
+Epoch: 107, Reconstruction Loss:0.0978 Time(s/epoch):0.0104
+Epoch: 108, Reconstruction Loss:0.0970 Time(s/epoch):0.0100
+Epoch: 109, Reconstruction Loss:0.1072 Time(s/epoch):0.0098
+Epoch: 110, Reconstruction Loss:0.1181 Time(s/epoch):0.0086
+Epoch: 111, Reconstruction Loss:0.1234 Time(s/epoch):0.0079
+Epoch: 112, Reconstruction Loss:0.1223 Time(s/epoch):0.0110
+Epoch: 113, Reconstruction Loss:0.1178 Time(s/epoch):0.0097
+Epoch: 114, Reconstruction Loss:0.1140 Time(s/epoch):0.0076
+Epoch: 115, Reconstruction Loss:0.1148 Time(s/epoch):0.0077
+Epoch: 116, Reconstruction Loss:0.1218 Time(s/epoch):0.0075
+Epoch: 117, Reconstruction Loss:0.1333 Time(s/epoch):0.0076
+Epoch: 118, Reconstruction Loss:0.1462 Time(s/epoch):0.0075
+Epoch: 119, Reconstruction Loss:0.1572 Time(s/epoch):0.0073
+Epoch: 120, Reconstruction Loss:0.1635 Time(s/epoch):0.0070
+Epoch: 121, Reconstruction Loss:0.1634 Time(s/epoch):0.0075
+Epoch: 122, Reconstruction Loss:0.1562 Time(s/epoch):0.0073
+Epoch: 123, Reconstruction Loss:0.1423 Time(s/epoch):0.0071
+Epoch: 124, Reconstruction Loss:0.1244 Time(s/epoch):0.0071
+Epoch: 125, Reconstruction Loss:0.1089 Time(s/epoch):0.0083
+Epoch: 126, Reconstruction Loss:0.1046 Time(s/epoch):0.0092
+Epoch: 127, Reconstruction Loss:0.1116 Time(s/epoch):0.0082
+Epoch: 128, Reconstruction Loss:0.1201 Time(s/epoch):0.0103
+Epoch: 129, Reconstruction Loss:0.1227 Time(s/epoch):0.0106
+Epoch: 130, Reconstruction Loss:0.1190 Time(s/epoch):0.0097
+Epoch: 131, Reconstruction Loss:0.1133 Time(s/epoch):0.0096
+Epoch: 132, Reconstruction Loss:0.1109 Time(s/epoch):0.0090
+Epoch: 133, Reconstruction Loss:0.1149 Time(s/epoch):0.0074
+Epoch: 134, Reconstruction Loss:0.1244 Time(s/epoch):0.0073
+Epoch: 135, Reconstruction Loss:0.1367 Time(s/epoch):0.0072
+Epoch: 136, Reconstruction Loss:0.1489 Time(s/epoch):0.0072
+Epoch: 137, Reconstruction Loss:0.1578 Time(s/epoch):0.0072
+Epoch: 138, Reconstruction Loss:0.1611 Time(s/epoch):0.0078
+Epoch: 139, Reconstruction Loss:0.1578 Time(s/epoch):0.0086
+Epoch: 140, Reconstruction Loss:0.1476 Time(s/epoch):0.0078
+Epoch: 141, Reconstruction Loss:0.1315 Time(s/epoch):0.0098
+Epoch: 142, Reconstruction Loss:0.1124 Time(s/epoch):0.0089
+Epoch: 143, Reconstruction Loss:0.0969 Time(s/epoch):0.0075
+Epoch: 144, Reconstruction Loss:0.0943 Time(s/epoch):0.0076
+Epoch: 145, Reconstruction Loss:0.1052 Time(s/epoch):0.0073
+Epoch: 146, Reconstruction Loss:0.1195 Time(s/epoch):0.0073
+Epoch: 147, Reconstruction Loss:0.1299 Time(s/epoch):0.0073
+Epoch: 148, Reconstruction Loss:0.1341 Time(s/epoch):0.0076
+Epoch: 149, Reconstruction Loss:0.1326 Time(s/epoch):0.0098
+Epoch: 150, Reconstruction Loss:0.1269 Time(s/epoch):0.0098
+Epoch: 151, Reconstruction Loss:0.1191 Time(s/epoch):0.0095
+Epoch: 152, Reconstruction Loss:0.1122 Time(s/epoch):0.0095
+Epoch: 153, Reconstruction Loss:0.1094 Time(s/epoch):0.0092
+Epoch: 154, Reconstruction Loss:0.1134 Time(s/epoch):0.0071
+Epoch: 155, Reconstruction Loss:0.1237 Time(s/epoch):0.0071
+Epoch: 156, Reconstruction Loss:0.1368 Time(s/epoch):0.0073
+Epoch: 157, Reconstruction Loss:0.1485 Time(s/epoch):0.0074
+Epoch: 158, Reconstruction Loss:0.1554 Time(s/epoch):0.0097
+Epoch: 159, Reconstruction Loss:0.1555 Time(s/epoch):0.0100
+Epoch: 160, Reconstruction Loss:0.1486 Time(s/epoch):0.0098
+Epoch: 161, Reconstruction Loss:0.1355 Time(s/epoch):0.0102
+Epoch: 162, Reconstruction Loss:0.1188 Time(s/epoch):0.0099
+Epoch: 163, Reconstruction Loss:0.1037 Time(s/epoch):0.0076
+Epoch: 164, Reconstruction Loss:0.0972 Time(s/epoch):0.0087
+Epoch: 165, Reconstruction Loss:0.1023 Time(s/epoch):0.0098
+Epoch: 166, Reconstruction Loss:0.1132 Time(s/epoch):0.0087
+Epoch: 167, Reconstruction Loss:0.1230 Time(s/epoch):0.0079
+Epoch: 168, Reconstruction Loss:0.1289 Time(s/epoch):0.0086
+Epoch: 169, Reconstruction Loss:0.1308 Time(s/epoch):0.0075
+Epoch: 170, Reconstruction Loss:0.1297 Time(s/epoch):0.0082
+Epoch: 171, Reconstruction Loss:0.1267 Time(s/epoch):0.0079
+Epoch: 172, Reconstruction Loss:0.1227 Time(s/epoch):0.0079
+Epoch: 173, Reconstruction Loss:0.1188 Time(s/epoch):0.0081
+Epoch: 174, Reconstruction Loss:0.1161 Time(s/epoch):0.0096
+Epoch: 175, Reconstruction Loss:0.1159 Time(s/epoch):0.0088
+Epoch: 176, Reconstruction Loss:0.1181 Time(s/epoch):0.0073
+Epoch: 177, Reconstruction Loss:0.1214 Time(s/epoch):0.0077
+Epoch: 178, Reconstruction Loss:0.1234 Time(s/epoch):0.0099
+Epoch: 179, Reconstruction Loss:0.1221 Time(s/epoch):0.0094
+Epoch: 180, Reconstruction Loss:0.1169 Time(s/epoch):0.0077
+Epoch: 181, Reconstruction Loss:0.1085 Time(s/epoch):0.0084
+Epoch: 182, Reconstruction Loss:0.0994 Time(s/epoch):0.0112
+Epoch: 183, Reconstruction Loss:0.0936 Time(s/epoch):0.0085
+Epoch: 184, Reconstruction Loss:0.0942 Time(s/epoch):0.0083
+Epoch: 185, Reconstruction Loss:0.1002 Time(s/epoch):0.0100
+Epoch: 186, Reconstruction Loss:0.1076 Time(s/epoch):0.0093
+Epoch: 187, Reconstruction Loss:0.1130 Time(s/epoch):0.0116
+Epoch: 188, Reconstruction Loss:0.1150 Time(s/epoch):0.0103
+Epoch: 189, Reconstruction Loss:0.1137 Time(s/epoch):0.0094
+Epoch: 190, Reconstruction Loss:0.1096 Time(s/epoch):0.0098
+Epoch: 191, Reconstruction Loss:0.1036 Time(s/epoch):0.0107
+Epoch: 192, Reconstruction Loss:0.0967 Time(s/epoch):0.0096
+Epoch: 193, Reconstruction Loss:0.0910 Time(s/epoch):0.0080
+Epoch: 194, Reconstruction Loss:0.0887 Time(s/epoch):0.0101
+Epoch: 195, Reconstruction Loss:0.0913 Time(s/epoch):0.0100
+Epoch: 196, Reconstruction Loss:0.0976 Time(s/epoch):0.0084
+Epoch: 197, Reconstruction Loss:0.1045 Time(s/epoch):0.0080
+Epoch: 198, Reconstruction Loss:0.1090 Time(s/epoch):0.0102
+Epoch: 199, Reconstruction Loss:0.1091 Time(s/epoch):0.0087
+Epoch: 200, Reconstruction Loss:0.1040 Time(s/epoch):0.0075
+[Train] best epoch:11 | min reconstruction loss:0.0756
+Begin finetuning...
+Epoch: 001, Supervised Loss:2.1796 Time(s/epoch):0.0054
+Epoch: 002, Supervised Loss:2.0827 Time(s/epoch):0.0057
+Epoch: 003, Supervised Loss:1.9856 Time(s/epoch):0.0050
+Epoch: 004, Supervised Loss:1.9268 Time(s/epoch):0.0061
+Epoch: 005, Supervised Loss:1.9133 Time(s/epoch):0.0048
+Epoch: 006, Supervised Loss:1.9293 Time(s/epoch):0.0057
+Epoch: 007, Supervised Loss:1.9415 Time(s/epoch):0.0061
+Epoch: 008, Supervised Loss:1.9394 Time(s/epoch):0.0068
+Epoch: 009, Supervised Loss:1.9338 Time(s/epoch):0.0063
+Epoch: 010, Supervised Loss:1.9315 Time(s/epoch):0.0048
+Epoch: 011, Supervised Loss:1.9292 Time(s/epoch):0.0052
+Epoch: 012, Supervised Loss:1.9224 Time(s/epoch):0.0052
+Epoch: 013, Supervised Loss:1.9127 Time(s/epoch):0.0068
+Epoch: 014, Supervised Loss:1.9051 Time(s/epoch):0.0065
+Epoch: 015, Supervised Loss:1.9020 Time(s/epoch):0.0065
+Epoch: 016, Supervised Loss:1.9024 Time(s/epoch):0.0066
+Epoch: 017, Supervised Loss:1.9039 Time(s/epoch):0.0065
+Epoch: 018, Supervised Loss:1.9045 Time(s/epoch):0.0065
+Epoch: 019, Supervised Loss:1.9037 Time(s/epoch):0.0067
+Epoch: 020, Supervised Loss:1.9022 Time(s/epoch):0.0065
+Epoch: 021, Supervised Loss:1.9016 Time(s/epoch):0.0068
+Epoch: 022, Supervised Loss:1.9033 Time(s/epoch):0.0059
+Epoch: 023, Supervised Loss:1.9075 Time(s/epoch):0.0047
+Epoch: 024, Supervised Loss:1.9129 Time(s/epoch):0.0053
+Epoch: 025, Supervised Loss:1.9176 Time(s/epoch):0.0065
+Epoch: 026, Supervised Loss:1.9204 Time(s/epoch):0.0067
+Epoch: 027, Supervised Loss:1.9213 Time(s/epoch):0.0068
+Epoch: 028, Supervised Loss:1.9209 Time(s/epoch):0.0066
+Epoch: 029, Supervised Loss:1.9195 Time(s/epoch):0.0054
+Epoch: 030, Supervised Loss:1.9173 Time(s/epoch):0.0066
+0.9296738 515
+Add 395 edges.
+Prune 370 edges from torch.Size([2, 515]) to torch.Size([2, 145])
+save graph to: ../ckpt/data_Wisconsin_new_0.3.dat
+Homophily ratio change from 0.196 to 0.736
+Data(x=[251, 1703], edge_index=[2, 535], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+GraphSAGE(
+  (convs): ModuleList(
+    (0): SAGEConv(1703, 64, aggr=mean)
+    (1): SAGEConv(64, 5, aggr=mean)
+  )
+)
+Epoch running time:3.6230 s
+[Old Data] Data(x=[251, 1703], edge_index=[2, 515], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+load graph from: ../ckpt/data_Wisconsin_new_0.3.dat
+Homophily ratio change from 0.196 to 0.736
+Data(x=[251, 1703], edge_index=[2, 535], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+GraphSAGE(
+  (convs): ModuleList(
+    (0): SAGEConv(1703, 64, aggr=mean)
+    (1): SAGEConv(64, 5, aggr=mean)
+  )
+)
+Epoch running time:1.6742 s
+[Old Data] Data(x=[251, 1703], edge_index=[2, 515], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+load graph from: ../ckpt/data_Wisconsin_new_0.3.dat
+Homophily ratio change from 0.196 to 0.736
+Data(x=[251, 1703], edge_index=[2, 535], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+GraphSAGE(
+  (convs): ModuleList(
+    (0): SAGEConv(1703, 64, aggr=mean)
+    (1): SAGEConv(64, 5, aggr=mean)
+  )
+)
+Epoch running time:1.6814 s
+[Old Data] Data(x=[251, 1703], edge_index=[2, 515], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+preparing label similarity matrix.
+candidate set size: tensor(21)
+preparing feature similarity matrix.
+cpu cpu cpu
+Epoch: 001, Reconstruction Loss:0.1114 Time(s/epoch):0.0129
+Epoch: 002, Reconstruction Loss:0.1162 Time(s/epoch):0.0077
+Epoch: 003, Reconstruction Loss:0.0974 Time(s/epoch):0.0091
+Epoch: 004, Reconstruction Loss:0.1007 Time(s/epoch):0.0074
+Epoch: 005, Reconstruction Loss:0.0944 Time(s/epoch):0.0120
+Epoch: 006, Reconstruction Loss:0.1040 Time(s/epoch):0.0094
+Epoch: 007, Reconstruction Loss:0.1223 Time(s/epoch):0.0073
+Epoch: 008, Reconstruction Loss:0.1201 Time(s/epoch):0.0072
+Epoch: 009, Reconstruction Loss:0.0991 Time(s/epoch):0.0071
+Epoch: 010, Reconstruction Loss:0.0760 Time(s/epoch):0.0108
+Epoch: 011, Reconstruction Loss:0.0756 Time(s/epoch):0.0094
+Epoch: 012, Reconstruction Loss:0.0876 Time(s/epoch):0.0104
+Epoch: 013, Reconstruction Loss:0.0961 Time(s/epoch):0.0093
+Epoch: 014, Reconstruction Loss:0.1101 Time(s/epoch):0.0078
+Epoch: 015, Reconstruction Loss:0.1290 Time(s/epoch):0.0099
+Epoch: 016, Reconstruction Loss:0.1436 Time(s/epoch):0.0111
+Epoch: 017, Reconstruction Loss:0.1476 Time(s/epoch):0.0103
+Epoch: 018, Reconstruction Loss:0.1399 Time(s/epoch):0.0089
+Epoch: 019, Reconstruction Loss:0.1232 Time(s/epoch):0.0079
+Epoch: 020, Reconstruction Loss:0.1069 Time(s/epoch):0.0079
+Epoch: 021, Reconstruction Loss:0.1068 Time(s/epoch):0.0085
+Epoch: 022, Reconstruction Loss:0.1227 Time(s/epoch):0.0075
+Epoch: 023, Reconstruction Loss:0.1351 Time(s/epoch):0.0079
+Epoch: 024, Reconstruction Loss:0.1337 Time(s/epoch):0.0104
+Epoch: 025, Reconstruction Loss:0.1232 Time(s/epoch):0.0102
+Epoch: 026, Reconstruction Loss:0.1176 Time(s/epoch):0.0094
+Epoch: 027, Reconstruction Loss:0.1266 Time(s/epoch):0.0102
+Epoch: 028, Reconstruction Loss:0.1437 Time(s/epoch):0.0097
+Epoch: 029, Reconstruction Loss:0.1599 Time(s/epoch):0.0071
+Epoch: 030, Reconstruction Loss:0.1705 Time(s/epoch):0.0072
+Epoch: 031, Reconstruction Loss:0.1734 Time(s/epoch):0.0074
+Epoch: 032, Reconstruction Loss:0.1687 Time(s/epoch):0.0083
+Epoch: 033, Reconstruction Loss:0.1571 Time(s/epoch):0.0097
+Epoch: 034, Reconstruction Loss:0.1407 Time(s/epoch):0.0092
+Epoch: 035, Reconstruction Loss:0.1230 Time(s/epoch):0.0075
+Epoch: 036, Reconstruction Loss:0.1102 Time(s/epoch):0.0077
+Epoch: 037, Reconstruction Loss:0.1091 Time(s/epoch):0.0079
+Epoch: 038, Reconstruction Loss:0.1185 Time(s/epoch):0.0074
+Epoch: 039, Reconstruction Loss:0.1286 Time(s/epoch):0.0073
+Epoch: 040, Reconstruction Loss:0.1318 Time(s/epoch):0.0083
+Epoch: 041, Reconstruction Loss:0.1261 Time(s/epoch):0.0085
+Epoch: 042, Reconstruction Loss:0.1149 Time(s/epoch):0.0088
+Epoch: 043, Reconstruction Loss:0.1061 Time(s/epoch):0.0095
+Epoch: 044, Reconstruction Loss:0.1086 Time(s/epoch):0.0081
+Epoch: 045, Reconstruction Loss:0.1224 Time(s/epoch):0.0066
+Epoch: 046, Reconstruction Loss:0.1393 Time(s/epoch):0.0071
+Epoch: 047, Reconstruction Loss:0.1522 Time(s/epoch):0.0073
+Epoch: 048, Reconstruction Loss:0.1579 Time(s/epoch):0.0075
+Epoch: 049, Reconstruction Loss:0.1554 Time(s/epoch):0.0074
+Epoch: 050, Reconstruction Loss:0.1451 Time(s/epoch):0.0082
+Epoch: 051, Reconstruction Loss:0.1285 Time(s/epoch):0.0095
+Epoch: 052, Reconstruction Loss:0.1090 Time(s/epoch):0.0104
+Epoch: 053, Reconstruction Loss:0.0934 Time(s/epoch):0.0099
+Epoch: 054, Reconstruction Loss:0.0921 Time(s/epoch):0.0101
+Epoch: 055, Reconstruction Loss:0.1063 Time(s/epoch):0.0089
+Epoch: 056, Reconstruction Loss:0.1243 Time(s/epoch):0.0078
+Epoch: 057, Reconstruction Loss:0.1371 Time(s/epoch):0.0095
+Epoch: 058, Reconstruction Loss:0.1418 Time(s/epoch):0.0102
+Epoch: 059, Reconstruction Loss:0.1389 Time(s/epoch):0.0098
+Epoch: 060, Reconstruction Loss:0.1295 Time(s/epoch):0.0081
+Epoch: 061, Reconstruction Loss:0.1159 Time(s/epoch):0.0079
+Epoch: 062, Reconstruction Loss:0.1021 Time(s/epoch):0.0082
+Epoch: 063, Reconstruction Loss:0.0960 Time(s/epoch):0.0082
+Epoch: 064, Reconstruction Loss:0.1040 Time(s/epoch):0.0090
+Epoch: 065, Reconstruction Loss:0.1214 Time(s/epoch):0.0099
+Epoch: 066, Reconstruction Loss:0.1388 Time(s/epoch):0.0086
+Epoch: 067, Reconstruction Loss:0.1502 Time(s/epoch):0.0071
+Epoch: 068, Reconstruction Loss:0.1535 Time(s/epoch):0.0091
+Epoch: 069, Reconstruction Loss:0.1484 Time(s/epoch):0.0098
+Epoch: 070, Reconstruction Loss:0.1356 Time(s/epoch):0.0099
+Epoch: 071, Reconstruction Loss:0.1175 Time(s/epoch):0.0094
+Epoch: 072, Reconstruction Loss:0.0993 Time(s/epoch):0.0097
+Epoch: 073, Reconstruction Loss:0.0896 Time(s/epoch):0.0084
+Epoch: 074, Reconstruction Loss:0.0940 Time(s/epoch):0.0077
+Epoch: 075, Reconstruction Loss:0.1050 Time(s/epoch):0.0083
+Epoch: 076, Reconstruction Loss:0.1131 Time(s/epoch):0.0079
+Epoch: 077, Reconstruction Loss:0.1153 Time(s/epoch):0.0077
+Epoch: 078, Reconstruction Loss:0.1132 Time(s/epoch):0.0082
+Epoch: 079, Reconstruction Loss:0.1102 Time(s/epoch):0.0089
+Epoch: 080, Reconstruction Loss:0.1096 Time(s/epoch):0.0082
+Epoch: 081, Reconstruction Loss:0.1131 Time(s/epoch):0.0076
+Epoch: 082, Reconstruction Loss:0.1202 Time(s/epoch):0.0107
+Epoch: 083, Reconstruction Loss:0.1290 Time(s/epoch):0.0098
+Epoch: 084, Reconstruction Loss:0.1364 Time(s/epoch):0.0103
+Epoch: 085, Reconstruction Loss:0.1395 Time(s/epoch):0.0103
+Epoch: 086, Reconstruction Loss:0.1362 Time(s/epoch):0.0103
+Epoch: 087, Reconstruction Loss:0.1264 Time(s/epoch):0.0080
+Epoch: 088, Reconstruction Loss:0.1122 Time(s/epoch):0.0076
+Epoch: 089, Reconstruction Loss:0.0986 Time(s/epoch):0.0093
+Epoch: 090, Reconstruction Loss:0.0935 Time(s/epoch):0.0103
+Epoch: 091, Reconstruction Loss:0.1000 Time(s/epoch):0.0090
+Epoch: 092, Reconstruction Loss:0.1108 Time(s/epoch):0.0091
+Epoch: 093, Reconstruction Loss:0.1182 Time(s/epoch):0.0089
+Epoch: 094, Reconstruction Loss:0.1194 Time(s/epoch):0.0110
+Epoch: 095, Reconstruction Loss:0.1154 Time(s/epoch):0.0113
+Epoch: 096, Reconstruction Loss:0.1091 Time(s/epoch):0.0098
+Epoch: 097, Reconstruction Loss:0.1048 Time(s/epoch):0.0104
+Epoch: 098, Reconstruction Loss:0.1067 Time(s/epoch):0.0119
+Epoch: 099, Reconstruction Loss:0.1158 Time(s/epoch):0.0095
+Epoch: 100, Reconstruction Loss:0.1285 Time(s/epoch):0.0110
+Epoch: 101, Reconstruction Loss:0.1401 Time(s/epoch):0.0118
+Epoch: 102, Reconstruction Loss:0.1472 Time(s/epoch):0.0111
+Epoch: 103, Reconstruction Loss:0.1478 Time(s/epoch):0.0115
+Epoch: 104, Reconstruction Loss:0.1411 Time(s/epoch):0.0113
+Epoch: 105, Reconstruction Loss:0.1278 Time(s/epoch):0.0097
+Epoch: 106, Reconstruction Loss:0.1110 Time(s/epoch):0.0101
+Epoch: 107, Reconstruction Loss:0.0978 Time(s/epoch):0.0091
+Epoch: 108, Reconstruction Loss:0.0970 Time(s/epoch):0.0086
+Epoch: 109, Reconstruction Loss:0.1072 Time(s/epoch):0.0082
+Epoch: 110, Reconstruction Loss:0.1181 Time(s/epoch):0.0096
+Epoch: 111, Reconstruction Loss:0.1234 Time(s/epoch):0.0078
+Epoch: 112, Reconstruction Loss:0.1223 Time(s/epoch):0.0082
+Epoch: 113, Reconstruction Loss:0.1178 Time(s/epoch):0.0090
+Epoch: 114, Reconstruction Loss:0.1140 Time(s/epoch):0.0106
+Epoch: 115, Reconstruction Loss:0.1148 Time(s/epoch):0.0103
+Epoch: 116, Reconstruction Loss:0.1218 Time(s/epoch):0.0101
+Epoch: 117, Reconstruction Loss:0.1333 Time(s/epoch):0.0085
+Epoch: 118, Reconstruction Loss:0.1462 Time(s/epoch):0.0085
+Epoch: 119, Reconstruction Loss:0.1572 Time(s/epoch):0.0111
+Epoch: 120, Reconstruction Loss:0.1635 Time(s/epoch):0.0101
+Epoch: 121, Reconstruction Loss:0.1634 Time(s/epoch):0.0096
+Epoch: 122, Reconstruction Loss:0.1562 Time(s/epoch):0.0113
+Epoch: 123, Reconstruction Loss:0.1423 Time(s/epoch):0.0119
+Epoch: 124, Reconstruction Loss:0.1244 Time(s/epoch):0.0118
+Epoch: 125, Reconstruction Loss:0.1089 Time(s/epoch):0.0112
+Epoch: 126, Reconstruction Loss:0.1046 Time(s/epoch):0.0113
+Epoch: 127, Reconstruction Loss:0.1116 Time(s/epoch):0.0093
+Epoch: 128, Reconstruction Loss:0.1201 Time(s/epoch):0.0085
+Epoch: 129, Reconstruction Loss:0.1227 Time(s/epoch):0.0109
+Epoch: 130, Reconstruction Loss:0.1190 Time(s/epoch):0.0119
+Epoch: 131, Reconstruction Loss:0.1133 Time(s/epoch):0.0155
+Epoch: 132, Reconstruction Loss:0.1109 Time(s/epoch):0.0165
+Epoch: 133, Reconstruction Loss:0.1149 Time(s/epoch):0.0118
+Epoch: 134, Reconstruction Loss:0.1244 Time(s/epoch):0.0100
+Epoch: 135, Reconstruction Loss:0.1367 Time(s/epoch):0.0101
+Epoch: 136, Reconstruction Loss:0.1489 Time(s/epoch):0.0093
+Epoch: 137, Reconstruction Loss:0.1578 Time(s/epoch):0.0073
+Epoch: 138, Reconstruction Loss:0.1611 Time(s/epoch):0.0073
+Epoch: 139, Reconstruction Loss:0.1578 Time(s/epoch):0.0065
+Epoch: 140, Reconstruction Loss:0.1476 Time(s/epoch):0.0068
+Epoch: 141, Reconstruction Loss:0.1315 Time(s/epoch):0.0075
+Epoch: 142, Reconstruction Loss:0.1124 Time(s/epoch):0.0072
+Epoch: 143, Reconstruction Loss:0.0969 Time(s/epoch):0.0075
+Epoch: 144, Reconstruction Loss:0.0943 Time(s/epoch):0.0075
+Epoch: 145, Reconstruction Loss:0.1052 Time(s/epoch):0.0075
+Epoch: 146, Reconstruction Loss:0.1195 Time(s/epoch):0.0075
+Epoch: 147, Reconstruction Loss:0.1299 Time(s/epoch):0.0077
+Epoch: 148, Reconstruction Loss:0.1341 Time(s/epoch):0.0077
+Epoch: 149, Reconstruction Loss:0.1326 Time(s/epoch):0.0073
+Epoch: 150, Reconstruction Loss:0.1269 Time(s/epoch):0.0069
+Epoch: 151, Reconstruction Loss:0.1191 Time(s/epoch):0.0071
+Epoch: 152, Reconstruction Loss:0.1122 Time(s/epoch):0.0070
+Epoch: 153, Reconstruction Loss:0.1094 Time(s/epoch):0.0070
+Epoch: 154, Reconstruction Loss:0.1134 Time(s/epoch):0.0074
+Epoch: 155, Reconstruction Loss:0.1237 Time(s/epoch):0.0072
+Epoch: 156, Reconstruction Loss:0.1368 Time(s/epoch):0.0074
+Epoch: 157, Reconstruction Loss:0.1485 Time(s/epoch):0.0073
+Epoch: 158, Reconstruction Loss:0.1554 Time(s/epoch):0.0072
+Epoch: 159, Reconstruction Loss:0.1555 Time(s/epoch):0.0071
+Epoch: 160, Reconstruction Loss:0.1486 Time(s/epoch):0.0072
+Epoch: 161, Reconstruction Loss:0.1355 Time(s/epoch):0.0071
+Epoch: 162, Reconstruction Loss:0.1188 Time(s/epoch):0.0072
+Epoch: 163, Reconstruction Loss:0.1037 Time(s/epoch):0.0074
+Epoch: 164, Reconstruction Loss:0.0972 Time(s/epoch):0.0076
+Epoch: 165, Reconstruction Loss:0.1023 Time(s/epoch):0.0078
+Epoch: 166, Reconstruction Loss:0.1132 Time(s/epoch):0.0081
+Epoch: 167, Reconstruction Loss:0.1230 Time(s/epoch):0.0098
+Epoch: 168, Reconstruction Loss:0.1289 Time(s/epoch):0.0096
+Epoch: 169, Reconstruction Loss:0.1308 Time(s/epoch):0.0094
+Epoch: 170, Reconstruction Loss:0.1297 Time(s/epoch):0.0097
+Epoch: 171, Reconstruction Loss:0.1267 Time(s/epoch):0.0095
+Epoch: 172, Reconstruction Loss:0.1227 Time(s/epoch):0.0095
+Epoch: 173, Reconstruction Loss:0.1188 Time(s/epoch):0.0083
+Epoch: 174, Reconstruction Loss:0.1161 Time(s/epoch):0.0072
+Epoch: 175, Reconstruction Loss:0.1159 Time(s/epoch):0.0076
+Epoch: 176, Reconstruction Loss:0.1181 Time(s/epoch):0.0075
+Epoch: 177, Reconstruction Loss:0.1214 Time(s/epoch):0.0089
+Epoch: 178, Reconstruction Loss:0.1234 Time(s/epoch):0.0096
+Epoch: 179, Reconstruction Loss:0.1221 Time(s/epoch):0.0102
+Epoch: 180, Reconstruction Loss:0.1169 Time(s/epoch):0.0094
+Epoch: 181, Reconstruction Loss:0.1085 Time(s/epoch):0.0074
+Epoch: 182, Reconstruction Loss:0.0994 Time(s/epoch):0.0078
+Epoch: 183, Reconstruction Loss:0.0936 Time(s/epoch):0.0077
+Epoch: 184, Reconstruction Loss:0.0942 Time(s/epoch):0.0079
+Epoch: 185, Reconstruction Loss:0.1002 Time(s/epoch):0.0099
+Epoch: 186, Reconstruction Loss:0.1076 Time(s/epoch):0.0100
+Epoch: 187, Reconstruction Loss:0.1130 Time(s/epoch):0.0098
+Epoch: 188, Reconstruction Loss:0.1150 Time(s/epoch):0.0100
+Epoch: 189, Reconstruction Loss:0.1137 Time(s/epoch):0.0101
+Epoch: 190, Reconstruction Loss:0.1096 Time(s/epoch):0.0101
+Epoch: 191, Reconstruction Loss:0.1036 Time(s/epoch):0.0103
+Epoch: 192, Reconstruction Loss:0.0967 Time(s/epoch):0.0095
+Epoch: 193, Reconstruction Loss:0.0910 Time(s/epoch):0.0077
+Epoch: 194, Reconstruction Loss:0.0887 Time(s/epoch):0.0080
+Epoch: 195, Reconstruction Loss:0.0913 Time(s/epoch):0.0079
+Epoch: 196, Reconstruction Loss:0.0976 Time(s/epoch):0.0081
+Epoch: 197, Reconstruction Loss:0.1045 Time(s/epoch):0.0081
+Epoch: 198, Reconstruction Loss:0.1090 Time(s/epoch):0.0092
+Epoch: 199, Reconstruction Loss:0.1091 Time(s/epoch):0.0100
+Epoch: 200, Reconstruction Loss:0.1040 Time(s/epoch):0.0074
+[Train] best epoch:11 | min reconstruction loss:0.0756
+Begin finetuning...
+Epoch: 001, Supervised Loss:1.6467 Time(s/epoch):0.0055
+Epoch: 002, Supervised Loss:1.5446 Time(s/epoch):0.0057
+Epoch: 003, Supervised Loss:1.4415 Time(s/epoch):0.0069
+Epoch: 004, Supervised Loss:1.3767 Time(s/epoch):0.0071
+Epoch: 005, Supervised Loss:1.3478 Time(s/epoch):0.0054
+Epoch: 006, Supervised Loss:1.3399 Time(s/epoch):0.0053
+Epoch: 007, Supervised Loss:1.3479 Time(s/epoch):0.0055
+Epoch: 008, Supervised Loss:1.3583 Time(s/epoch):0.0054
+Epoch: 009, Supervised Loss:1.3542 Time(s/epoch):0.0058
+Epoch: 010, Supervised Loss:1.3409 Time(s/epoch):0.0052
+Epoch: 011, Supervised Loss:1.3344 Time(s/epoch):0.0068
+Epoch: 012, Supervised Loss:1.3383 Time(s/epoch):0.0070
+Epoch: 013, Supervised Loss:1.3446 Time(s/epoch):0.0070
+Epoch: 014, Supervised Loss:1.3478 Time(s/epoch):0.0071
+Epoch: 015, Supervised Loss:1.3482 Time(s/epoch):0.0058
+Epoch: 016, Supervised Loss:1.3483 Time(s/epoch):0.0054
+Epoch: 017, Supervised Loss:1.3507 Time(s/epoch):0.0058
+Epoch: 018, Supervised Loss:1.3577 Time(s/epoch):0.0051
+Epoch: 019, Supervised Loss:1.3679 Time(s/epoch):0.0057
+Epoch: 020, Supervised Loss:1.3766 Time(s/epoch):0.0058
+Epoch: 021, Supervised Loss:1.3792 Time(s/epoch):0.0060
+Epoch: 022, Supervised Loss:1.3740 Time(s/epoch):0.0059
+Epoch: 023, Supervised Loss:1.3623 Time(s/epoch):0.0083
+Epoch: 024, Supervised Loss:1.3482 Time(s/epoch):0.0075
+Epoch: 025, Supervised Loss:1.3367 Time(s/epoch):0.0073
+Epoch: 026, Supervised Loss:1.3319 Time(s/epoch):0.0072
+Epoch: 027, Supervised Loss:1.3347 Time(s/epoch):0.0059
+Epoch: 028, Supervised Loss:1.3442 Time(s/epoch):0.0054
+Epoch: 029, Supervised Loss:1.3583 Time(s/epoch):0.0060
+Epoch: 030, Supervised Loss:1.3745 Time(s/epoch):0.0072
+0.88843113 515
+Add 423 edges.
+Prune 328 edges from torch.Size([2, 515]) to torch.Size([2, 187])
+save graph to: ../ckpt/data_Wisconsin_new_0.3.dat
+Homophily ratio change from 0.196 to 0.652
+Data(x=[251, 1703], edge_index=[2, 600], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+GraphSAGE(
+  (convs): ModuleList(
+    (0): SAGEConv(1703, 64, aggr=mean)
+    (1): SAGEConv(64, 5, aggr=mean)
+  )
+)
+Epoch running time:3.6760 s
+[Old Data] Data(x=[251, 1703], edge_index=[2, 515], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+load graph from: ../ckpt/data_Wisconsin_new_0.3.dat
+Homophily ratio change from 0.196 to 0.652
+Data(x=[251, 1703], edge_index=[2, 600], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+GraphSAGE(
+  (convs): ModuleList(
+    (0): SAGEConv(1703, 64, aggr=mean)
+    (1): SAGEConv(64, 5, aggr=mean)
+  )
+)
+Epoch running time:1.6730 s
+[Old Data] Data(x=[251, 1703], edge_index=[2, 515], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+load graph from: ../ckpt/data_Wisconsin_new_0.3.dat
+Homophily ratio change from 0.196 to 0.652
+Data(x=[251, 1703], edge_index=[2, 600], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+GraphSAGE(
+  (convs): ModuleList(
+    (0): SAGEConv(1703, 64, aggr=mean)
+    (1): SAGEConv(64, 5, aggr=mean)
+  )
+)
+Epoch running time:1.7098 s
+[Old Data] Data(x=[251, 1703], edge_index=[2, 515], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+preparing label similarity matrix.
+candidate set size: tensor(14)
+preparing feature similarity matrix.
+cpu cpu cpu
+Epoch: 001, Reconstruction Loss:0.1114 Time(s/epoch):0.0162
+Epoch: 002, Reconstruction Loss:0.1162 Time(s/epoch):0.0108
+Epoch: 003, Reconstruction Loss:0.0974 Time(s/epoch):0.0126
+Epoch: 004, Reconstruction Loss:0.1007 Time(s/epoch):0.0116
+Epoch: 005, Reconstruction Loss:0.0944 Time(s/epoch):0.0113
+Epoch: 006, Reconstruction Loss:0.1040 Time(s/epoch):0.0103
+Epoch: 007, Reconstruction Loss:0.1223 Time(s/epoch):0.0106
+Epoch: 008, Reconstruction Loss:0.1201 Time(s/epoch):0.0105
+Epoch: 009, Reconstruction Loss:0.0991 Time(s/epoch):0.0101
+Epoch: 010, Reconstruction Loss:0.0760 Time(s/epoch):0.0099
+Epoch: 011, Reconstruction Loss:0.0756 Time(s/epoch):0.0109
+Epoch: 012, Reconstruction Loss:0.0876 Time(s/epoch):0.0100
+Epoch: 013, Reconstruction Loss:0.0961 Time(s/epoch):0.0110
+Epoch: 014, Reconstruction Loss:0.1101 Time(s/epoch):0.0088
+Epoch: 015, Reconstruction Loss:0.1290 Time(s/epoch):0.0088
+Epoch: 016, Reconstruction Loss:0.1436 Time(s/epoch):0.0091
+Epoch: 017, Reconstruction Loss:0.1476 Time(s/epoch):0.0099
+Epoch: 018, Reconstruction Loss:0.1399 Time(s/epoch):0.0097
+Epoch: 019, Reconstruction Loss:0.1232 Time(s/epoch):0.0095
+Epoch: 020, Reconstruction Loss:0.1069 Time(s/epoch):0.0084
+Epoch: 021, Reconstruction Loss:0.1068 Time(s/epoch):0.0073
+Epoch: 022, Reconstruction Loss:0.1227 Time(s/epoch):0.0078
+Epoch: 023, Reconstruction Loss:0.1351 Time(s/epoch):0.0073
+Epoch: 024, Reconstruction Loss:0.1337 Time(s/epoch):0.0074
+Epoch: 025, Reconstruction Loss:0.1232 Time(s/epoch):0.0074
+Epoch: 026, Reconstruction Loss:0.1176 Time(s/epoch):0.0080
+Epoch: 027, Reconstruction Loss:0.1266 Time(s/epoch):0.0073
+Epoch: 028, Reconstruction Loss:0.1437 Time(s/epoch):0.0075
+Epoch: 029, Reconstruction Loss:0.1599 Time(s/epoch):0.0076
+Epoch: 030, Reconstruction Loss:0.1705 Time(s/epoch):0.0079
+Epoch: 031, Reconstruction Loss:0.1734 Time(s/epoch):0.0077
+Epoch: 032, Reconstruction Loss:0.1687 Time(s/epoch):0.0081
+Epoch: 033, Reconstruction Loss:0.1571 Time(s/epoch):0.0078
+Epoch: 034, Reconstruction Loss:0.1407 Time(s/epoch):0.0078
+Epoch: 035, Reconstruction Loss:0.1230 Time(s/epoch):0.0075
+Epoch: 036, Reconstruction Loss:0.1102 Time(s/epoch):0.0078
+Epoch: 037, Reconstruction Loss:0.1091 Time(s/epoch):0.0077
+Epoch: 038, Reconstruction Loss:0.1185 Time(s/epoch):0.0073
+Epoch: 039, Reconstruction Loss:0.1286 Time(s/epoch):0.0073
+Epoch: 040, Reconstruction Loss:0.1318 Time(s/epoch):0.0080
+Epoch: 041, Reconstruction Loss:0.1261 Time(s/epoch):0.0079
+Epoch: 042, Reconstruction Loss:0.1149 Time(s/epoch):0.0075
+Epoch: 043, Reconstruction Loss:0.1061 Time(s/epoch):0.0072
+Epoch: 044, Reconstruction Loss:0.1086 Time(s/epoch):0.0074
+Epoch: 045, Reconstruction Loss:0.1224 Time(s/epoch):0.0074
+Epoch: 046, Reconstruction Loss:0.1393 Time(s/epoch):0.0072
+Epoch: 047, Reconstruction Loss:0.1522 Time(s/epoch):0.0088
+Epoch: 048, Reconstruction Loss:0.1579 Time(s/epoch):0.0097
+Epoch: 049, Reconstruction Loss:0.1554 Time(s/epoch):0.0074
+Epoch: 050, Reconstruction Loss:0.1451 Time(s/epoch):0.0072
+Epoch: 051, Reconstruction Loss:0.1285 Time(s/epoch):0.0073
+Epoch: 052, Reconstruction Loss:0.1090 Time(s/epoch):0.0075
+Epoch: 053, Reconstruction Loss:0.0934 Time(s/epoch):0.0094
+Epoch: 054, Reconstruction Loss:0.0921 Time(s/epoch):0.0095
+Epoch: 055, Reconstruction Loss:0.1063 Time(s/epoch):0.0093
+Epoch: 056, Reconstruction Loss:0.1243 Time(s/epoch):0.0093
+Epoch: 057, Reconstruction Loss:0.1371 Time(s/epoch):0.0094
+Epoch: 058, Reconstruction Loss:0.1418 Time(s/epoch):0.0099
+Epoch: 059, Reconstruction Loss:0.1389 Time(s/epoch):0.0105
+Epoch: 060, Reconstruction Loss:0.1295 Time(s/epoch):0.0089
+Epoch: 061, Reconstruction Loss:0.1159 Time(s/epoch):0.0088
+Epoch: 062, Reconstruction Loss:0.1021 Time(s/epoch):0.0103
+Epoch: 063, Reconstruction Loss:0.0960 Time(s/epoch):0.0099
+Epoch: 064, Reconstruction Loss:0.1040 Time(s/epoch):0.0076
+Epoch: 065, Reconstruction Loss:0.1214 Time(s/epoch):0.0075
+Epoch: 066, Reconstruction Loss:0.1388 Time(s/epoch):0.0095
+Epoch: 067, Reconstruction Loss:0.1502 Time(s/epoch):0.0078
+Epoch: 068, Reconstruction Loss:0.1535 Time(s/epoch):0.0075
+Epoch: 069, Reconstruction Loss:0.1484 Time(s/epoch):0.0074
+Epoch: 070, Reconstruction Loss:0.1356 Time(s/epoch):0.0075
+Epoch: 071, Reconstruction Loss:0.1175 Time(s/epoch):0.0100
+Epoch: 072, Reconstruction Loss:0.0993 Time(s/epoch):0.0093
+Epoch: 073, Reconstruction Loss:0.0896 Time(s/epoch):0.0081
+Epoch: 074, Reconstruction Loss:0.0940 Time(s/epoch):0.0090
+Epoch: 075, Reconstruction Loss:0.1050 Time(s/epoch):0.0085
+Epoch: 076, Reconstruction Loss:0.1131 Time(s/epoch):0.0089
+Epoch: 077, Reconstruction Loss:0.1153 Time(s/epoch):0.0099
+Epoch: 078, Reconstruction Loss:0.1132 Time(s/epoch):0.0099
+Epoch: 079, Reconstruction Loss:0.1102 Time(s/epoch):0.0092
+Epoch: 080, Reconstruction Loss:0.1096 Time(s/epoch):0.0077
+Epoch: 081, Reconstruction Loss:0.1131 Time(s/epoch):0.0102
+Epoch: 082, Reconstruction Loss:0.1202 Time(s/epoch):0.0093
+Epoch: 083, Reconstruction Loss:0.1290 Time(s/epoch):0.0075
+Epoch: 084, Reconstruction Loss:0.1364 Time(s/epoch):0.0075
+Epoch: 085, Reconstruction Loss:0.1395 Time(s/epoch):0.0073
+Epoch: 086, Reconstruction Loss:0.1362 Time(s/epoch):0.0071
+Epoch: 087, Reconstruction Loss:0.1264 Time(s/epoch):0.0100
+Epoch: 088, Reconstruction Loss:0.1122 Time(s/epoch):0.0103
+Epoch: 089, Reconstruction Loss:0.0986 Time(s/epoch):0.0099
+Epoch: 090, Reconstruction Loss:0.0935 Time(s/epoch):0.0087
+Epoch: 091, Reconstruction Loss:0.1000 Time(s/epoch):0.0081
+Epoch: 092, Reconstruction Loss:0.1108 Time(s/epoch):0.0082
+Epoch: 093, Reconstruction Loss:0.1182 Time(s/epoch):0.0078
+Epoch: 094, Reconstruction Loss:0.1194 Time(s/epoch):0.0100
+Epoch: 095, Reconstruction Loss:0.1154 Time(s/epoch):0.0094
+Epoch: 096, Reconstruction Loss:0.1091 Time(s/epoch):0.0079
+Epoch: 097, Reconstruction Loss:0.1048 Time(s/epoch):0.0095
+Epoch: 098, Reconstruction Loss:0.1067 Time(s/epoch):0.0080
+Epoch: 099, Reconstruction Loss:0.1158 Time(s/epoch):0.0094
+Epoch: 100, Reconstruction Loss:0.1285 Time(s/epoch):0.0098
+Epoch: 101, Reconstruction Loss:0.1401 Time(s/epoch):0.0079
+Epoch: 102, Reconstruction Loss:0.1472 Time(s/epoch):0.0084
+Epoch: 103, Reconstruction Loss:0.1478 Time(s/epoch):0.0104
+Epoch: 104, Reconstruction Loss:0.1411 Time(s/epoch):0.0087
+Epoch: 105, Reconstruction Loss:0.1278 Time(s/epoch):0.0098
+Epoch: 106, Reconstruction Loss:0.1110 Time(s/epoch):0.0096
+Epoch: 107, Reconstruction Loss:0.0978 Time(s/epoch):0.0097
+Epoch: 108, Reconstruction Loss:0.0970 Time(s/epoch):0.0072
+Epoch: 109, Reconstruction Loss:0.1072 Time(s/epoch):0.0077
+Epoch: 110, Reconstruction Loss:0.1181 Time(s/epoch):0.0103
+Epoch: 111, Reconstruction Loss:0.1234 Time(s/epoch):0.0089
+Epoch: 112, Reconstruction Loss:0.1223 Time(s/epoch):0.0072
+Epoch: 113, Reconstruction Loss:0.1178 Time(s/epoch):0.0081
+Epoch: 114, Reconstruction Loss:0.1140 Time(s/epoch):0.0075
+Epoch: 115, Reconstruction Loss:0.1148 Time(s/epoch):0.0091
+Epoch: 116, Reconstruction Loss:0.1218 Time(s/epoch):0.0103
+Epoch: 117, Reconstruction Loss:0.1333 Time(s/epoch):0.0099
+Epoch: 118, Reconstruction Loss:0.1462 Time(s/epoch):0.0104
+Epoch: 119, Reconstruction Loss:0.1572 Time(s/epoch):0.0098
+Epoch: 120, Reconstruction Loss:0.1635 Time(s/epoch):0.0086
+Epoch: 121, Reconstruction Loss:0.1634 Time(s/epoch):0.0082
+Epoch: 122, Reconstruction Loss:0.1562 Time(s/epoch):0.0095
+Epoch: 123, Reconstruction Loss:0.1423 Time(s/epoch):0.0084
+Epoch: 124, Reconstruction Loss:0.1244 Time(s/epoch):0.0077
+Epoch: 125, Reconstruction Loss:0.1089 Time(s/epoch):0.0082
+Epoch: 126, Reconstruction Loss:0.1046 Time(s/epoch):0.0082
+Epoch: 127, Reconstruction Loss:0.1116 Time(s/epoch):0.0084
+Epoch: 128, Reconstruction Loss:0.1201 Time(s/epoch):0.0078
+Epoch: 129, Reconstruction Loss:0.1227 Time(s/epoch):0.0074
+Epoch: 130, Reconstruction Loss:0.1190 Time(s/epoch):0.0075
+Epoch: 131, Reconstruction Loss:0.1133 Time(s/epoch):0.0080
+Epoch: 132, Reconstruction Loss:0.1109 Time(s/epoch):0.0090
+Epoch: 133, Reconstruction Loss:0.1149 Time(s/epoch):0.0103
+Epoch: 134, Reconstruction Loss:0.1244 Time(s/epoch):0.0102
+Epoch: 135, Reconstruction Loss:0.1367 Time(s/epoch):0.0101
+Epoch: 136, Reconstruction Loss:0.1489 Time(s/epoch):0.0104
+Epoch: 137, Reconstruction Loss:0.1578 Time(s/epoch):0.0106
+Epoch: 138, Reconstruction Loss:0.1611 Time(s/epoch):0.0082
+Epoch: 139, Reconstruction Loss:0.1578 Time(s/epoch):0.0112
+Epoch: 140, Reconstruction Loss:0.1476 Time(s/epoch):0.0108
+Epoch: 141, Reconstruction Loss:0.1315 Time(s/epoch):0.0085
+Epoch: 142, Reconstruction Loss:0.1124 Time(s/epoch):0.0083
+Epoch: 143, Reconstruction Loss:0.0969 Time(s/epoch):0.0077
+Epoch: 144, Reconstruction Loss:0.0943 Time(s/epoch):0.0080
+Epoch: 145, Reconstruction Loss:0.1052 Time(s/epoch):0.0103
+Epoch: 146, Reconstruction Loss:0.1195 Time(s/epoch):0.0091
+Epoch: 147, Reconstruction Loss:0.1299 Time(s/epoch):0.0080
+Epoch: 148, Reconstruction Loss:0.1341 Time(s/epoch):0.0081
+Epoch: 149, Reconstruction Loss:0.1326 Time(s/epoch):0.0081
+Epoch: 150, Reconstruction Loss:0.1269 Time(s/epoch):0.0103
+Epoch: 151, Reconstruction Loss:0.1191 Time(s/epoch):0.0107
+Epoch: 152, Reconstruction Loss:0.1122 Time(s/epoch):0.0104
+Epoch: 153, Reconstruction Loss:0.1094 Time(s/epoch):0.0099
+Epoch: 154, Reconstruction Loss:0.1134 Time(s/epoch):0.0098
+Epoch: 155, Reconstruction Loss:0.1237 Time(s/epoch):0.0095
+Epoch: 156, Reconstruction Loss:0.1368 Time(s/epoch):0.0097
+Epoch: 157, Reconstruction Loss:0.1485 Time(s/epoch):0.0094
+Epoch: 158, Reconstruction Loss:0.1554 Time(s/epoch):0.0096
+Epoch: 159, Reconstruction Loss:0.1555 Time(s/epoch):0.0094
+Epoch: 160, Reconstruction Loss:0.1486 Time(s/epoch):0.0075
+Epoch: 161, Reconstruction Loss:0.1355 Time(s/epoch):0.0080
+Epoch: 162, Reconstruction Loss:0.1188 Time(s/epoch):0.0094
+Epoch: 163, Reconstruction Loss:0.1037 Time(s/epoch):0.0084
+Epoch: 164, Reconstruction Loss:0.0972 Time(s/epoch):0.0073
+Epoch: 165, Reconstruction Loss:0.1023 Time(s/epoch):0.0084
+Epoch: 166, Reconstruction Loss:0.1132 Time(s/epoch):0.0098
+Epoch: 167, Reconstruction Loss:0.1230 Time(s/epoch):0.0095
+Epoch: 168, Reconstruction Loss:0.1289 Time(s/epoch):0.0094
+Epoch: 169, Reconstruction Loss:0.1308 Time(s/epoch):0.0070
+Epoch: 170, Reconstruction Loss:0.1297 Time(s/epoch):0.0071
+Epoch: 171, Reconstruction Loss:0.1267 Time(s/epoch):0.0070
+Epoch: 172, Reconstruction Loss:0.1227 Time(s/epoch):0.0070
+Epoch: 173, Reconstruction Loss:0.1188 Time(s/epoch):0.0074
+Epoch: 174, Reconstruction Loss:0.1161 Time(s/epoch):0.0073
+Epoch: 175, Reconstruction Loss:0.1159 Time(s/epoch):0.0073
+Epoch: 176, Reconstruction Loss:0.1181 Time(s/epoch):0.0071
+Epoch: 177, Reconstruction Loss:0.1214 Time(s/epoch):0.0085
+Epoch: 178, Reconstruction Loss:0.1234 Time(s/epoch):0.0099
+Epoch: 179, Reconstruction Loss:0.1221 Time(s/epoch):0.0096
+Epoch: 180, Reconstruction Loss:0.1169 Time(s/epoch):0.0089
+Epoch: 181, Reconstruction Loss:0.1085 Time(s/epoch):0.0070
+Epoch: 182, Reconstruction Loss:0.0994 Time(s/epoch):0.0075
+Epoch: 183, Reconstruction Loss:0.0936 Time(s/epoch):0.0073
+Epoch: 184, Reconstruction Loss:0.0942 Time(s/epoch):0.0075
+Epoch: 185, Reconstruction Loss:0.1002 Time(s/epoch):0.0075
+Epoch: 186, Reconstruction Loss:0.1076 Time(s/epoch):0.0073
+Epoch: 187, Reconstruction Loss:0.1130 Time(s/epoch):0.0075
+Epoch: 188, Reconstruction Loss:0.1150 Time(s/epoch):0.0071
+Epoch: 189, Reconstruction Loss:0.1137 Time(s/epoch):0.0089
+Epoch: 190, Reconstruction Loss:0.1096 Time(s/epoch):0.0071
+Epoch: 191, Reconstruction Loss:0.1036 Time(s/epoch):0.0095
+Epoch: 192, Reconstruction Loss:0.0967 Time(s/epoch):0.0095
+Epoch: 193, Reconstruction Loss:0.0910 Time(s/epoch):0.0094
+Epoch: 194, Reconstruction Loss:0.0887 Time(s/epoch):0.0095
+Epoch: 195, Reconstruction Loss:0.0913 Time(s/epoch):0.0098
+Epoch: 196, Reconstruction Loss:0.0976 Time(s/epoch):0.0097
+Epoch: 197, Reconstruction Loss:0.1045 Time(s/epoch):0.0094
+Epoch: 198, Reconstruction Loss:0.1090 Time(s/epoch):0.0080
+Epoch: 199, Reconstruction Loss:0.1091 Time(s/epoch):0.0072
+Epoch: 200, Reconstruction Loss:0.1040 Time(s/epoch):0.0073
+[Train] best epoch:11 | min reconstruction loss:0.0756
+Begin finetuning...
+Epoch: 001, Supervised Loss:1.6454 Time(s/epoch):0.0052
+Epoch: 002, Supervised Loss:1.5919 Time(s/epoch):0.0064
+Epoch: 003, Supervised Loss:1.5536 Time(s/epoch):0.0067
+Epoch: 004, Supervised Loss:1.5711 Time(s/epoch):0.0067
+Epoch: 005, Supervised Loss:1.6228 Time(s/epoch):0.0063
+Epoch: 006, Supervised Loss:1.6664 Time(s/epoch):0.0067
+Epoch: 007, Supervised Loss:1.6887 Time(s/epoch):0.0067
+Epoch: 008, Supervised Loss:1.6927 Time(s/epoch):0.0067
+Epoch: 009, Supervised Loss:1.6841 Time(s/epoch):0.0068
+Epoch: 010, Supervised Loss:1.6698 Time(s/epoch):0.0065
+Epoch: 011, Supervised Loss:1.6557 Time(s/epoch):0.0065
+Epoch: 012, Supervised Loss:1.6448 Time(s/epoch):0.0065
+Epoch: 013, Supervised Loss:1.6373 Time(s/epoch):0.0064
+Epoch: 014, Supervised Loss:1.6322 Time(s/epoch):0.0065
+Epoch: 015, Supervised Loss:1.6286 Time(s/epoch):0.0065
+Epoch: 016, Supervised Loss:1.6253 Time(s/epoch):0.0062
+Epoch: 017, Supervised Loss:1.6216 Time(s/epoch):0.0051
+Epoch: 018, Supervised Loss:1.6176 Time(s/epoch):0.0049
+Epoch: 019, Supervised Loss:1.6136 Time(s/epoch):0.0053
+Epoch: 020, Supervised Loss:1.6103 Time(s/epoch):0.0053
+Epoch: 021, Supervised Loss:1.6077 Time(s/epoch):0.0052
+Epoch: 022, Supervised Loss:1.6058 Time(s/epoch):0.0057
+Epoch: 023, Supervised Loss:1.6039 Time(s/epoch):0.0068
+Epoch: 024, Supervised Loss:1.6016 Time(s/epoch):0.0070
+Epoch: 025, Supervised Loss:1.5988 Time(s/epoch):0.0069
+Epoch: 026, Supervised Loss:1.5959 Time(s/epoch):0.0066
+Epoch: 027, Supervised Loss:1.5938 Time(s/epoch):0.0054
+Epoch: 028, Supervised Loss:1.5929 Time(s/epoch):0.0052
+Epoch: 029, Supervised Loss:1.5931 Time(s/epoch):0.0055
+Epoch: 030, Supervised Loss:1.5940 Time(s/epoch):0.0051
+0.8427247 515
+Add 426 edges.
+Prune 348 edges from torch.Size([2, 515]) to torch.Size([2, 167])
+save graph to: ../ckpt/data_Wisconsin_new_0.3.dat
+Homophily ratio change from 0.196 to 0.739
+Data(x=[251, 1703], edge_index=[2, 582], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+GraphSAGE(
+  (convs): ModuleList(
+    (0): SAGEConv(1703, 64, aggr=mean)
+    (1): SAGEConv(64, 5, aggr=mean)
+  )
+)
+Epoch running time:3.6348 s
+[Old Data] Data(x=[251, 1703], edge_index=[2, 515], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+load graph from: ../ckpt/data_Wisconsin_new_0.3.dat
+Homophily ratio change from 0.196 to 0.739
+Data(x=[251, 1703], edge_index=[2, 582], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+GraphSAGE(
+  (convs): ModuleList(
+    (0): SAGEConv(1703, 64, aggr=mean)
+    (1): SAGEConv(64, 5, aggr=mean)
+  )
+)
+Epoch running time:1.7746 s
+[Old Data] Data(x=[251, 1703], edge_index=[2, 515], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+load graph from: ../ckpt/data_Wisconsin_new_0.3.dat
+Homophily ratio change from 0.196 to 0.739
+Data(x=[251, 1703], edge_index=[2, 582], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+GraphSAGE(
+  (convs): ModuleList(
+    (0): SAGEConv(1703, 64, aggr=mean)
+    (1): SAGEConv(64, 5, aggr=mean)
+  )
+)
+Epoch running time:1.7709 s
+[Old Data] Data(x=[251, 1703], edge_index=[2, 515], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+preparing label similarity matrix.
+candidate set size: tensor(30)
+preparing feature similarity matrix.
+cpu cpu cpu
+Epoch: 001, Reconstruction Loss:0.1114 Time(s/epoch):0.0175
+Epoch: 002, Reconstruction Loss:0.1162 Time(s/epoch):0.0116
+Epoch: 003, Reconstruction Loss:0.0974 Time(s/epoch):0.0130
+Epoch: 004, Reconstruction Loss:0.1007 Time(s/epoch):0.0108
+Epoch: 005, Reconstruction Loss:0.0944 Time(s/epoch):0.0130
+Epoch: 006, Reconstruction Loss:0.1040 Time(s/epoch):0.0108
+Epoch: 007, Reconstruction Loss:0.1223 Time(s/epoch):0.0106
+Epoch: 008, Reconstruction Loss:0.1201 Time(s/epoch):0.0104
+Epoch: 009, Reconstruction Loss:0.0991 Time(s/epoch):0.0110
+Epoch: 010, Reconstruction Loss:0.0760 Time(s/epoch):0.0117
+Epoch: 011, Reconstruction Loss:0.0756 Time(s/epoch):0.0131
+Epoch: 012, Reconstruction Loss:0.0876 Time(s/epoch):0.0126
+Epoch: 013, Reconstruction Loss:0.0961 Time(s/epoch):0.0138
+Epoch: 014, Reconstruction Loss:0.1101 Time(s/epoch):0.0166
+Epoch: 015, Reconstruction Loss:0.1290 Time(s/epoch):0.0117
+Epoch: 016, Reconstruction Loss:0.1436 Time(s/epoch):0.0109
+Epoch: 017, Reconstruction Loss:0.1476 Time(s/epoch):0.0117
+Epoch: 018, Reconstruction Loss:0.1399 Time(s/epoch):0.0094
+Epoch: 019, Reconstruction Loss:0.1232 Time(s/epoch):0.0113
+Epoch: 020, Reconstruction Loss:0.1069 Time(s/epoch):0.0118
+Epoch: 021, Reconstruction Loss:0.1068 Time(s/epoch):0.0124
+Epoch: 022, Reconstruction Loss:0.1227 Time(s/epoch):0.0120
+Epoch: 023, Reconstruction Loss:0.1351 Time(s/epoch):0.0106
+Epoch: 024, Reconstruction Loss:0.1337 Time(s/epoch):0.0086
+Epoch: 025, Reconstruction Loss:0.1232 Time(s/epoch):0.0101
+Epoch: 026, Reconstruction Loss:0.1176 Time(s/epoch):0.0107
+Epoch: 027, Reconstruction Loss:0.1266 Time(s/epoch):0.0115
+Epoch: 028, Reconstruction Loss:0.1437 Time(s/epoch):0.0117
+Epoch: 029, Reconstruction Loss:0.1599 Time(s/epoch):0.0127
+Epoch: 030, Reconstruction Loss:0.1705 Time(s/epoch):0.0130
+Epoch: 031, Reconstruction Loss:0.1734 Time(s/epoch):0.0105
+Epoch: 032, Reconstruction Loss:0.1687 Time(s/epoch):0.0076
+Epoch: 033, Reconstruction Loss:0.1571 Time(s/epoch):0.0101
+Epoch: 034, Reconstruction Loss:0.1407 Time(s/epoch):0.0103
+Epoch: 035, Reconstruction Loss:0.1230 Time(s/epoch):0.0093
+Epoch: 036, Reconstruction Loss:0.1102 Time(s/epoch):0.0088
+Epoch: 037, Reconstruction Loss:0.1091 Time(s/epoch):0.0084
+Epoch: 038, Reconstruction Loss:0.1185 Time(s/epoch):0.0106
+Epoch: 039, Reconstruction Loss:0.1286 Time(s/epoch):0.0121
+Epoch: 040, Reconstruction Loss:0.1318 Time(s/epoch):0.0142
+Epoch: 041, Reconstruction Loss:0.1261 Time(s/epoch):0.0135
+Epoch: 042, Reconstruction Loss:0.1149 Time(s/epoch):0.0137
+Epoch: 043, Reconstruction Loss:0.1061 Time(s/epoch):0.0118
+Epoch: 044, Reconstruction Loss:0.1086 Time(s/epoch):0.0121
+Epoch: 045, Reconstruction Loss:0.1224 Time(s/epoch):0.0120
+Epoch: 046, Reconstruction Loss:0.1393 Time(s/epoch):0.0120
+Epoch: 047, Reconstruction Loss:0.1522 Time(s/epoch):0.0094
+Epoch: 048, Reconstruction Loss:0.1579 Time(s/epoch):0.0101
+Epoch: 049, Reconstruction Loss:0.1554 Time(s/epoch):0.0107
+Epoch: 050, Reconstruction Loss:0.1451 Time(s/epoch):0.0109
+Epoch: 051, Reconstruction Loss:0.1285 Time(s/epoch):0.0110
+Epoch: 052, Reconstruction Loss:0.1090 Time(s/epoch):0.0110
+Epoch: 053, Reconstruction Loss:0.0934 Time(s/epoch):0.0115
+Epoch: 054, Reconstruction Loss:0.0921 Time(s/epoch):0.0112
+Epoch: 055, Reconstruction Loss:0.1063 Time(s/epoch):0.0112
+Epoch: 056, Reconstruction Loss:0.1243 Time(s/epoch):0.0110
+Epoch: 057, Reconstruction Loss:0.1371 Time(s/epoch):0.0114
+Epoch: 058, Reconstruction Loss:0.1418 Time(s/epoch):0.0103
+Epoch: 059, Reconstruction Loss:0.1389 Time(s/epoch):0.0090
+Epoch: 060, Reconstruction Loss:0.1295 Time(s/epoch):0.0114
+Epoch: 061, Reconstruction Loss:0.1159 Time(s/epoch):0.0122
+Epoch: 062, Reconstruction Loss:0.1021 Time(s/epoch):0.0103
+Epoch: 063, Reconstruction Loss:0.0960 Time(s/epoch):0.0115
+Epoch: 064, Reconstruction Loss:0.1040 Time(s/epoch):0.0106
+Epoch: 065, Reconstruction Loss:0.1214 Time(s/epoch):0.0123
+Epoch: 066, Reconstruction Loss:0.1388 Time(s/epoch):0.0107
+Epoch: 067, Reconstruction Loss:0.1502 Time(s/epoch):0.0096
+Epoch: 068, Reconstruction Loss:0.1535 Time(s/epoch):0.0112
+Epoch: 069, Reconstruction Loss:0.1484 Time(s/epoch):0.0105
+Epoch: 070, Reconstruction Loss:0.1356 Time(s/epoch):0.0094
+Epoch: 071, Reconstruction Loss:0.1175 Time(s/epoch):0.0082
+Epoch: 072, Reconstruction Loss:0.0993 Time(s/epoch):0.0083
+Epoch: 073, Reconstruction Loss:0.0896 Time(s/epoch):0.0080
+Epoch: 074, Reconstruction Loss:0.0940 Time(s/epoch):0.0104
+Epoch: 075, Reconstruction Loss:0.1050 Time(s/epoch):0.0103
+Epoch: 076, Reconstruction Loss:0.1131 Time(s/epoch):0.0102
+Epoch: 077, Reconstruction Loss:0.1153 Time(s/epoch):0.0115
+Epoch: 078, Reconstruction Loss:0.1132 Time(s/epoch):0.0113
+Epoch: 079, Reconstruction Loss:0.1102 Time(s/epoch):0.0103
+Epoch: 080, Reconstruction Loss:0.1096 Time(s/epoch):0.0086
+Epoch: 081, Reconstruction Loss:0.1131 Time(s/epoch):0.0085
+Epoch: 082, Reconstruction Loss:0.1202 Time(s/epoch):0.0087
+Epoch: 083, Reconstruction Loss:0.1290 Time(s/epoch):0.0104
+Epoch: 084, Reconstruction Loss:0.1364 Time(s/epoch):0.0103
+Epoch: 085, Reconstruction Loss:0.1395 Time(s/epoch):0.0077
+Epoch: 086, Reconstruction Loss:0.1362 Time(s/epoch):0.0093
+Epoch: 087, Reconstruction Loss:0.1264 Time(s/epoch):0.0112
+Epoch: 088, Reconstruction Loss:0.1122 Time(s/epoch):0.0116
+Epoch: 089, Reconstruction Loss:0.0986 Time(s/epoch):0.0093
+Epoch: 090, Reconstruction Loss:0.0935 Time(s/epoch):0.0087
+Epoch: 091, Reconstruction Loss:0.1000 Time(s/epoch):0.0104
+Epoch: 092, Reconstruction Loss:0.1108 Time(s/epoch):0.0116
+Epoch: 093, Reconstruction Loss:0.1182 Time(s/epoch):0.0111
+Epoch: 094, Reconstruction Loss:0.1194 Time(s/epoch):0.0108
+Epoch: 095, Reconstruction Loss:0.1154 Time(s/epoch):0.0094
+Epoch: 096, Reconstruction Loss:0.1091 Time(s/epoch):0.0097
+Epoch: 097, Reconstruction Loss:0.1048 Time(s/epoch):0.0087
+Epoch: 098, Reconstruction Loss:0.1067 Time(s/epoch):0.0086
+Epoch: 099, Reconstruction Loss:0.1158 Time(s/epoch):0.0102
+Epoch: 100, Reconstruction Loss:0.1285 Time(s/epoch):0.0123
+Epoch: 101, Reconstruction Loss:0.1401 Time(s/epoch):0.0083
+Epoch: 102, Reconstruction Loss:0.1472 Time(s/epoch):0.0084
+Epoch: 103, Reconstruction Loss:0.1478 Time(s/epoch):0.0125
+Epoch: 104, Reconstruction Loss:0.1411 Time(s/epoch):0.0086
+Epoch: 105, Reconstruction Loss:0.1278 Time(s/epoch):0.0105
+Epoch: 106, Reconstruction Loss:0.1110 Time(s/epoch):0.0084
+Epoch: 107, Reconstruction Loss:0.0978 Time(s/epoch):0.0107
+Epoch: 108, Reconstruction Loss:0.0970 Time(s/epoch):0.0078
+Epoch: 109, Reconstruction Loss:0.1072 Time(s/epoch):0.0098
+Epoch: 110, Reconstruction Loss:0.1181 Time(s/epoch):0.0097
+Epoch: 111, Reconstruction Loss:0.1234 Time(s/epoch):0.0086
+Epoch: 112, Reconstruction Loss:0.1223 Time(s/epoch):0.0095
+Epoch: 113, Reconstruction Loss:0.1178 Time(s/epoch):0.0103
+Epoch: 114, Reconstruction Loss:0.1140 Time(s/epoch):0.0097
+Epoch: 115, Reconstruction Loss:0.1148 Time(s/epoch):0.0093
+Epoch: 116, Reconstruction Loss:0.1218 Time(s/epoch):0.0093
+Epoch: 117, Reconstruction Loss:0.1333 Time(s/epoch):0.0124
+Epoch: 118, Reconstruction Loss:0.1462 Time(s/epoch):0.0099
+Epoch: 119, Reconstruction Loss:0.1572 Time(s/epoch):0.0101
+Epoch: 120, Reconstruction Loss:0.1635 Time(s/epoch):0.0105
+Epoch: 121, Reconstruction Loss:0.1634 Time(s/epoch):0.0108
+Epoch: 122, Reconstruction Loss:0.1562 Time(s/epoch):0.0121
+Epoch: 123, Reconstruction Loss:0.1423 Time(s/epoch):0.0093
+Epoch: 124, Reconstruction Loss:0.1244 Time(s/epoch):0.0084
+Epoch: 125, Reconstruction Loss:0.1089 Time(s/epoch):0.0089
+Epoch: 126, Reconstruction Loss:0.1046 Time(s/epoch):0.0105
+Epoch: 127, Reconstruction Loss:0.1116 Time(s/epoch):0.0093
+Epoch: 128, Reconstruction Loss:0.1201 Time(s/epoch):0.0085
+Epoch: 129, Reconstruction Loss:0.1227 Time(s/epoch):0.0107
+Epoch: 130, Reconstruction Loss:0.1190 Time(s/epoch):0.0097
+Epoch: 131, Reconstruction Loss:0.1133 Time(s/epoch):0.0080
+Epoch: 132, Reconstruction Loss:0.1109 Time(s/epoch):0.0087
+Epoch: 133, Reconstruction Loss:0.1149 Time(s/epoch):0.0078
+Epoch: 134, Reconstruction Loss:0.1244 Time(s/epoch):0.0078
+Epoch: 135, Reconstruction Loss:0.1367 Time(s/epoch):0.0077
+Epoch: 136, Reconstruction Loss:0.1489 Time(s/epoch):0.0081
+Epoch: 137, Reconstruction Loss:0.1578 Time(s/epoch):0.0081
+Epoch: 138, Reconstruction Loss:0.1611 Time(s/epoch):0.0079
+Epoch: 139, Reconstruction Loss:0.1578 Time(s/epoch):0.0081
+Epoch: 140, Reconstruction Loss:0.1476 Time(s/epoch):0.0095
+Epoch: 141, Reconstruction Loss:0.1315 Time(s/epoch):0.0085
+Epoch: 142, Reconstruction Loss:0.1124 Time(s/epoch):0.0079
+Epoch: 143, Reconstruction Loss:0.0969 Time(s/epoch):0.0079
+Epoch: 144, Reconstruction Loss:0.0943 Time(s/epoch):0.0100
+Epoch: 145, Reconstruction Loss:0.1052 Time(s/epoch):0.0098
+Epoch: 146, Reconstruction Loss:0.1195 Time(s/epoch):0.0087
+Epoch: 147, Reconstruction Loss:0.1299 Time(s/epoch):0.0103
+Epoch: 148, Reconstruction Loss:0.1341 Time(s/epoch):0.0105
+Epoch: 149, Reconstruction Loss:0.1326 Time(s/epoch):0.0087
+Epoch: 150, Reconstruction Loss:0.1269 Time(s/epoch):0.0093
+Epoch: 151, Reconstruction Loss:0.1191 Time(s/epoch):0.0086
+Epoch: 152, Reconstruction Loss:0.1122 Time(s/epoch):0.0097
+Epoch: 153, Reconstruction Loss:0.1094 Time(s/epoch):0.0097
+Epoch: 154, Reconstruction Loss:0.1134 Time(s/epoch):0.0075
+Epoch: 155, Reconstruction Loss:0.1237 Time(s/epoch):0.0079
+Epoch: 156, Reconstruction Loss:0.1368 Time(s/epoch):0.0099
+Epoch: 157, Reconstruction Loss:0.1485 Time(s/epoch):0.0101
+Epoch: 158, Reconstruction Loss:0.1554 Time(s/epoch):0.0095
+Epoch: 159, Reconstruction Loss:0.1555 Time(s/epoch):0.0107
+Epoch: 160, Reconstruction Loss:0.1486 Time(s/epoch):0.0088
+Epoch: 161, Reconstruction Loss:0.1355 Time(s/epoch):0.0084
+Epoch: 162, Reconstruction Loss:0.1188 Time(s/epoch):0.0094
+Epoch: 163, Reconstruction Loss:0.1037 Time(s/epoch):0.0098
+Epoch: 164, Reconstruction Loss:0.0972 Time(s/epoch):0.0089
+Epoch: 165, Reconstruction Loss:0.1023 Time(s/epoch):0.0098
+Epoch: 166, Reconstruction Loss:0.1132 Time(s/epoch):0.0103
+Epoch: 167, Reconstruction Loss:0.1230 Time(s/epoch):0.0090
+Epoch: 168, Reconstruction Loss:0.1289 Time(s/epoch):0.0085
+Epoch: 169, Reconstruction Loss:0.1308 Time(s/epoch):0.0101
+Epoch: 170, Reconstruction Loss:0.1297 Time(s/epoch):0.0090
+Epoch: 171, Reconstruction Loss:0.1267 Time(s/epoch):0.0094
+Epoch: 172, Reconstruction Loss:0.1227 Time(s/epoch):0.0100
+Epoch: 173, Reconstruction Loss:0.1188 Time(s/epoch):0.0085
+Epoch: 174, Reconstruction Loss:0.1161 Time(s/epoch):0.0081
+Epoch: 175, Reconstruction Loss:0.1159 Time(s/epoch):0.0081
+Epoch: 176, Reconstruction Loss:0.1181 Time(s/epoch):0.0079
+Epoch: 177, Reconstruction Loss:0.1214 Time(s/epoch):0.0075
+Epoch: 178, Reconstruction Loss:0.1234 Time(s/epoch):0.0075
+Epoch: 179, Reconstruction Loss:0.1221 Time(s/epoch):0.0068
+Epoch: 180, Reconstruction Loss:0.1169 Time(s/epoch):0.0071
+Epoch: 181, Reconstruction Loss:0.1085 Time(s/epoch):0.0069
+Epoch: 182, Reconstruction Loss:0.0994 Time(s/epoch):0.0076
+Epoch: 183, Reconstruction Loss:0.0936 Time(s/epoch):0.0073
+Epoch: 184, Reconstruction Loss:0.0942 Time(s/epoch):0.0094
+Epoch: 185, Reconstruction Loss:0.1002 Time(s/epoch):0.0103
+Epoch: 186, Reconstruction Loss:0.1076 Time(s/epoch):0.0077
+Epoch: 187, Reconstruction Loss:0.1130 Time(s/epoch):0.0075
+Epoch: 188, Reconstruction Loss:0.1150 Time(s/epoch):0.0075
+Epoch: 189, Reconstruction Loss:0.1137 Time(s/epoch):0.0095
+Epoch: 190, Reconstruction Loss:0.1096 Time(s/epoch):0.0076
+Epoch: 191, Reconstruction Loss:0.1036 Time(s/epoch):0.0076
+Epoch: 192, Reconstruction Loss:0.0967 Time(s/epoch):0.0091
+Epoch: 193, Reconstruction Loss:0.0910 Time(s/epoch):0.0094
+Epoch: 194, Reconstruction Loss:0.0887 Time(s/epoch):0.0076
+Epoch: 195, Reconstruction Loss:0.0913 Time(s/epoch):0.0075
+Epoch: 196, Reconstruction Loss:0.0976 Time(s/epoch):0.0073
+Epoch: 197, Reconstruction Loss:0.1045 Time(s/epoch):0.0082
+Epoch: 198, Reconstruction Loss:0.1090 Time(s/epoch):0.0084
+Epoch: 199, Reconstruction Loss:0.1091 Time(s/epoch):0.0080
+Epoch: 200, Reconstruction Loss:0.1040 Time(s/epoch):0.0096
+[Train] best epoch:11 | min reconstruction loss:0.0756
+Begin finetuning...
+Epoch: 001, Supervised Loss:1.6818 Time(s/epoch):0.0064
+Epoch: 002, Supervised Loss:1.6121 Time(s/epoch):0.0065
+Epoch: 003, Supervised Loss:1.5352 Time(s/epoch):0.0064
+Epoch: 004, Supervised Loss:1.4937 Time(s/epoch):0.0065
+Epoch: 005, Supervised Loss:1.5007 Time(s/epoch):0.0064
+Epoch: 006, Supervised Loss:1.5295 Time(s/epoch):0.0065
+Epoch: 007, Supervised Loss:1.5471 Time(s/epoch):0.0051
+Epoch: 008, Supervised Loss:1.5416 Time(s/epoch):0.0045
+Epoch: 009, Supervised Loss:1.5203 Time(s/epoch):0.0051
+Epoch: 010, Supervised Loss:1.5043 Time(s/epoch):0.0063
+Epoch: 011, Supervised Loss:1.5021 Time(s/epoch):0.0063
+Epoch: 012, Supervised Loss:1.5063 Time(s/epoch):0.0068
+Epoch: 013, Supervised Loss:1.5092 Time(s/epoch):0.0062
+Epoch: 014, Supervised Loss:1.5111 Time(s/epoch):0.0065
+Epoch: 015, Supervised Loss:1.5156 Time(s/epoch):0.0068
+Epoch: 016, Supervised Loss:1.5195 Time(s/epoch):0.0069
+Epoch: 017, Supervised Loss:1.5187 Time(s/epoch):0.0065
+Epoch: 018, Supervised Loss:1.5153 Time(s/epoch):0.0065
+Epoch: 019, Supervised Loss:1.5107 Time(s/epoch):0.0066
+Epoch: 020, Supervised Loss:1.5032 Time(s/epoch):0.0064
+Epoch: 021, Supervised Loss:1.4933 Time(s/epoch):0.0064
+Epoch: 022, Supervised Loss:1.4840 Time(s/epoch):0.0062
+Epoch: 023, Supervised Loss:1.4789 Time(s/epoch):0.0062
+Epoch: 024, Supervised Loss:1.4785 Time(s/epoch):0.0067
+Epoch: 025, Supervised Loss:1.4807 Time(s/epoch):0.0067
+Epoch: 026, Supervised Loss:1.4839 Time(s/epoch):0.0065
+Epoch: 027, Supervised Loss:1.4876 Time(s/epoch):0.0053
+Epoch: 028, Supervised Loss:1.4914 Time(s/epoch):0.0059
+Epoch: 029, Supervised Loss:1.4946 Time(s/epoch):0.0053
+Epoch: 030, Supervised Loss:1.4958 Time(s/epoch):0.0053
+0.9652736 515
+Add 343 edges.
+Prune 355 edges from torch.Size([2, 515]) to torch.Size([2, 160])
+save graph to: ../ckpt/data_Wisconsin_new_0.3.dat
+Homophily ratio change from 0.196 to 0.674
+Data(x=[251, 1703], edge_index=[2, 497], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+GraphSAGE(
+  (convs): ModuleList(
+    (0): SAGEConv(1703, 64, aggr=mean)
+    (1): SAGEConv(64, 5, aggr=mean)
+  )
+)
+Epoch running time:3.9934 s
+[Old Data] Data(x=[251, 1703], edge_index=[2, 515], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+load graph from: ../ckpt/data_Wisconsin_new_0.3.dat
+Homophily ratio change from 0.196 to 0.674
+Data(x=[251, 1703], edge_index=[2, 497], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+GraphSAGE(
+  (convs): ModuleList(
+    (0): SAGEConv(1703, 64, aggr=mean)
+    (1): SAGEConv(64, 5, aggr=mean)
+  )
+)
+Epoch running time:1.7533 s
+[Old Data] Data(x=[251, 1703], edge_index=[2, 515], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+load graph from: ../ckpt/data_Wisconsin_new_0.3.dat
+Homophily ratio change from 0.196 to 0.674
+Data(x=[251, 1703], edge_index=[2, 497], y=[251], train_mask=[251], val_mask=[251], test_mask=[251])
+GraphSAGE(
+  (convs): ModuleList(
+    (0): SAGEConv(1703, 64, aggr=mean)
+    (1): SAGEConv(64, 5, aggr=mean)
+  )
+)
+Epoch running time:2.5772 s
+Namespace(model='GraphSAGE', num_layer=2, repeat=3, num_epoch=200, dataset='Wisconsin', data_dir='../data', gpu='0', running_id='0', log_dir=None, hidden=64, moment=1, seed=0, gnn_seed=None, auto_fixed_seed=False, use_center_moment=True, lr=0.01, wd=0.005, graph_learn=True, lr_gl=0.001, wd_gl=0.005, thres_min_deg=3, thres_min_deg_ratio=1.0, save_dir_gl='../ckpt/', window=[10000, 10000], shuffle=[False, False], epoch_train_gl=200, epoch_finetune_gl=30, seed_gl=0, k=8, cat_self=True, drop_last=[False, False], prunning=True, epsilon=None, thres_prunning=0.3, use_cpu_cache=False, drop_edge=False, prob_drop_edge=0.0)
+[1;32m注意力重連實驗完成！[0m
+[1;34m==== 所有實驗完成 ====[0m

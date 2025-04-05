@@ -1,0 +1,7 @@
+Model,Rewiring,Train_Acc,Val_Acc,Test_Acc
+GCN,attention,,,
+GCN,none,,,
+GAT,attention,,,
+GAT,none,,,
+GraphSAGE,attention,,,
+GraphSAGE,none,,,

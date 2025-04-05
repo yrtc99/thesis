@@ -1,0 +1,14 @@
+[1;34m==== 運行配置 ====[0m
+數據集: Wisconsin
+模型: GAT
+重連方法: none
+GPU: 0
+重複次數: 3
+隨機種子: 0
+
+[1;34m==== 開始運行實驗 ====[0m
+[1;36m--- 運行 GAT 基準實驗 (Wisconsin 數據集) ---[0m
+2.6.1
+cannot load google_drive_downloader, install it if needed.
+[1;31m基準實驗失敗！[0m
+[1;34m==== 所有實驗完成 ====[0m
