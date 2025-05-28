@@ -345,7 +345,12 @@ if __name__ == '__main__':
     ap.add_argument('--drop_edge', action='store_true', default=False, help='whether to random drop edges with p')
     ap.add_argument('--prob_drop_edge', type=float, default=0., help='prob of drop edge.')
     
-
+    # 改進注意力重連的參數
+    ap.add_argument('--homophily_weight', type=float, default=2.0, help='同質性權重 (default: 2.0)')
+    ap.add_argument('--temperature', type=float, default=0.5, help='溫度參數 (default: 0.5)')
+    ap.add_argument('--feature_dropout', type=float, default=0.2, help='特徵丟棄率 (default: 0.2)')
+    ap.add_argument('--edge_dropout', type=float, default=0.1, help='邊丟棄率 (default: 0.1)')
+    
     args = ap.parse_args()
     args.window = eval(args.window.replace(' ', ''))
     args.shuffle = eval(args.shuffle.replace(' ', ''))
@@ -400,7 +405,7 @@ if __name__ == '__main__':
     # load_path_gl = f'../ckpt/data_{args.dataset}_new.dat'
 
     runs = 1
-    if args.dataset in ["Cornell", "Texas", "Wisconsin", "actor", "chameleon", "squirrel"]:
+    if args.dataset in ["Cornell", "Texas", "Wisconsin", "Actor", "chameleon", "squirrel", 'fb100']:
         runs = 10
     for split_idx in range(runs):
         for train_id in range(1, 1+repeat):
@@ -496,12 +501,12 @@ if __name__ == '__main__':
                     # Use the improved attention rewiring method
                     attention_rewirer = ImprovedAttentionRewirer(
                         top_k=args.k,
-                        temperature=0.5,  # Lower temperature for sharper attention
+                        temperature=args.temperature,  # Lower temperature for sharper attention
                         min_deg=5,        # Increased minimum degree
                         min_deg_ratio=1.5,# Higher ratio for better connectivity
-                        homophily_weight=2.0, # Weight for homophily enhancement
-                        feature_dropout=0.2,  # Feature dropout for regularization
-                        edge_dropout=0.1      # Edge dropout to prevent overfitting
+                        homophily_weight=args.homophily_weight, # Weight for homophily enhancement
+                        feature_dropout=args.feature_dropout,  # Feature dropout for regularization
+                        edge_dropout=args.edge_dropout      # Edge dropout to prevent overfitting
                     )
                     data_attention = attention_rewirer(
                         data,

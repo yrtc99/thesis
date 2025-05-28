@@ -64,7 +64,7 @@ class ImprovedAttentionRewirer:
         # 對每個節點，選擇top-k個最相似的節點建立連接
         for node in range(num_nodes):
             # 獲取該節點的注意力分數
-            node_similarity = attention_scores[node]
+            node_similarity = attention_scores[node].clone()  # 創建副本以避免修改原始張量
             
             # 將自身的分數設為最小，避免自環
             node_similarity[node] = float('-inf')
@@ -94,59 +94,164 @@ class ImprovedAttentionRewirer:
         for node in range(num_nodes):
             if in_degree[node] < min_deg_threshold:
                 # 獲取該節點的注意力分數
-                node_similarity = attention_scores[node]
+                node_similarity = attention_scores[node].clone()  # 創建副本
                 node_similarity[node] = float('-inf')
                 
-                # 排除已經連接的節點
-                connected_nodes = new_edge_index[0, new_edge_index[1] == node]
-                node_similarity[connected_nodes] = float('-inf')
+                # 獲取已連接的節點，避免重複
+                connected_nodes = new_edge_index[1, new_edge_index[0] == node]
+                for connected in connected_nodes:
+                    node_similarity[connected] = float('-inf')
                 
-                # 獲取額外的連接數量
-                additional_edges = min_deg_threshold - int(in_degree[node].item())
+                # 計算需要添加的額外連接數量
+                num_to_add = min_deg_threshold - int(in_degree[node].item())
                 
-                # 獲取額外的連接
-                _, extra_indices = torch.topk(node_similarity, additional_edges)
+                # 選擇最相似的節點作為額外連接
+                _, extra_indices = torch.topk(node_similarity, num_to_add)
                 
-                # 添加額外的連接
-                extra_src = torch.full((additional_edges,), node, device=device)
+                # 創建額外的邊
+                extra_src = torch.full((num_to_add,), node, device=device)
                 extra_dst = extra_indices
                 
                 # 添加到邊索引
                 additional_edges = torch.stack([extra_dst, extra_src])  # 注意這裡是反向連接，確保入度增加
                 new_edge_index = torch.cat([new_edge_index, additional_edges], dim=1)
         
-        # 增強同質性：如果有標籤信息，優先連接同類節點
-        if labels is not None:
-            # 計算當前同質性
-            current_homophily = homophily(new_edge_index, labels)
+        # ========== 全新的同質性增強機制 ==========
+        if labels is not None and self.homophily_weight > 0:
+            # 獲取基準同質性
+            base_homophily = homophily(new_edge_index, labels)
+            if isinstance(base_homophily, torch.Tensor):
+                base_homophily = base_homophily.item()
             
-            # 如果同質性較低，增加同類節點之間的連接
-            if current_homophily < 0.5:  # 可調整的閾值
-                # 為每個節點找到同類節點
-                for node in range(num_nodes):
-                    node_label = labels[node]
-                    same_label_nodes = torch.where(labels == node_label)[0]
+            # 創建快速查找數據結構
+            # 1. 為每個標籤找到所有節點
+            label_to_nodes = {}
+            for i in range(num_nodes):
+                label = int(labels[i].item())
+                if label not in label_to_nodes:
+                    label_to_nodes[label] = []
+                label_to_nodes[label].append(i)
+            
+            # 2. 創建已存在邊的集合，用於快速查詢
+            existing_edges = set()
+            for i in range(new_edge_index.size(1)):
+                src, dst = int(new_edge_index[0, i].item()), int(new_edge_index[1, i].item())
+                existing_edges.add((src, dst))
+            
+            # 3. 計算每個節點的同質性
+            node_homophily = torch.zeros(num_nodes, device=device)
+            for node in range(num_nodes):
+                neighbors = new_edge_index[1, new_edge_index[0] == node]
+                if len(neighbors) == 0:
+                    continue
+                
+                node_label = labels[node]
+                same_label_count = 0
+                for neighbor in neighbors:
+                    if labels[neighbor] == node_label:
+                        same_label_count += 1
+                
+                node_homophily[node] = same_label_count / len(neighbors)
+            
+            # 根據同質性權重動態設置閾值
+            homophily_threshold = max(0.2, 0.4 - 0.03 * self.homophily_weight)
+            
+            # 找出需要增強同質性的節點
+            low_homophily_nodes = torch.where(node_homophily < homophily_threshold)[0]
+            
+            # 控制總共添加的邊數量
+            max_edges_per_node = max(2, int(1 + self.homophily_weight))
+            total_max_edges = int(num_nodes * 0.1 * self.homophily_weight)
+            
+            # 存儲新添加的同質性邊
+            homophily_edges = []
+            added_edges_count = 0
+            
+            # 對每個低同質性節點，添加同類連接
+            for node in low_homophily_nodes:
+                if added_edges_count >= total_max_edges:
+                    break
+                
+                node_idx = int(node.item())
+                node_label = int(labels[node].item())
+                
+                # 獲取同類節點
+                same_label_nodes = label_to_nodes[node_label]
+                same_label_nodes = [n for n in same_label_nodes if n != node_idx]
+                
+                if not same_label_nodes:
+                    continue
+                
+                # 計算與同類節點的相似度
+                node_feature = q_features[node].unsqueeze(0)
+                sim_scores = []
+                valid_candidates = []
+                
+                for candidate in same_label_nodes:
+                    # 排除已存在的邊
+                    if (node_idx, candidate) in existing_edges:
+                        continue
                     
-                    # 排除自身
-                    same_label_nodes = same_label_nodes[same_label_nodes != node]
+                    # 計算相似度
+                    candidate_feature = k_features[candidate].unsqueeze(0)
+                    sim = torch.mm(node_feature, candidate_feature.t()).item()
                     
-                    if len(same_label_nodes) > 0:
-                        # 計算與同類節點的相似度
-                        similarity = torch.mm(q_features[node].unsqueeze(0), 
-                                             k_features[same_label_nodes].t()).squeeze()
+                    # 應用同質性權重 - 更強的權重效果
+                    weighted_sim = sim * (1.0 + 0.5 * self.homophily_weight)
+                    
+                    sim_scores.append(weighted_sim)
+                    valid_candidates.append(candidate)
+                
+                if not valid_candidates:
+                    continue
+                
+                # 選擇最相似的節點建立連接
+                sim_scores = torch.tensor(sim_scores, device=device)
+                num_to_add = min(len(valid_candidates), max_edges_per_node)
+                
+                if num_to_add > 0:
+                    _, top_indices = torch.topk(sim_scores, num_to_add)
+                    
+                    for idx in top_indices:
+                        candidate = valid_candidates[idx]
                         
-                        # 選擇最相似的同類節點
-                        num_to_add = min(3, len(same_label_nodes))  # 每個節點最多添加3個同類連接
-                        _, top_indices = torch.topk(similarity, num_to_add)
-                        top_same_label_nodes = same_label_nodes[top_indices]
+                        # 創建雙向連接
+                        src = torch.tensor([node_idx], device=device)
+                        dst = torch.tensor([candidate], device=device)
                         
-                        # 添加同類連接
-                        src = torch.full((num_to_add,), node, device=device)
-                        dst = top_same_label_nodes
+                        # 添加邊
+                        homophily_edges.append(torch.stack([src, dst]))
+                        homophily_edges.append(torch.stack([dst, src]))  # 反向連接也添加
                         
-                        # 添加到邊索引
-                        same_label_edges = torch.stack([src, dst])
-                        new_edge_index = torch.cat([new_edge_index, same_label_edges], dim=1)
+                        # 更新已存在邊集合
+                        existing_edges.add((node_idx, candidate))
+                        existing_edges.add((candidate, node_idx))
+                        
+                        added_edges_count += 2
+                        
+                        if added_edges_count >= total_max_edges:
+                            break
+            
+            # 合併同質性增強的邊
+            if homophily_edges:
+                homophily_edge_index = torch.cat(homophily_edges, dim=1)
+                enhanced_edge_index = torch.cat([new_edge_index, homophily_edge_index], dim=1)
+                
+                # 計算增強後的同質性
+                enhanced_homophily = homophily(enhanced_edge_index, labels)
+                if isinstance(enhanced_homophily, torch.Tensor):
+                    enhanced_homophily = enhanced_homophily.item()
+                
+                if self.training:
+                    print(f"Homophily changed from {base_homophily:.4f} to {enhanced_homophily:.4f} with weight {self.homophily_weight}")
+                
+                # 只有在同質性真的提高時才使用增強後的圖
+                if enhanced_homophily > base_homophily:
+                    new_edge_index = enhanced_edge_index
+                else:
+                    # 如果同質性反而下降，則保持原樣
+                    if self.training:
+                        print(f"Homophily enhancement rejected: would decrease from {base_homophily:.4f} to {enhanced_homophily:.4f}")
         
         # 應用邊丟棄以防止過擬合
         if self.training and self.edge_dropout > 0:
